@@ -1,0 +1,39 @@
+.topNav{
+    list-style: none;
+    z-index: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: black;
+}
+
+.topNav li a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.dif{
+    margin-right: 85%;
+}
+
+.topNav li a::after{
+    content: '';
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: red;
+    bottom: -50%;
+    transition: all ease-in-out 250ms;
+}
+
+.topNav li a:hover::after{
+    width: 100%;
+}
+
+.topNav li a:hover{
+    color: darkgrey;
+}
