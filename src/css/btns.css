@@ -1,5 +1,5 @@
 .btns{
-    align-self: end;
+    align-self: center;
 }
 
 .btns button{
@@ -8,6 +8,8 @@
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #dif{

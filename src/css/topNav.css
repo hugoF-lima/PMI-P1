@@ -5,12 +5,12 @@
     display: flex;
     justify-content: space-between;
     padding: 25px;
-    background-color: black;
+    background-color: #6A8899;
 }
 
 .topNav li a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: large;
     font-weight: bold;
     margin-left: 10px;
@@ -26,7 +26,7 @@
     display: block;
     height: 5px;
     width: 0%;
-    background-color: red;
+    background-color: black;
     bottom: -50%;
     transition: all ease-in-out 250ms;
 }
@@ -36,5 +36,5 @@
 }
 
 .topNav li a:hover{
-    color: darkgrey;
+    color: black;
 }
