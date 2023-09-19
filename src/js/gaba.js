@@ -5,7 +5,7 @@ export const gaba = [
         img:[
             {
             img:true,
-            imgScr:''
+            imgScr:'../img/Q1_text'
             },
         ],
         opcoes:[

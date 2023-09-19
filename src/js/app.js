@@ -26,45 +26,45 @@ gaba.map(questao =>{
             <div class="alter">
                 <div>
                     <input type="radio" name="isgift" id="isgift0" value="0"/>
-                    ${questao.opcoes.map(opcoes =>{
+                    ${questao.opcoes.map(opcao =>{
                         return `
-                        <label for="isgift0">A.${opcoes.texto}</label>
+                        <label for="isgift0">A.${opcao.texto}</label>
                         `
                     })
                 .join('')}
                 </div>
                 <div>
                     <input type="radio" name="isgift" id="isgift1" value="1"/>
-                    ${questao.opcoes.map(opcoes =>{
+                    ${questao.opcoes.map(opcao =>{
                         return `
-                        <label for="isgift1">B. ${opcoes.texto}</label>
+                        <label for="isgift1">B. ${opcao.texto}</label>
                         `
                     })
                 .join('')}
                 </div>
                 <div>
                     <input type="radio" name="isgift" id="isgift2" value="2"/>
-                    ${questao.opcoes.map(opcoes =>{
+                    ${questao.opcoes.map(opcao =>{
                         return `
-                        <label for="isgift2">C. ${opcoes.texto}</label>
+                        <label for="isgift2">C. ${opcao.texto}</label>
                         `
                     })
                 .join('')}
                 </div>
                 <div>
                     <input type="radio" name="isgift" id="isgift3" value="3"/>
-                    ${questao.opcoes.map(opcoes =>{
+                    ${questao.opcoes.map(opcao =>{
                         return `
-                        <label for="isgift3">D. ${opcoes.texto}</label>
+                        <label for="isgift3">D. ${opcao.texto}</label>
                         `
                     })
                 .join('')}                    
                 </div>
                 <div>
                     <input type="radio" name="isgift" id="isgift4" value="4"/>
-                    ${questao.opcoes.map(opcoes =>{
+                    ${questao.opcoes.map(opcao =>{
                         return `
-                        <label for="isgift4">E. ${opcoes.texto}</label>
+                        <label for="isgift4">E. ${opcao.texto}</label>
                         `
                     })
                 .join('')}
@@ -85,4 +85,4 @@ gaba.map(questao =>{
         <img src="../../img/logoCPS.png" alt="Logo CPS">
     </footer>
     `;
-})
+});
