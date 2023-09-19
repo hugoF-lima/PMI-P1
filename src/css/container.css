@@ -1,6 +1,6 @@
 .container{
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .container h3, p{
-    margin-right: 20%;
+    align-self: flex-start;
 }
 
 .container img{
@@ -23,4 +23,5 @@
 
 .alter div{
     margin: 10px;
+    padding-left: 40px;
 }
