@@ -24,51 +24,16 @@ gaba.map(questao =>{
             <p><b>${questao.enunciado}</b></p>
 
             <div class="alter">
-                <div>
-                    <input type="radio" name="isgift" id="isgift0" value="0"/>
-                    ${questao.opcoes.map(opcao =>{
-                        return `
-                        <label for="isgift0">A.${opcao.texto}</label>
-                        `
+                ${questao.opcoes
+                    .map(opcao => {
+                      return `
+                        <div class="opcao">
+                            <input class="questao__opcoes__opcao" type="radio" id="${questao.id}_${opcao.id}" " name="${questao.id} value="${opcao.id}">
+                            <label class="questao_opcoes__texto" for="${questao.id}_${opcao.id}"><span class="alter_id">${opcao.id})</span> ${opcao.texto}</label> <br>
+                        </div>
+                    `;
                     })
-                .join('')}
-                </div>
-                <div>
-                    <input type="radio" name="isgift" id="isgift1" value="1"/>
-                    ${questao.opcoes.map(opcao =>{
-                        return `
-                        <label for="isgift1">B. ${opcao.texto}</label>
-                        `
-                    })
-                .join('')}
-                </div>
-                <div>
-                    <input type="radio" name="isgift" id="isgift2" value="2"/>
-                    ${questao.opcoes.map(opcao =>{
-                        return `
-                        <label for="isgift2">C. ${opcao.texto}</label>
-                        `
-                    })
-                .join('')}
-                </div>
-                <div>
-                    <input type="radio" name="isgift" id="isgift3" value="3"/>
-                    ${questao.opcoes.map(opcao =>{
-                        return `
-                        <label for="isgift3">D. ${opcao.texto}</label>
-                        `
-                    })
-                .join('')}                    
-                </div>
-                <div>
-                    <input type="radio" name="isgift" id="isgift4" value="4"/>
-                    ${questao.opcoes.map(opcao =>{
-                        return `
-                        <label for="isgift4">E. ${opcao.texto}</label>
-                        `
-                    })
-                .join('')}
-                </div>
+                    .join('')}
             </div>
             
             <div class="btns">

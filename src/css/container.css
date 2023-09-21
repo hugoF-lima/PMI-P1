@@ -31,6 +31,13 @@
     flex-direction: column;
 }
 
+.alter_id{
+    font-weight: bold;
+}
+.opcao{
+    margin-bottom: 100px;
+}
+
 .alter div{
     margin: 10px;
     padding-left: 40px;

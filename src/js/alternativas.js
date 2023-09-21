@@ -1,8 +1,8 @@
-function exibirGift(){
+/* function exibirGift(){
               $('#allow_gift_messages').attr('checked','checked');
               $('#allow_gift_messages_for_order').attr('checked','checked');
               $('#gift-message-whole-message').attr('disabled',false);
-              //$j('#allow_gift_messages_for_items').attr('checked','checked');
+              $j('#allow_gift_messages_for_items').attr('checked','checked');
               $('#allow-gift-message-container').show();
               $('#allow-gift-messages-for-items-container').show();
 }
@@ -10,7 +10,7 @@ function esconderGift(){
               $('#allow_gift_messages').attr('checked',false);
               $('#allow_gift_messages_for_order').attr('checked',false);
               $('#gift-message-whole-message').attr('disabled','disabled');
-              //$j('#allow_gift_messages_for_items').attr('checked',false);
+              $j('#allow_gift_messages_for_items').attr('checked',false);
               $('#allow-gift-message-container').hide();
               $('#allow-gift-messages-for-items-container').hide();
 }
@@ -30,4 +30,4 @@ if($(this).attr('id') != 'isgift0'){
         this.checked = false;
 }
     checado = this.checked;
-}});
+}}); */
