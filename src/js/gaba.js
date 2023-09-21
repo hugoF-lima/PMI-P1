@@ -4,13 +4,10 @@ export const gaba = [
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
-<<<<<<< HEAD
             img:true,
-            imgScr:'../img/Q1_text.PNG'
-=======
+            imgScr:'../img/Q1_text.PNG',
                 img: true,
                 imgScr: '../../img/Q1_text.PNG'
->>>>>>> 976f6de54037dd2c07a09ea018df297567a56ec2
             },
         ],
         opcoes: [
@@ -39,7 +36,6 @@ export const gaba = [
 
     },
     {
-<<<<<<< HEAD
         id:'02',
         enunciado:'A respeito dessas asserções, assinale a opção correta.',
         img:[
@@ -72,7 +68,7 @@ export const gaba = [
         ],
         opcoeCorreta:'C'
     },
-=======
+    {
         id: '02',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
@@ -1260,6 +1256,4 @@ export const gaba = [
         ],
         opcaoCorreta: 'E',
     },
-
->>>>>>> 976f6de54037dd2c07a09ea018df297567a56ec2
 ];
