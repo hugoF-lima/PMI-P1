@@ -1,8 +1,20 @@
 import { gaba } from "./gaba.js";
 
+let indiceAtual = 0;
 const content = document.querySelector('#bloco');
+const prox = document.querySelector('#prox');
+const ante = document.querySelector('#voltar');
 
-gaba.map(questao =>{
+prox.addEventListener('click', ()=>{
+    altQuest(true);
+});
+ante.addEventListener('click', ()=>{
+    altQuest(false);
+});
+
+function mostrarQuest(indice){
+    const questao = gaba[indice];
+
     content.innerHTML += `
     <header>
         <ul class="topNav">
@@ -37,9 +49,9 @@ gaba.map(questao =>{
             </div>
             
             <div class="btns">
-                <button type="submit" id="dif">Anterior</button>
-                <button type="submit">Verificar</button>
-                <button type="submit">Próxima</button>
+                <button type="submit" class="dif" id="voltar">Anterior</button>
+                <button type="submit" id="verif">Verificar</button>
+                <button type="submit" id="prox">Próxima</button>
             </div>
 
         </article>
@@ -50,4 +62,22 @@ gaba.map(questao =>{
         <img src="../../img/logoCPS.png" alt="Logo CPS">
     </footer>
     `;
-});
+}
+
+mostrarQuest(0);
+
+function altQuest(direcao){
+    if(direcao){
+        indiceAtual++;
+        if(indiceAtual > gaba.length -1){
+            indiceAtual = 0;
+        }
+    } else {
+        indiceAtual -=1;
+        if(indiceAtual < gaba.length -1){
+            indiceAtual = 2;
+        }
+    }
+
+    mostrarQuest(indiceAtual);
+}

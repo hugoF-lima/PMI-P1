@@ -5,7 +5,7 @@ export const gaba = [
         img:[
             {
             img:true,
-            imgScr:'../../img/Q1_text.PNG'
+            imgScr:'../img/Q1_text.PNG'
             },
         ],
         opcoes:[
@@ -31,5 +31,38 @@ export const gaba = [
             },
         ],
         opcaoCorreta:'E'
+    },
+    {
+        id:'02',
+        enunciado:'A respeito dessas asserções, assinale a opção correta.',
+        img:[
+            {
+                img:true,
+                imgScr:'../img/Q2_text1.PNG'
+            }
+        ],
+        opcoes:[
+            {
+                id:'A',
+                texto:'As asserções I e II são proposições verdadeiras, e a II é uma justificati va correta da I.',
+            },
+            {
+                id:'B',
+                texto:'As asserções I e II são proposições verdadeiras, mas a II não é uma justificati va correta da I.'
+            },
+            {
+                id:'C',
+                texto:'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.'
+            },
+            {
+                id:'D',
+                texto:'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.'
+            },
+            {
+                id:'E',
+                texto:'As asserções I e II são proposições falsas.',
+            }
+        ],
+        opcoeCorreta:'C'
     },
 ];
