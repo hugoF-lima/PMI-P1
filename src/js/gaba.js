@@ -201,7 +201,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '06',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -234,7 +234,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '07',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -267,7 +267,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '08',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -300,7 +300,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '09',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -333,7 +333,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '10',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -366,7 +366,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '11',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -399,7 +399,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '12',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -432,7 +432,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '13',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -465,7 +465,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '14',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -498,7 +498,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '15',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -531,7 +531,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '16',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -564,7 +564,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '17',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -597,7 +597,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '18',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -630,7 +630,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '19',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -663,7 +663,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '20',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -696,7 +696,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '21',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -729,7 +729,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '22',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -762,7 +762,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '23',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -795,7 +795,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '24',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -828,7 +828,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '25',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -861,7 +861,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '26',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -894,7 +894,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '27',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -927,7 +927,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '28',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -960,7 +960,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '29',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -993,7 +993,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '30',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1026,7 +1026,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '31',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1059,7 +1059,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '32',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1092,7 +1092,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '33',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1125,7 +1125,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '34',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1158,7 +1158,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '35',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1191,7 +1191,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '36',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
@@ -1224,7 +1224,7 @@ export const gaba = [
         opcaoCorreta: 'E',
     },
     {
-        id: '01',
+        id: '37',
         enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {

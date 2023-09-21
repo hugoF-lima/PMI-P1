@@ -75,7 +75,7 @@ function altQuest(direcao){
     } else {
         indiceAtual -=1;
         if(indiceAtual < gaba.length -1){
-            indiceAtual = 2;
+            indiceAtual = 37;
         }
     }
 
