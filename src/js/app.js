@@ -58,6 +58,6 @@ function altQuest(direcao){
             indiceAtual = indiceAtual;
         }
     }
-    console.log(indiceAtual)
+    console.log(indiceAtual);
     mostrarQuest(indiceAtual);
 }

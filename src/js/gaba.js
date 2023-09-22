@@ -72,8 +72,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '',
-                imgScr: ''
+                imgScr: '../img/Q3_text.PNG'
             },
         ],
         opcoes: [
@@ -106,7 +105,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q4_text.PNG'
             },
         ],
         opcoes: [
@@ -139,9 +138,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '',
-                imgScr: '',
-                imgScr: ''
+                imgScr: '../img/Q5_text.PNG'
             },
         ],
         opcoes: [
@@ -174,7 +171,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q6_text.PNG'
             },
         ],
         opcoes: [
@@ -207,8 +204,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '',
-                imgScr: ''
+                imgScr: '../img/Q7_text.PNG'
             },
         ],
         opcoes: [
@@ -241,7 +237,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q8_text.PNG'
             },
         ],
         opcoes: [
@@ -274,7 +270,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q9_text.PNG'
             },
         ],
         opcoes: [
@@ -307,7 +303,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q10_text.PNG'
             },
         ],
         opcoes: [
@@ -340,9 +336,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '',
-                imgScr: '',
-                imgScr: ''
+                imgScr: '../img/Q11_text.PNG'
             },
         ],
         opcoes: [
@@ -375,7 +369,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q12_text.PNG'
             },
         ],
         opcoes: [
@@ -408,7 +402,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q13_text.PNG'
             },
         ],
         opcoes: [
@@ -441,8 +435,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '',
-                imgScr: ''
+                imgScr: '../img/Q14_text.PNG'
             },
         ],
         opcoes: [
@@ -475,7 +468,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: ''
+                imgScr: '../img/Q15_text.PNG'
             },
         ],
         opcoes: [
