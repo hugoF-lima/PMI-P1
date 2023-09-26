@@ -1,17 +1,20 @@
-import { gaba } from "./gaba.js";
+import { gaba } from "./gaba.js"; //Importação do arquivo gaba.js
 
-let indiceAtual = 0;
-const content = document.querySelector('#bloco');
-const prox = document.querySelector('#prox');
-const ante = document.querySelector('#voltar');
+let indiceAtual = 0; //Declaração da variavel ultilizada para passar valor do indice
+const content = document.querySelector('#bloco'); //Constante ultilizada para indenticicar setor em que a função atua
+const prox = document.querySelector('#prox'); //Constante ultilizada para indentificar botão de mudança de corpo
+const ante = document.querySelector('#voltar'); //Constante ultilizada para indentificar botão de mudança de corpo
 
+//Função de atribuição de ação ao clique do botão
 prox.addEventListener('click', ()=>{
     altQuest(true);
 });
+//Função de atribuição de ação ao clique do botão
 ante.addEventListener('click', ()=>{
     altQuest(false);
 });
 
+//Função innerHTML para mudaça de corpo do HTML com indentificação por indicie
 function mostrarQuest(indice){
     const questao = gaba[indice];
     console.log(questao.enunciado);
@@ -44,8 +47,10 @@ function mostrarQuest(indice){
     `;
 }
 
+//Execução da função anterior
 mostrarQuest(0);
 
+//Função de navegação pelo indicie
 function altQuest(direcao){
     if(direcao){
         indiceAtual++;
