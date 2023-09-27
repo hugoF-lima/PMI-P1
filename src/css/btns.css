@@ -1,9 +1,18 @@
-.btns{
+.containerBtns {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 20vh;
+    min-width: 20vh;
+}
+
+.btns {
     margin: auto;
     align-self: center;
 }
 
-.btns button{
+
+.btns button {
     margin-top: 40px;
     margin-right: 60px;
     padding: 5px;
@@ -13,6 +22,6 @@
     border-radius: 10px;
 }
 
-.dif{
+.dif {
     margin-right: 400px;
 }

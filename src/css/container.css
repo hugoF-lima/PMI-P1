@@ -1,4 +1,4 @@
-.container{
+.container {
     margin-left: 200px;
     margin-right: 200px;
     width: 1000px;
@@ -17,28 +17,30 @@
     box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
 }
 
-.container h3, p{
+.container h3,
+p {
     align-self: flex-start;
     align-items: center;
 }
 
-.container img{
+.container img {
     border-radius: 40px;
 }
 
-.alter{
+.alter {
     display: flex;
     flex-direction: column;
 }
 
-.alter_id{
+.alter_id {
     font-weight: bold;
 }
-.opcao{
+
+.opcao {
     margin-bottom: 100px;
 }
 
-.alter div{
+.alter div {
     margin: 10px;
     padding-left: 40px;
 }

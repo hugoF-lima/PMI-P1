@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Teste</title>
+    <link rel="stylesheet" href="src/css/body.css"><!-- Importação do arquivo CSS principal -->
+    <script type="module" src="src/js/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <ul class="topNav">
+            <!-- logo do enade aqui? reconsiderar -->
+            <li class="dif"><a href=""><img src="src/img/logo_png.svg" alt="Logo ENADE"></a></li>
+            <li><a href="tutorial.html">Tutorial</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </header>
+    <div id="bloco"></div>
+    <div class="container">
+        <div class="questionPane"></div>
+        <div class="btns">
+            <button type="submit" class="dif" id="voltar">Anterior</button>
+            <button type="submit" id="verif">Verificar</button>
+            <button type="submit" id="prox">Próxima</button>
+        </div>
+        <div id="navigationQuestion" class="questionNavigation">
+            <!-- TODO: read length of gaba and generate buttons accordingly -->
+        </div>
+    </div>
+    <footer class="botomNav">
+        <a href="https://www.fateccarapicuiba.edu.br/" target="_blank"><img src="./src/img/logoFatec.png"
+                alt="Logo ADS"></a>
+        <a href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" target="_blank"><img
+                src="./src/img/adslogo.png" alt="Logo ADS"></a>
+        <a href="www.cps.sp.gov.br"><img src="./src/img/logoCPS.png" alt="Logo CPS"></a>
+    </footer>
+</body>
+<!-- Temporary patching a hole in the fact that the js should only load after when iterating page elements -->
+<script type="module" src="src/js/populateButtons.js"></script>
+
+</html>
