@@ -3,6 +3,7 @@
 @import url(./container.css); /*Importação do CSS do container da questão*/
 @import url(./btns.css); /*Importação do CSS dos botões*/
 
+/*Corpo do html*/
 body{
     margin: 0;
     padding: 0;
