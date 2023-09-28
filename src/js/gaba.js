@@ -5,7 +5,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q1_text.PNG'
+                imgScr: '../img/Q1_text.PNG'
             },
         ],
         opcoes: [
@@ -39,7 +39,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q2_text1.PNG'
+                imgScr: '../img/Q2_text1.PNG'
             }
         ],
         opcoes: [
@@ -72,7 +72,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q3_text.PNG'
+                imgScr: '../img/Q3_text.PNG'
             },
         ],
         opcoes: [
@@ -105,7 +105,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q4_text.PNG'
+                imgScr: '../img/Q4_text.PNG'
             },
         ],
         opcoes: [
@@ -138,7 +138,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q5_text.PNG'
+                imgScr: '../img/Q5_text.PNG'
             },
         ],
         opcoes: [
@@ -171,7 +171,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q6_text.PNG'
+                imgScr: '../img/Q6_text.PNG'
             },
         ],
         opcoes: [
@@ -204,7 +204,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q7_text.PNG'
+                imgScr: '../img/Q7_text.PNG'
             },
         ],
         opcoes: [
@@ -237,7 +237,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q8_text.PNG'
+                imgScr: '../img/Q8_text.PNG'
             },
         ],
         opcoes: [
@@ -270,7 +270,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q9_text.PNG'
+                imgScr: '../img/Q9_text.PNG'
             },
         ],
         opcoes: [
@@ -303,7 +303,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q10_text.PNG'
+                imgScr: '../img/Q10_text.PNG'
             },
         ],
         opcoes: [
@@ -336,7 +336,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q11_text.PNG'
+                imgScr: '../img/Q11_text.PNG'
             },
         ],
         opcoes: [
@@ -369,7 +369,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q12_text.PNG'
+                imgScr: '../img/Q12_text.PNG'
             },
         ],
         opcoes: [
@@ -402,7 +402,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q13_text.PNG'
+                imgScr: '../img/Q13_text.PNG'
             },
         ],
         opcoes: [
@@ -435,7 +435,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q14_text.PNG'
+                imgScr: '../img/Q14_text.PNG'
             },
         ],
         opcoes: [
@@ -468,7 +468,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q15_text.PNG'
+                imgScr: '../img/Q15_text.PNG'
             },
         ],
         opcoes: [
@@ -505,7 +505,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q16_text.PNG'
+                imgScr: '../img/Q16_text.PNG'
             },
         ],
         opcoes: [
@@ -542,7 +542,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q17_text.PNG'
+                imgScr: '../img/Q17_text.PNG'
             },
         ],
         opcoes: [
@@ -579,7 +579,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q18_text.PNG'
+                imgScr: '../img/Q18_text.PNG'
             },
         ],
         opcoes: [
@@ -616,7 +616,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q19_text.PNG'
+                imgScr: '../img/Q19_text.PNG'
             },
         ],
         opcoes: [
@@ -653,7 +653,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q20_text.PNG'
+                imgScr: '../img/Q20_text.PNG'
             },
         ],
         opcoes: [
@@ -690,7 +690,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q21_text.PNG'
+                imgScr: '../img/Q21_text.PNG'
             },
         ],
         opcoes: [
@@ -724,7 +724,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q22_text.PNG'
+                imgScr: '../img/Q22_text.PNG'
             },
         ],
         opcoes: [
@@ -757,7 +757,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q23_text.PNG'
+                imgScr: '../img/Q23_text.PNG'
             },
         ],
         opcoes: [
@@ -792,7 +792,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q24_text.PNG'
+                imgScr: '../img/Q24_text.PNG'
             },
         ],
         opcoes: [
@@ -829,7 +829,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q25_text.PNG'
+                imgScr: '../img/Q25_text.PNG'
             },
         ],
         opcoes: [
@@ -866,7 +866,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q26_text.PNG'
+                imgScr: '../img/Q26_text.PNG'
             },
         ],
         opcoes: [
@@ -903,7 +903,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q27_text.PNG'
+                imgScr: '../img/Q27_text.PNG'
             },
         ],
         opcoes: [
@@ -940,7 +940,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q28_text1.PNG'
+                imgScr: '../img/Q28_text1.PNG'
             },
         ],
         opcoes: [
@@ -977,7 +977,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q29_text.PNG'
+                imgScr: '../img/Q29_text.PNG'
             },
         ],
         opcoes: [
@@ -1014,7 +1014,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q30_text.PNG'
+                imgScr: '../img/Q30_text.PNG'
             },
         ],
         opcoes: [
@@ -1047,7 +1047,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q31_text.PNG'
+                imgScr: '../img/Q31_text.PNG'
             },
         ],
         opcoes: [
@@ -1084,7 +1084,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q32_text.png'
+                imgScr: '../img/Q32_text.png'
             },
         ],
         opcoes: [
@@ -1121,7 +1121,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q33_text.PNG'
+                imgScr: '../img/Q33_text.PNG'
             },
         ],
         opcoes: [
@@ -1158,7 +1158,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q34_text.PNG'
+                imgScr: '../img/Q34_text.PNG'
             },
         ],
         opcoes: [
@@ -1195,7 +1195,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q35_text.PNG'
+                imgScr: '../img/Q35_text.PNG'
             },
         ],
         opcoes: [

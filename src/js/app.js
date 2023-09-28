@@ -21,9 +21,10 @@ export function mostrarQuest(indice) {
     console.log(questao.enunciado);
 
     content.innerHTML = `
+    <img src="../img/logo_png.svg">
         <article class="container">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1> 
-            <h3>Questão ${questao.id}</h3>
+            <h3>Questão ${questao.id} / ${gaba.length}</h3>
             ${questao.img.map(img => {
         return `
                 <img src="${img.imgScr}" alt="Imagem da Questão" >
@@ -44,6 +45,7 @@ export function mostrarQuest(indice) {
             })
             .join('')}
             </div>
+            <p>Fonte:<a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Prova PDF</a></p>
         </article>
     `;
 }

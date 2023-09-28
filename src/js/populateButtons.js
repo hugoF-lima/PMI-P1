@@ -1,5 +1,6 @@
 import { gaba } from "./gaba.js"; //Importação do arquivo gaba.js
 import { mostrarQuest } from "./app.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     // Your JavaScript code here
     montarIndexQuest();
