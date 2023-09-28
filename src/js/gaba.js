@@ -1226,4 +1226,5 @@ export const gaba = [
         ],
         opcaoCorreta: 'D',
     },
+
 ];
