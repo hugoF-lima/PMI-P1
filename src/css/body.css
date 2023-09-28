@@ -1,4 +1,4 @@
-@import url(./topNav.css);  /*Importação do CSS da TopNav*/
+@import url(./topNav.css); /*Importação do CSS da TopNav*/
 @import url(./botomNav.css); /*Importação do CSS do Rodapé*/
 @import url(./container.css); /*Importação do CSS do container da questão*/
 @import url(./btns.css); /*Importação do CSS dos botões*/
@@ -9,4 +9,12 @@ body{
     padding: 0;
     background-color: #B5D4E6;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.middleNav {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

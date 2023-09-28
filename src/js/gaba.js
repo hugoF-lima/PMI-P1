@@ -1,36 +1,37 @@
 export const gaba = [
     {
-        id: '01', //Numero e ID da questão
-        enunciado: 'A partir das informações apresentadas, é correto afirmar que:', //Texto do enunciado da questão
+        id: '01',
+        enunciado: 'A partir das informações apresentadas, é correto afirmar que:',
         img: [
             {
-                img: true, //Função ainda a ser modificada
-                imgScr: '../img/Q1_text.PNG' //Caminho da imagem da questão
+                img: true,
+                imgScr: 'src/img/Q1_text.PNG'
             },
         ],
         opcoes: [
             {
-                id: 'A', //ID da alternativa
-                texto: 'o fator ambiental e o fator demográfico afetam a mobilidade social observada, sendo ela menor nos países que apresentam as maiores taxas de natalidade.' //Texto da alternativa
+                id: 'A',
+                texto: 'o fator ambiental e o fator demográfico afetam a mobilidade social observada, sendo ela menor nos países que apresentam as maiores taxas de natalidade.'
             },
             {
-                id: 'B', //ID da alternativa
-                texto: 'a baixa organização social dos economicamente menos favorecidos determina a baixa mobilidade social da base para o topo da pirâmide.' //Texto da alternativa
+                id: 'B',
+                texto: 'a baixa organização social dos economicamente menos favorecidos determina a baixa mobilidade social da base para o topo da pirâmide.'
             },
             {
-                id: 'C', //ID da alternativa
-                texto: 'a mobilidade social é caracterizada por um fator ancestral que se revela ao longo das gerações, sendo um limitador da efi cácia de políti cas públicas de redução das desigualdades sociais.' //Texto da alternativa
+                id: 'C',
+                texto: 'a mobilidade social é caracterizada por um fator ancestral que se revela ao longo das gerações, sendo um limitador da efi cácia de políti cas públicas de redução das desigualdades sociais.'
             },
             {
-                id: 'D', //ID da alternativa
-                texto: 'a análise de mobilidade social permite a observação de um ciclo vicioso, que se caracteriza por uma subida nas camadas sociais seguida de uma queda, repetindo-se esse ciclo de modo sucessivo.' //Texto da alternativa
+                id: 'D',
+                texto: 'a análise de mobilidade social permite a observação de um ciclo vicioso, que se caracteriza por uma subida nas camadas sociais seguida de uma queda, repetindo-se esse ciclo de modo sucessivo.'
             },
             {
-                id: 'E', //ID da alternativa
-                texto: 'a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, o que ocasiona confl itos sociais em busca do acesso a tais fatores.' //Texto da alternativa
+                id: 'E',
+                texto: 'a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, o que ocasiona confl itos sociais em busca do acesso a tais fatores.'
             },
         ],
-        opcaoCorreta: 'E', //ID da alternativa correta
+        opcaoCorreta: 'E',
+
     },
     {
         id: '02',
@@ -38,7 +39,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q2_text1.PNG'
+                imgScr: 'src/img/Q2_text1.PNG'
             }
         ],
         opcoes: [
@@ -71,7 +72,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q3_text.PNG'
+                imgScr: 'src/img/Q3_text.PNG'
             },
         ],
         opcoes: [
@@ -104,7 +105,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q4_text.PNG'
+                imgScr: 'src/img/Q4_text.PNG'
             },
         ],
         opcoes: [
@@ -137,7 +138,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q5_text.PNG'
+                imgScr: 'src/img/Q5_text.PNG'
             },
         ],
         opcoes: [
@@ -170,7 +171,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q6_text.PNG'
+                imgScr: 'src/img/Q6_text.PNG'
             },
         ],
         opcoes: [
@@ -203,7 +204,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q7_text.PNG'
+                imgScr: 'src/img/Q7_text.PNG'
             },
         ],
         opcoes: [
@@ -236,7 +237,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q8_text.PNG'
+                imgScr: 'src/img/Q8_text.PNG'
             },
         ],
         opcoes: [
@@ -269,7 +270,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q9_text.PNG'
+                imgScr: 'src/img/Q9_text.PNG'
             },
         ],
         opcoes: [
@@ -302,7 +303,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q10_text.PNG'
+                imgScr: 'src/img/Q10_text.PNG'
             },
         ],
         opcoes: [
@@ -335,7 +336,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q11_text.PNG'
+                imgScr: 'src/img/Q11_text.PNG'
             },
         ],
         opcoes: [
@@ -368,7 +369,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q12_text.PNG'
+                imgScr: 'src/img/Q12_text.PNG'
             },
         ],
         opcoes: [
@@ -401,7 +402,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q13_text.PNG'
+                imgScr: 'src/img/Q13_text.PNG'
             },
         ],
         opcoes: [
@@ -434,7 +435,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q14_text.PNG'
+                imgScr: 'src/img/Q14_text.PNG'
             },
         ],
         opcoes: [
@@ -467,7 +468,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q15_text.PNG'
+                imgScr: 'src/img/Q15_text.PNG'
             },
         ],
         opcoes: [
@@ -504,7 +505,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q16_text.PNG'
+                imgScr: 'src/img/Q16_text.PNG'
             },
         ],
         opcoes: [
@@ -541,7 +542,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q17_text.PNG'
+                imgScr: 'src/img/Q17_text.PNG'
             },
         ],
         opcoes: [
@@ -578,7 +579,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q18_text.PNG'
+                imgScr: 'src/img/Q18_text.PNG'
             },
         ],
         opcoes: [
@@ -615,7 +616,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q19_text.PNG'
+                imgScr: 'src/img/Q19_text.PNG'
             },
         ],
         opcoes: [
@@ -652,7 +653,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q20_text.PNG'
+                imgScr: 'src/img/Q20_text.PNG'
             },
         ],
         opcoes: [
@@ -689,7 +690,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q21_text.PNG'
+                imgScr: 'src/img/Q21_text.PNG'
             },
         ],
         opcoes: [
@@ -723,7 +724,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q22_text.PNG'
+                imgScr: 'src/img/Q22_text.PNG'
             },
         ],
         opcoes: [
@@ -756,7 +757,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q23_text.PNG'
+                imgScr: 'src/img/Q23_text.PNG'
             },
         ],
         opcoes: [
@@ -791,7 +792,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q24_text.PNG'
+                imgScr: 'src/img/Q24_text.PNG'
             },
         ],
         opcoes: [
@@ -828,7 +829,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q25_text.PNG'
+                imgScr: 'src/img/Q25_text.PNG'
             },
         ],
         opcoes: [
@@ -865,7 +866,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q26_text.PNG'
+                imgScr: 'src/img/Q26_text.PNG'
             },
         ],
         opcoes: [
@@ -902,7 +903,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q27_text.PNG'
+                imgScr: 'src/img/Q27_text.PNG'
             },
         ],
         opcoes: [
@@ -939,7 +940,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q28_text1.PNG'
+                imgScr: 'src/img/Q28_text1.PNG'
             },
         ],
         opcoes: [
@@ -976,7 +977,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q29_text.PNG'
+                imgScr: 'src/img/Q29_text.PNG'
             },
         ],
         opcoes: [
@@ -1013,7 +1014,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q30_text.PNG'
+                imgScr: 'src/img/Q30_text.PNG'
             },
         ],
         opcoes: [
@@ -1046,7 +1047,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q31_text.PNG'
+                imgScr: 'src/img/Q31_text.PNG'
             },
         ],
         opcoes: [
@@ -1083,7 +1084,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q32_text.PNG'
+                imgScr: 'src/img/Q32_text.png'
             },
         ],
         opcoes: [
@@ -1120,7 +1121,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q33_text.PNG'
+                imgScr: 'src/img/Q33_text.PNG'
             },
         ],
         opcoes: [
@@ -1157,7 +1158,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: '../img/Q34_text.PNG'
+                imgScr: 'src/img/Q34_text.PNG'
             },
         ],
         opcoes: [
