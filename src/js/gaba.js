@@ -497,7 +497,7 @@ export const gaba = [
                 texto: 'I, II e III.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'C',
     },
     {
         id: '16',
@@ -534,7 +534,7 @@ export const gaba = [
                 texto: '((X3 . X2")" + X1")"'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'B',
     },
     {
         id: '17',
@@ -571,7 +571,7 @@ export const gaba = [
                 texto: 'As asserções I e II são proposições falsas.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'C',
     },
     {
         id: '18',
@@ -645,7 +645,7 @@ export const gaba = [
                 texto: 'II, III e IV.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'D',
     },
     {
         id: '20',
@@ -682,7 +682,7 @@ export const gaba = [
                 texto: 'I, II e III.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'A',
     },
     {
         id: '21',
@@ -749,7 +749,7 @@ export const gaba = [
                 texto: 'PESSOA(cpf: texto, nome: texto) PET(codigo: inteiro, nome: texto, data_nascimento: data, codigo_tipo_pet: inteiro, descricao_tipo_pet,<br> adotante: texto)<br> adotante referencia PESSOA(cpf)<br>'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'A',
     },
     {
         id: '23',
@@ -784,7 +784,7 @@ export const gaba = [
                 texto: 'O número máximo de elementos que essa árvore poderá ter com 10 níveis será de 1 024 elementos.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'C',
     },
     {
         id: '24',
@@ -858,7 +858,7 @@ export const gaba = [
                 texto: 'II, III e IV.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'B',
     },
     {
         id: '26',
@@ -895,7 +895,7 @@ export const gaba = [
                 texto: 'I, II e III.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'A',
     },
     {
         id: '27',
@@ -932,7 +932,7 @@ export const gaba = [
                 texto: '99,74% de chance que sua capacidade esteja no intervalo [161, 181].'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'D',
     },
     {
         id: '28',
@@ -969,7 +969,7 @@ export const gaba = [
                 texto: 'II, III e IV.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'B',
     },
     {
         id: '29',
@@ -1006,7 +1006,7 @@ export const gaba = [
                 texto: 'I, II, III e IV.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: '#',
     },
     {
         id: '30',
@@ -1113,7 +1113,7 @@ export const gaba = [
                 texto: 'I, II e IV.'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'A',
     },
     {
         id: '33',
@@ -1150,7 +1150,7 @@ export const gaba = [
                 texto: 'saoirmas(X,Y):-paide(X,P), maede(Y,M), X=Y, mulher(X), mulher(Y).'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: '#',
     },
     {
         id: '34',
@@ -1187,6 +1187,44 @@ export const gaba = [
                 texto: 'A: 5 B: 6 C: 8 D: 0 E: 3 F: 1 G: 2'
             },
         ],
-        opcaoCorreta: 'E',
+        opcaoCorreta: 'C',
     },
+    {
+        id: '35',
+        enunciado: 'Com base na definição apresentada e nos conceitos básicos de sistemas distribuídos, assinale a opção correta.',
+        img: [
+            {
+                img: true,
+                imgScr: 'src/img/Q34_text.PNG'
+            },
+        ],
+        opcoes: [
+            {
+                id: 'A',
+                texto: 'A existência de um relógio físico local sincronizado com um relógio global é o que permite aos usuários <br> de um sistema distribuído trocarem mensagens de forma coordenada.',
+            },
+
+            {
+                id: 'B',
+                texto: 'A falha de um componente em um sistema distribuído peer-to-peer causa a interrupção de todos os <br>demais componentes até o seu retorno.'
+            },
+
+            {
+                id: 'C',
+                texto: 'O compartilhamento dos recursos distribuídos entre computadores interligados por uma rede <br>é possível desde que os dispositivos sejam homogêneos em termos de hardware e software.'
+            },
+
+            {
+                id: 'D',
+                texto: 'A adição de novos dispositivos em um sistema distribuído para atender a uma demanda temporária <br>ou crescente está ligada à característica de escalabilidade do sistema.'
+            },
+
+            {
+                id: 'E',
+                texto: 'A possibilidade de vários clientes acessarem de forma concorrente um mesmo recurso compartilhado <br>em um servidor é resultado do alto nível de transparência do sistema'
+            },
+        ],
+        opcaoCorreta: 'D',
+    },
+
 ];
