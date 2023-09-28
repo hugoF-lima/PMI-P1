@@ -1195,7 +1195,7 @@ export const gaba = [
         img: [
             {
                 img: true,
-                imgScr: 'src/img/Q34_text.PNG'
+                imgScr: 'src/img/Q35_text.PNG'
             },
         ],
         opcoes: [
