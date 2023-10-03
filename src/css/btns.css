@@ -1,4 +1,4 @@
-/*Aquivo de estilização da parte de botão*/
+/*Arquivo de estilização da parte de botão*/
 .containerBtns {
     display: flex;
     justify-content: left;
@@ -15,14 +15,44 @@
 
 .btns button {
     margin-top: 40px;
+    font-weight: bold;
     margin-right: 60px;
-    padding: 5px;
+    width: 150px;
+    padding: 20px 50px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: white;
-    border-radius: 10px;
+    background-color: #B5D4E6;
+    border-radius: 25px;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btns button:hover{
+    transform: scale(1.05); 
 }
 
 .dif {
     margin-right: 400px;
 }
+
+#iniciarSimulado{
+    margin-top: 40px;
+    margin-right: 60px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #B5D4E6;
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+#iniciarSimulado:hover {
+    transform: scale(1.05); 
+}
+
+
+
+
+
+
