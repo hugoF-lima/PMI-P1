@@ -40,15 +40,23 @@ export function mostrarQuest(indice) {
                     `;
             })
             .join('')}
-                <button class="questBtn" type="button" id="voltQuest">Voltar</button>
-                <button class="questBtn" type="submit" id="veriQuest">Verificar</button>
-                <button class="questBtn" type="button" id="proxQuest">Proxima</button>
+                <div class="btnContainer">
+                    <button class="questBtn" type="button" id="voltQuest">Voltar</button>
+                    <button class="questBtn" type="submit" id="veriQuest">Verificar</button>
+                    <button class="questBtn" type="button" id="proxQuest">Proxima</button>
+                    <button class"questBtn" type="button" id="finalizarQuest">Finalizar</button>
+                </div>
             </form>
 
             <p>Fonte:<a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Prova PDF</a></p>
             
         </article>
     `;
+
+    document.querySelector('#finalizarQuest').addEventListener('click', ()=>{
+        window.alert('Simulado finalizado.');
+        location.assign('finalizar.html');
+    })
 
     document.querySelector('#proxQuest').addEventListener('click', () =>{
         altQuest(true);
@@ -75,7 +83,8 @@ function altQuest(direcao) {
     if (direcao) {
         indiceAtual++;
         if (indiceAtual > gaba.length - 1) {
-            indiceAtual = 0;
+            window.alert('Simulado finalizado.');
+            location.assign('finalizar.html');
         }
     } else {
         indiceAtual -= 1;
