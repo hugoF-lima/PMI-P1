@@ -2,6 +2,7 @@
 @import url(./botomNav.css); /*Importação do CSS do Rodapé*/
 @import url(./container.css); /*Importação do CSS do container da questão*/
 @import url(./btns.css); /*Importação do CSS dos botões*/
+@import url(./popUp.css);
 
 /*Corpo do html*/
 body{

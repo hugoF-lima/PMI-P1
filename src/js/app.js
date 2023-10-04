@@ -2,25 +2,15 @@ import { gaba } from "./gaba.js"; //Importação do arquivo gaba.js
 
 let indiceAtual = 0; //Declaração da variavel ultilizada para passar valor do indice
 const content = document.querySelector('#bloco'); //Constante ultilizada para indenticicar setor em que a função atua
-const prox = document.querySelector('#prox'); //Constante ultilizada para indentificar botão de mudança de corpo
+const popUp = document.querySelector('#popUp');
+const bgPop = document.querySelector('#bgPop');
+const showPopUp = document.querySelector('#showPopUp');
 
-//const ante = document.querySelector('#voltar'); //Constante ultilizada para indentificar botão de mudança de corpo
-
-//Função de atribuição de ação ao clique do botão
-prox.addEventListener('click', () => {
-    altQuest(true);
-});
-
-//Função de atribuição de ação ao clique do botão
-/*ante.addEventListener('click', () => {
-    altQuest(false);
-});*/
 
 //incluido export para chamar na outra classe (Metodo gambiarrento).
 //Função innerHTML para mudaça de corpo do HTML com indentificação por indicie
 export function mostrarQuest(indice) {
     const questao = gaba[indice];
-    console.log(questao.enunciado);
 
     content.innerHTML = `
     <img src="../img/logo_png.svg">
@@ -44,19 +34,38 @@ export function mostrarQuest(indice) {
             .map(opcao => {
                 return `
                         <div class="opcao">
-                            <input class="questao__opcoes__opcao" type="radio" id="${questao.id}_${opcao.id}" name="${questao.id} value="${opcao.id}">
-                            <label class="questao_opcoes__texto" for="${questao.id}_${opcao.id}"><span class="alter_id">${opcao.id})</span> ${opcao.texto}</label> <br>
+                            <input class="questaoOpcoesOpcao" type="radio" id="${questao.id}_${opcao.id}" name="${questao.id}" value="${opcao.id}">
+                            <label class="questaoOpcaoText" for="${questao.id}_${opcao.id}"><span class="alter_id">${opcao.id})</span> ${opcao.texto}</label> <br>
                         </div>
                     `;
             })
             .join('')}
+                <button class="questBtn" type="button" id="voltQuest">Voltar</button>
+                <button class="questBtn" type="submit" id="veriQuest">Verificar</button>
+                <button class="questBtn" type="button" id="proxQuest">Proxima</button>
             </form>
 
             <p>Fonte:<a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Prova PDF</a></p>
             
         </article>
     `;
-}
+
+    document.querySelector('#proxQuest').addEventListener('click', () =>{
+        altQuest(true);
+    });
+
+    document.querySelector('#voltQuest').addEventListener('click', () =>{
+        altQuest(false);
+    });
+
+    document.querySelector('#form').addEventListener('submit', e => {
+       e.preventDefault();
+       const selecionada = document.querySelector(`input[name="${questao.id}"]:checked`);
+        if (selecionada.value) {
+          openPopUp(questao, selecionada.value == questao.opcaoCorreta);
+        };
+    });
+};
 
 //Execução da função anterior
 mostrarQuest(0);
@@ -77,3 +86,23 @@ function altQuest(direcao) {
     console.log(indiceAtual);
     mostrarQuest(indiceAtual);
 }
+
+//PopUp
+function openPopUp(questao, acertou){
+    showPopUp.classList.add('show');
+    const resPopUp = questao.opcoes.filter( e => e.id === questao.opcaoCorreta);
+    
+    popUp.innerHTML = `
+    <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
+      <div class="popUpContainer">
+        <p class="popUpTitulo"> A resposta correta da Questão <span>${questao.id}:</span></p>
+        <p class="popUpText"><span class="popUpTextId">${resPopUp[0].id}) </span>${resPopUp[0].texto}</p>
+      </div>
+    `;
+};
+
+bgPop.addEventListener('click', ()=>{
+    showPopUp.classList.remove('show');
+    showPopUp.classList.add('hidden');
+    console.log(showPopUp.classList);
+});
