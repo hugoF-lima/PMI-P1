@@ -2,14 +2,14 @@ import { gaba } from "./gaba.js"; //Importação do arquivo gaba.js
 
 let indiceAtual = 0; //Declaração da variavel ultilizada para passar valor do indice
 //tentando habilitar os botões de Index das questões
-const pageElement = document.querySelector("#navigationQuestion");
+//const pageElement = document.querySelector("#navigationQuestion");
 
 const content = document.querySelector('#bloco'); //Constante ultilizada para indenticicar setor em que a função atua
 const popUp = document.querySelector('#popUp');
 const bgPop = document.querySelector('#bgPop');
 const showPopUp = document.querySelector('#showPopUp');
-let qtd_Acertos = 0;
-let qtd_Erros = 0;
+let qtd_Acertos = 2;
+let qtd_Erros = 1;
 
 
 export function montarIndexQuest() {
@@ -18,7 +18,7 @@ export function montarIndexQuest() {
         pageElementAdd += "<button class='navButton' onclick='mostrarQuest(" + (i + 1) + ")'>" + (i + 1) + "</button>";
     }
 
-    pageElement.innerHTML = pageElementAdd;
+    pageElementAdd.innerHTML = pageElementAdd;
 }
 
 //incluido export para chamar na outra classe (Metodo gambiarrento).
@@ -116,46 +116,26 @@ function altQuest(direcao) {
             indiceAtual = indiceAtual;
         }
     }
-    console.log(indiceAtual);
     mostrarQuest(indiceAtual);
 }
 
 export function mostrarResultados() {
-
+     let porcentagemAcertos = (qtd_Acertos*100) / gaba.length;
+     let porcentagemErros = (qtd_Erros*100) / gaba.length;
+     
     content.innerHTML = `
     <img src="../img/logo_png.svg">
 
         <article class="container">
         <h3>Simulado Finalizado!</h3>
-        <h2 id="qtdAcerto">Quantidade de Acertos: ${qtd_Acertos} / ${gaba.length} (100%)</h2>
-        <h2 id="qtdErros">Quantidade de Erros: ${qtd_Erros} / ${gaba.length} (100%)</h2>
-        <h2 id="qtdRespond">Questões Respondidas: ${qtd_Acertos}/ ${gaba.length} (100%)</h2>
+        <h2 id="qtdAcerto">Quantidade de Acertos: ${qtd_Acertos} / ${gaba.length} (${Math.round(porcentagemAcertos)}%)</h2>
+        <h2 id="qtdErros">Quantidade de Erros: ${qtd_Erros} / ${gaba.length} (${Math.round(porcentagemErros)}%)</h2>
+        <h2 id="qtdRespond">Questões Respondidas: ${qtd_Acertos}/ ${gaba.length} (${Math.round(porcentagemAcertos)}%)</h2>
         <button id="iniciarSimulado"><a href="./simulado.html">Refazer Simulado!</button>   
         </article>
     `;
-
-
-    document.querySelector('#finalizarQuest').addEventListener('click', () => {
-        window.alert('Simulado finalizado.');
-        location.assign('finalizar.html');
-    })
-
-    document.querySelector('#proxQuest').addEventListener('click', () => {
-        altQuest(true);
-    });
-
-    document.querySelector('#voltQuest').addEventListener('click', () => {
-        altQuest(false);
-    });
-
-    document.querySelector('#form').addEventListener('submit', e => {
-        e.preventDefault();
-        const selecionada = document.querySelector(`input[name="${questao.id}"]:checked`);
-        if (selecionada.value) {
-            openPopUp(questao, selecionada.value == questao.opcaoCorreta);
-        };
-    });
 };
+
 //PopUp
 function openPopUp(questao, acertou) {
     showPopUp.classList.add('show');
