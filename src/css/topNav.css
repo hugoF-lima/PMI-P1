@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap');
 
 /*Arquivo de estilização da parte da TopNav*/
-.topNav{
+.topNav {
     list-style: none;
     z-index: 0;
     margin: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     background-color: #6A8899;
     height: 70px;
 }
 
-.topNav li a{
+.topNav li a {
     text-decoration: none;
     color: black;
     font-size: large;
@@ -23,16 +23,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.topNav li a img{
+.topNav li a img {
     max-width: 100px;
     max-height: 50px;
 }
 
-.dif{
+.dif {
     margin-right: 80%;
 }
 
-.topNav li a::after{
+.topNav li a::after {
     content: '';
     position: relative;
     display: block;
@@ -43,10 +43,10 @@
     transition: all ease-in-out 250ms;
 }
 
-.topNav li a:hover::after{
+.topNav li a:hover::after {
     width: 100%;
 }
 
-.topNav li a:hover{
+.topNav li a:hover {
     color: black;
 }

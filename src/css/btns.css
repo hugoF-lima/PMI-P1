@@ -1,4 +1,4 @@
-/*Arquivo de estilização da parte de botão*/
+/*Aquivo de estilização da parte de botão*/
 .containerBtns {
     display: flex;
     justify-content: left;
@@ -27,15 +27,15 @@
     transition: transform 0.2s ease;
 }
 
-.btns button:hover{
-    transform: scale(1.05); 
+.btns button:hover {
+    transform: scale(1.05);
 }
 
 .dif {
     margin-right: 400px;
 }
 
-#iniciarSimulado{
+#iniciarSimulado {
     margin-top: 40px;
     font-weight: bold;
     margin-right: 60px;
@@ -50,11 +50,5 @@
 }
 
 #iniciarSimulado:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
-
-
-
-
-
-

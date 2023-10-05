@@ -20,7 +20,7 @@
     border-radius: 10px;
 }
 
-.containerBtns{
+.containerBtns {
     margin-left: 200px;
     margin-right: 200px;
     width: 1000px;
@@ -38,19 +38,19 @@
     border-radius: 0px 0px 10px 10px;
 }
 
-#index{
+#index {
     height: 200px;
 }
 
-#sobre{
+#sobre {
     height: 500px;
 }
 
-#tutorial{
+#tutorial {
     height: 450px;
 }
 
-.middleNav{
+.middleNav {
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     height: 750px;

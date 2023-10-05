@@ -1,5 +1,5 @@
 /*Aquivo de estilização da parte do rodapé*/
-.botomNav{
+.botomNav {
     background-color: #6A8899;
     color: black;
     display: flex;
@@ -7,12 +7,12 @@
     align-items: flex-end;
 }
 
-.botomNav img{
+.botomNav img {
     margin: 20px;
     max-height: 60px;
     bottom: 100%;
 }
 
-#footerIndex{
+#footerIndex {
     margin-top: 200px;
 }
