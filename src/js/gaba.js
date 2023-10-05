@@ -12,14 +12,14 @@ export const gaba = [
             {
                 id: 'A',
                 texto: 'o fator ambiental e o fator demográfico afetam a mobilidade social observada, sendo ela menor nos países que apresentam as maiores taxas de natalidade.'
-            },
+             },
             {
                 id: 'B',
                 texto: 'a baixa organização social dos economicamente menos favorecidos determina a baixa mobilidade social da base para o topo da pirâmide.'
             },
             {
                 id: 'C',
-                texto: 'a mobilidade social é caracterizada por um fator ancestral que se revela ao longo das gerações, sendo um limitador da efi cácia de políti cas públicas de redução das desigualdades sociais.'
+                texto: 'a mobilidade social é caracterizada por um fator ancestral que se revela ao longo das gerações, sendo um limitador da eficácia de políticas públicas de redução das desigualdades sociais.'
             },
             {
                 id: 'D',
@@ -27,7 +27,7 @@ export const gaba = [
             },
             {
                 id: 'E',
-                texto: 'a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, o que ocasiona confl itos sociais em busca do acesso a tais fatores.'
+                texto: 'a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, o que ocasiona conflitos sociais em busca do acesso a tais fatores.'
             },
         ],
         opcaoCorreta: 'E',
