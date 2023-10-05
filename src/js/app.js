@@ -5,13 +5,13 @@ let indiceAtual = 0; //Declaração da variavel ultilizada para passar valor do 
 //const pageElement = document.querySelector("#navigationQuestion");
 
 const content = document.querySelector('#bloco'); //Constante ultilizada para indenticicar setor em que a função atua
-const popUp = document.querySelector('#popUp');
-const bgPop = document.querySelector('#bgPop');
-const showPopUp = document.querySelector('#showPopUp');
-let qtd_Acertos = 2;
-let qtd_Erros = 1;
+const popUp = document.querySelector('#popUp'); //Constante ultilizada para indentificar setor de popUp
+const bgPop = document.querySelector('#bgPop'); //Constante ultilizada para indentificar o setor bgPop
+const showPopUp = document.querySelector('#showPopUp'); //Constante ultilizada para indentificar o setor showPopUp
+let qtd_Acertos = 2; //Váriavel usada temporariamente para contabilizar acertos
+let qtd_Erros = 1; //Váriavel usada temporariamente para contabilizar erros
 
-
+//Função geradora da navegação em botões
 export function montarIndexQuest() {
     var pageElementAdd = "";
     for (var i = 0; i < gaba.length; i++) {
@@ -21,11 +21,12 @@ export function montarIndexQuest() {
     pageElementAdd.innerHTML = pageElementAdd;
 }
 
-//incluido export para chamar na outra classe (Metodo gambiarrento).
 //Função innerHTML para mudaça de corpo do HTML com indentificação por indicie
 export function mostrarQuest(indice) {
+    //constante usada para puxar informações do arquivo gaba.js
     const questao = gaba[indice];
 
+    //troca do conteudo HTML ultilizando innerHTML
     content.innerHTML = `
     <link rel="stylesheet" href="../css/body.css">
     <img src="../img/logo_png.svg">
@@ -73,20 +74,23 @@ export function mostrarQuest(indice) {
         </article>
     `;
 
-
+    //Atruibuição de função para o botão Finalizar passado no innerHTML
     document.querySelector('#finalizarQuest').addEventListener('click', () => {
         window.alert('Simulado finalizado.');
         location.assign('finalizar.html');
     })
 
+    //Atrubuição de função para o botão próximo passado no innerHTML
     document.querySelector('#proxQuest').addEventListener('click', () => {
         altQuest(true);
     });
 
+    //Atrubuição de função para o botão voltar passado no innerHTML
     document.querySelector('#voltQuest').addEventListener('click', () => {
         altQuest(false);
     });
 
+    //Atrubuição de função para o botão verificar passado no innerHTML
     document.querySelector('#form').addEventListener('submit', e => {
         e.preventDefault();
         const selecionada = document.querySelector(`input[name="${questao.id}"]:checked`);
@@ -107,7 +111,7 @@ function altQuest(direcao) {
     if (direcao) {
         indiceAtual++;
         if (indiceAtual > gaba.length - 1) {
-            window.alert('Simulado finalizado.');
+            window.alert('Simulado finalizado.');//caso o usuário chege ao final do simulado automáticamente passado para a tela de finalizar
             location.assign('finalizar.html');
         }
     } else {
@@ -116,9 +120,10 @@ function altQuest(direcao) {
             indiceAtual = indiceAtual;
         }
     }
-    mostrarQuest(indiceAtual);
+    mostrarQuest(indiceAtual);//executar função de troca de innerHTML com o novo indice
 }
 
+//função criada para mostrar quantidades de acertos e erros do usuario
 export function mostrarResultados() {
      let porcentagemAcertos = (qtd_Acertos*100) / gaba.length;
      let porcentagemErros = (qtd_Erros*100) / gaba.length;
@@ -136,7 +141,7 @@ export function mostrarResultados() {
     `;
 };
 
-//PopUp
+//função de execução do popUp
 function openPopUp(questao, acertou) {
     showPopUp.classList.add('show');
     const resPopUp = questao.opcoes.filter(e => e.id === questao.opcaoCorreta);
@@ -149,6 +154,7 @@ function openPopUp(questao, acertou) {
       </div>
     `;
 
+    //função para desabilitar popUp caso clique fora do mesmo
     bgPop.addEventListener('click', () => {
         showPopUp.classList.remove('show');
         showPopUp.classList.add('hidden');
