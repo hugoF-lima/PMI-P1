@@ -1,13 +1,16 @@
-@import url(./topNav.css);
 /*Importação do CSS da TopNav*/
-@import url(./botomNav.css);
+@import url(./topNav.css);
 /*Importação do CSS do Rodapé*/
-@import url(./container.css);
+@import url(./botomNav.css);
 /*Importação do CSS do container da questão*/
-@import url(./btns.css);
+@import url(./container.css);
 /*Importação do CSS dos botões*/
-@import url(./popUp.css);
+@import url(./btns.css);
 /*Importação do CSS do popUp*/
+@import url(./popUp.css);
+/* Importação do CSS do menu dropdown */
+@import url(./dropdown.css);
+
 
 /*Corpo do html*/
 body {
@@ -17,8 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
+/* Estrutura do painel central  */
 .middleNav {
     justify-content: center;
     align-items: center;

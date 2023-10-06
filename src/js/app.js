@@ -12,19 +12,34 @@ let qtd_Acertos = 2; //Váriavel usada temporariamente para contabilizar acertos
 let qtd_Erros = 1; //Váriavel usada temporariamente para contabilizar erros
 
 //Função geradora da navegação em botões
-export function montarIndexQuest() {
+/* export function montarIndexQuest() {
     var pageElementAdd = "";
     for (var i = 0; i < gaba.length; i++) {
         pageElementAdd += "<button class='navButton' onclick='mostrarQuest(" + (i + 1) + ")'>" + (i + 1) + "</button>";
     }
 
     pageElementAdd.innerHTML = pageElementAdd;
+} */
+
+function saveSelectedOption(questaoId, selectedOptionId) {
+    const selectedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
+    selectedOptions[questaoId] = selectedOptionId;
+    localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
 }
 
 //Função innerHTML para mudaça de corpo do HTML com indentificação por indicie
 export function mostrarQuest(indice) {
     //constante usada para puxar informações do arquivo gaba.js
     const questao = gaba[indice];
+
+    const selectedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
+    const savedOptionId = selectedOptions[questao.id];
+
+    /* Contagem do numero de questões para geração do conjunto de botões */
+    var pageElementAdd = "";
+    for (var i = 0; i < gaba.length; i++) {
+        pageElementAdd += `<button type='button' class='navButton' onclick='mostrarQuest(${i + 1})'>${i + 1}</button>`;
+    }
 
     //troca do conteudo HTML ultilizando innerHTML
     content.innerHTML = `
@@ -64,19 +79,36 @@ export function mostrarQuest(indice) {
                         <button type="button" id="proxQuest">Próxima</button>
                         <button type="button" id="finalizarQuest">Finalizar</button>
                     </div>
-                    <!-- <div id="navigationQuestion" class="questioNavegation"></div> -->
+                    <div id="navigationQuestion" class="questioNavegation">${pageElementAdd}</div>
                 </div>
 
             </form>
 
-            <p>Fonte:<a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Prova PDF</a></p>
+            <p>Fonte:<a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Arquivo PDF da Prova</a></p>
             
         </article>
     `;
 
+    questao.opcoes.forEach(opcao => {
+        const radioInput = document.getElementById(`${questao.id}_${opcao.id}`);
+
+        // Add an event listener to capture the selected option
+        radioInput.addEventListener('change', function () {
+            if (this.checked) {
+                saveSelectedOption(questao.id, opcao.id);
+            }
+        });
+
+        // Pre-select the saved option, if it exists
+        if (savedOptionId === opcao.id) {
+            radioInput.checked = true;
+        }
+    });
+
     //Atruibuição de função para o botão Finalizar passado no innerHTML
     document.querySelector('#finalizarQuest').addEventListener('click', () => {
         window.alert('Simulado finalizado.');
+        localStorage.removeItem('selectedOptions');
         location.assign('finalizar.html');
     })
 
@@ -98,6 +130,8 @@ export function mostrarQuest(indice) {
             openPopUp(questao, selecionada.value == questao.opcaoCorreta);
         };
     });
+
+    console.log(selectedOptions);
 };
 
 //Execução da função anterior
@@ -125,9 +159,9 @@ function altQuest(direcao) {
 
 //função criada para mostrar quantidades de acertos e erros do usuario
 export function mostrarResultados() {
-     let porcentagemAcertos = (qtd_Acertos*100) / gaba.length;
-     let porcentagemErros = (qtd_Erros*100) / gaba.length;
-     
+    let porcentagemAcertos = (qtd_Acertos * 100) / gaba.length;
+    let porcentagemErros = (qtd_Erros * 100) / gaba.length;
+    
     content.innerHTML = `
     <img src="../img/logo_png.svg">
 
@@ -145,7 +179,6 @@ export function mostrarResultados() {
 function openPopUp(questao, acertou) {
     showPopUp.classList.add('show');
     const resPopUp = questao.opcoes.filter(e => e.id === questao.opcaoCorreta);
-
     popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
       <div class="popUpContainer">
