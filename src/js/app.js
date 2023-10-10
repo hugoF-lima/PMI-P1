@@ -111,7 +111,9 @@ export function mostrarQuest(indice) {
             opcao.disabled = true;
         });
 
-        if(selecionada.value){
+        if(selecionada.value){ 
+            console.log("value ", selecionada.value);
+            console.log("selecionada ", selecionada);
             armazenarQuest(
                 questao.id,
                 selecionada.value == questao.opcaoCorreta,
@@ -155,8 +157,13 @@ function altQuest(direcao) {
 
 //função de execução do popUp
 function openPopUp(questao, acertou) {
+    console.log("questao: ",questao);
+    console.log("opcoes: ",questao.opcoes);
+    console.log("acerto: ",acertou);
     showPopUp.classList.add('show');
     const resPopUp = questao.opcoes.filter(e => e.id == questao.opcaoCorreta);
+    console.log('resPop: ', resPopUp);
+
     popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
       <div class="popUpContainer">
