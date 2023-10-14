@@ -1,0 +1,23 @@
+.content_container{
+    columns: 10em 2;
+    column-gap: 1.5em;
+    margin: 10%  25%;
+}
+
+.collum1 h3{
+    display: block;
+    padding-bottom: 1em;
+}
+
+.collum1 button{
+    margin: 10% 20%;
+    background-color: #6A8899;
+    border-radius: .75em;
+    padding: .5em 0px;
+}
+
+.collum1 button a{
+    padding: 1em;
+    text-decoration: none;
+    color: whitesmoke;
+}

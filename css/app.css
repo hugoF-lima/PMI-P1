@@ -1,0 +1,26 @@
+@import url(./topNav.css);
+@import url(./botomNav.css);
+@import url(./content.css);
+@import url(./creditos.css);
+@import url(./tutorial.css);
+@import url(./sobre.css);
+@import url(./popUp.css);
+@import url(./simulado.css);
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+}

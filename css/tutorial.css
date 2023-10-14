@@ -1,0 +1,26 @@
+.containerTutorial{
+    margin: 5% 30%;
+    border: 2px solid lightgray;
+}
+
+.containerTutorial button{
+    margin: 5% 20% 5% 35%;
+    padding: .5em 1em;
+    background-color: #6A8899;
+    border-radius: 1em;
+}
+
+.containerTutorial button a{
+    padding: 0px 15px 0px 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: medium;
+}
+
+.containerTutorial h3{
+    text-align: center;
+}
+
+.containerTutorial h3,p{
+    margin: .5em 1em .5em 1em;
+}
