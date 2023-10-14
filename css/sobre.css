@@ -1,0 +1,29 @@
+.containerSobre{
+    margin: 5% 30%;
+    padding: 10px 5px;
+    border: .5px solid lightgray;
+}
+
+.containerSobre h3{
+    text-align: center;
+}
+
+.containerSobre p{
+    margin-bottom: 10px;
+}
+
+.containerSobre img{
+    margin-left: 2.5em;
+}
+
+.containerSobre button{
+    margin-left: 4em;
+    padding: .5em 1em;
+    border-radius: .5em;
+    background-color: #6A8899;
+}
+
+.containerSobre button a{
+    text-decoration: none;
+    color: whitesmoke;
+}

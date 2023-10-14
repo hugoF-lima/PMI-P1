@@ -1,0 +1,21 @@
+.botomNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A8899;
+    padding: 1.5em;
+}
+
+.botomNav a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.botomNav a img{
+    max-width: 5em;
+    max-height: 3em;
+}
