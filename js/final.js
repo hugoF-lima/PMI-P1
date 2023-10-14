@@ -10,9 +10,6 @@ if(!simulado){
     window.location.href = 'index.html';
 }
 
-console.log('Simulado: ',simulado);
-console.log('Simulado[info]: ', simulado['02']);
-
 for (let info in simulado){
     console.log(simulado[info]);
     if(simulado[info][0] == true){
@@ -53,46 +50,14 @@ const cardContent = [
 
 function mostrarRes(){
     final.innerHTML = `
-        <div class="finalizado">
-            <div class="finalizado__header">
-                <h3>Simulado finalizado</h3>
-                <p>Confira suas estatísticas: </p>
-            </div>
-            <div class="finalizado__conteudo">
-                ${cardContent
-                  .map(info => {
-                    return `
-                    <div class="finalizado__conteudo__card">
-                        <div class="finalizado__conteudo__card__header">
-                            <span class="finalizado__conteudo__card__header__icon ${
-                              info.name
-                            }">
-                                <i class="${info.icon}"></i>
-                            </span>
-                        </div>
-                        <div class="finalizado__conteudo__card__body">
-                            <div class="finalizado__conteudo__card__body__info">
-                                <p 
-                                class="finalizado__conteudo__card__body__info__texto">
-                                ${info.titulo}</p>
-                                <p 
-                                class="finalizado__conteudo__card__body__info__qnt">
-                                ${info.quantidade}${
-                      info.titulo === 'Total respondido'
-                        ? `/${maxRes}`
-                        : ''
-                    } Questões 
-                                </p>
-                            </div>
-                            <div class="finalizado__conteudo__card__body__porcent">
-                                <p>${info.porcentagem.toFixed(2)}%</p>
-                            </div>
-                        </div>
-                        <div class="finalizado__conteudo__card__footer"></div>
-                    </div>`;
-                  })
-                  .join('')}
-            </div>
+        <div class="final">
+            ${cardContent.map(info =>{
+                return`
+                <h3 class="infoTitulo">${info.titulo}</h3>
+                <p class="infoQuant">${info.quantidade} de ${maxRes}</p>
+                <p class="infoPor">${info.porcentagem.toFixed(2)}%</p>
+                `
+            }).join('')}
         </div>
     `;
 }
