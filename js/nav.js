@@ -1,6 +1,7 @@
-const navBar = document.querySelector('#topNav');
-const botomBar = document.querySelector('#botomNav');
+const navBar = document.querySelector('#topNav'); //constante para seleção da area com ID topNav
+const botomBar = document.querySelector('#botomNav'); //constante para seleção de area com ID botomNav
 
+//atribuição de conteudo da topNav por innerHTML
 navBar.innerHTML = `
 <header>
 <ul class="topNav_container">
@@ -20,14 +21,7 @@ navBar.innerHTML = `
 </header>
 `;
 
-/* <li class="dropdown"><a>Acessibilidade</a>
-        <div class="dropdownContent">
-            <a>Modo noturno</a>
-            <a>Auto contraste</a>
-            <a>Modo escuro</a>
-        </div>
-    </li> */
-
+//atribuição de conteudo da bottomNav por innerHTML
 botomBar.innerHTML = `
 <footer class="botomNav">
     <a href="https://www.fateccarapicuiba.edu.br/" target="_blank"><img src="https://doity.com.br/media/doity/eventos/evento-60765-logo_organizador.png" alt="Logo_FATEC"></a>
