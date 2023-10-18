@@ -1,10 +1,19 @@
 .containerTutorial{
-    margin: 5% 30%;
-    border: 2px solid lightgray;
+    height: 550px;
+    max-width: 850px;
+    margin: 5% auto;
+    padding: 10px 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center; 
+    background-color: #CAE3FB;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
 }
 
 .containerTutorial button{
-    margin: 5% 20% 5% 35%;
+    margin: 1em auto;
     padding: .5em 1em;
     background-color: #2461C8;
     border-radius: 1em;

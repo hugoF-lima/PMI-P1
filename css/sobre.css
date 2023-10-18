@@ -1,7 +1,12 @@
 .containerSobre{
-    margin: 5% 30%;
+    height: 550px;
+    max-width: 850px;
+    margin: 5% auto;
     padding: 10px 5px;
-    border: .5px solid lightgray;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center; 
+    background-color: #CAE3FB;
 }
 
 .containerSobre h3{
@@ -14,6 +19,8 @@
 
 .containerSobre img{
     margin-left: 2.5em;
+    display: block; 
+    margin: 0 auto;
 }
 
 .containerSobre button{
@@ -21,6 +28,9 @@
     padding: .5em 1em;
     border-radius: .5em;
     background-color: #2461C8;
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 1em;
 }
 
 .containerSobre button a{
