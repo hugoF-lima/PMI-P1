@@ -6,6 +6,7 @@ navBar.innerHTML = `
 <header>
 <ul class="topNav_container">
     <li id="dif"><a href="./index.html"><img src="../img/newSimucadLogoCrop.jpeg" alt="LOGO"></a></li>
+    <li><a href="./index.html">Inicio</a></li>
     <li><a href="./tutorial.html">Tutorial</a></li>
     <li><a href="./sobre.html">Sobre</a></li>
     <li><a href="./credito.html">Créditos</a></li>

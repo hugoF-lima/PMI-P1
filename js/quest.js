@@ -25,7 +25,7 @@ export function showQuest(indice){
                 return `
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"
                 required ${verifiPass[quest.id] ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}
-                ${verifiPass[quest.id] ? verifiPass[quest.id][1] === opcao.id ? 'checked' : '' : ''}/>
+                ${verifiPass[quest.id] ? verifiPass[quest.id][1] === opcao.id ? '' : '' : 'checked'}/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `; 
             }).join('')}
