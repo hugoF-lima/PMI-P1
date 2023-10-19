@@ -6,11 +6,15 @@
 @import url(./sobre.css);
 @import url(./popUp.css);
 @import url(./simulado.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap');
+
 
 *{
     margin: 0;
     box-sizing: border-box;
     font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 footer{
