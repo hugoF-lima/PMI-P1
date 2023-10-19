@@ -1,11 +1,12 @@
 .content_container{
     columns: 10em 2;
     column-gap: 1.5em;
-    margin: 10%  25%;
+    margin: 5%  25%;
     padding: 10px 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     background-color: #CAE3FB;
+    padding: 30px 20px 20px 20px;
 }
 
 .content_container img{
