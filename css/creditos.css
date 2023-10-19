@@ -4,7 +4,9 @@
 
 .creditosContent{
     margin: 5% 30%;
-    border: 2px solid lightgrey;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #CAE3FB;
 }
 
 .creditosContent h3{
