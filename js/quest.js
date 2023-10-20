@@ -24,21 +24,21 @@ export function showQuest(indice){
             ${quest.opcoes.map(opcao => {
                 return `
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"
-                required ${verifiPass[quest.id] ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}
-                ${verifiPass[quest.id] ? verifiPass[quest.id][1] === opcao.id ? '' : '' : 'checked'}/>
+                required ${verifiPass[quest.id] ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `; 
             }).join('')}
 
                 <div class="btns">
                     <button type="button" id="volt">Voltar</button>
-                    <button type="submit" id="verif">Verificar</button>
+                    <button type="submit" id="verif">corrigir</button>
+                    <button type="button" id="estatic">Estastisticas</button>
                     <button type="button" id="prox">Proxima</button>
                     <button type="button" id="final">Finalizar</button>
                 </div>
             </form>
 
-            <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">Prova PDF</a></p>
+            <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
         </article>
     `;
 

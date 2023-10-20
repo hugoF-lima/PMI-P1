@@ -19,13 +19,11 @@
     text-align: center;
 }
 
-.creditosImg{
-    margin: 5% 20%;
+.creditosImg img{
+    margin-left: 10rem;
 }
 
 .creditosImg a{
-    text-decoration: none;
-    color: black;
     margin-right: 20px;
     columns: 10em 2;
     column-gap: 2em;
