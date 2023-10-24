@@ -21,11 +21,19 @@ let qtd_Erros = 1; //Váriavel usada temporariamente para contabilizar erros
     pageElementAdd.innerHTML = pageElementAdd;
 } */
 
+function saveSelectedOption(questaoId, selectedOptionId) {
+    const selectedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
+    selectedOptions[questaoId] = selectedOptionId;
+    localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
+}
+
 //Função innerHTML para mudaça de corpo do HTML com indentificação por indicie
 export function mostrarQuest(indice) {
     //constante usada para puxar informações do arquivo gaba.js
     const questao = gaba[indice];
-    const verifiPassado = JSON.parse(localStorage.getItem('Simulado')) ||  {};
+
+    const selectedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
+    const savedOptionId = selectedOptions[questao.id];
 
     /* Contagem do numero de questões para geração do conjunto de botões */
     var pageElementAdd = "";
@@ -81,9 +89,27 @@ export function mostrarQuest(indice) {
         </article>
     `;
 
+    questao.opcoes.forEach(opcao => {
+        const radioInput = document.getElementById(`${questao.id}_${opcao.id}`);
+        console.log("Radio input here" + questao.opcoes)
+        // Add an event listener to capture the selected option
+        radioInput.addEventListener('change', function () {
+            if (this.checked) {
+                saveSelectedOption(questao.id, opcao.id);
+                console.log("Aiai" + questao.id);
+            }
+        });
+
+        // Pre-select the saved option, if it exists
+        if (savedOptionId === opcao.id) {
+            radioInput.checked = true;
+        }
+    });
+
     //Atruibuição de função para o botão Finalizar passado no innerHTML
     document.querySelector('#finalizarQuest').addEventListener('click', () => {
         window.alert('Simulado finalizado.');
+        localStorage.removeItem('selectedOptions');
         location.assign('finalizar.html');
     })
 
@@ -104,38 +130,15 @@ export function mostrarQuest(indice) {
         if (selecionada.value) {
             openPopUp(questao, selecionada.value == questao.opcaoCorreta);
         };
-
-        const opcoesHTML = document.querySelectorAll('input[type="radio"]');
-
-        opcoesHTML.forEach(opcao => {
-            opcao.disabled = true;
-        });
-
-        if(selecionada.value){ 
-            console.log("value ", selecionada.value);
-            console.log("selecionada ", selecionada);
-            armazenarQuest(
-                questao.id,
-                selecionada.value == questao.opcaoCorreta,
-                selecionada.value,
-            );
-            openPopUp(questao, selecionada.value == questao.opcaoCorreta);
-        }
     });
+
+    console.log(selectedOptions);
 };
 
 //Execução da função anterior
 //Função agora é chamada via import pela script tag.
 //Assim não conflita com a pg de mostrarResultado.
 /* mostrarQuest(0); */
-
-function armazenarQuest(questPosicao, acertou, opcaoSelecionada){
-    const paraObjt = JSON.parse(localStorage.getItem('Simulado')) || {};
-    paraObjt[questPosicao] = [acertou, opcaoSelecionada];
-    const paraJson = JSON.stringify(paraObjt);
-    localStorage.setItem('Simulado', paraJson);
-    console.log(paraJson);
-}
 
 //Função de navegação pelo indicie
 function altQuest(direcao) {
@@ -155,15 +158,28 @@ function altQuest(direcao) {
     mostrarQuest(indiceAtual);//executar função de troca de innerHTML com o novo indice
 }
 
+//função criada para mostrar quantidades de acertos e erros do usuario
+export function mostrarResultados() {
+    let porcentagemAcertos = (qtd_Acertos * 100) / gaba.length;
+    let porcentagemErros = (qtd_Erros * 100) / gaba.length;
+
+    content.innerHTML = `
+    <img src="../img/logo_png.svg">
+
+        <article class="container">
+        <h3>Simulado Finalizado!</h3>
+        <h2 id="qtdAcerto">Quantidade de Acertos: ${qtd_Acertos} / ${gaba.length} (${Math.round(porcentagemAcertos)}%)</h2>
+        <h2 id="qtdErros">Quantidade de Erros: ${qtd_Erros} / ${gaba.length} (${Math.round(porcentagemErros)}%)</h2>
+        <h2 id="qtdRespond">Questões Respondidas: ${qtd_Acertos}/ ${gaba.length} (${Math.round(porcentagemAcertos)}%)</h2>
+        <button id="iniciarSimulado"><a href="./simulado.html">Refazer Simulado!</button>   
+        </article>
+    `;
+};
+
 //função de execução do popUp
 function openPopUp(questao, acertou) {
-    console.log("questao: ",questao);
-    console.log("opcoes: ",questao.opcoes);
-    console.log("acerto: ",acertou);
     showPopUp.classList.add('show');
-    const resPopUp = questao.opcoes.filter(e => e.id == questao.opcaoCorreta);
-    console.log('resPop: ', resPopUp);
-
+    const resPopUp = questao.opcoes.filter(e => e.id === questao.opcaoCorreta);
     popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
       <div class="popUpContainer">
@@ -176,5 +192,6 @@ function openPopUp(questao, acertou) {
     bgPop.addEventListener('click', () => {
         showPopUp.classList.remove('show');
         showPopUp.classList.add('hidden');
+        console.log(showPopUp.classList);
     });
 };

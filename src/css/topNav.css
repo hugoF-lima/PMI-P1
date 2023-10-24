@@ -40,12 +40,11 @@
     width: 0%;
     background-color: black;
     bottom: -50%;
-    left: 80px;
     transition: all ease-in-out 250ms;
 }
 
 .topNav li a:hover::after {
-    width: 50%;
+    width: 100%;
 }
 
 .topNav li a:hover {
