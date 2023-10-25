@@ -92,5 +92,6 @@
 }
 
 #dif {
-    margin-right: 35rem;
+    position: absolute;
+    left: 0px;
 }

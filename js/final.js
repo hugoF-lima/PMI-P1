@@ -6,12 +6,6 @@ let total = 0; //variavel para contabilidade de total respondido
 const maxRes = 35; //constante para máximo possivel de respostas
 const anuladas = 2; //constante para questões anuladas
 
-//verifica se o localStorage está vazio
-if(!simulado){
-    //caso o localStorage esteja vazio o usuário volta a tela inicial
-    window.location.href = 'index.html';
-}
-
 //contabilização de acertos e erros
 for (let info in simulado){
     //se simulado info é verdadeiro ele soma mais para acertos e para o total

@@ -13,34 +13,47 @@ export function showQuest(indice){
     
     //novo conteudo da página atrávez de innerHTML
     change.innerHTML = `
-    <a href="https://enade.inep.gov.br/enade/#!/index" target="_blank" class="enadeQuest"><img src="../img/logo_png.svg" alt="Logo enade"></a>
-        <article class="questContainer">
+    <article class="questContainer">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1>
             <h3>Questão ${quest.id} / ${gaba.length}</h3>
             <img src="${quest.img}" alt="Imagem da Questão">
             <p><b>${quest.enunciado}</b></p>
 
-            <form class="alterContainer" id="form" action="#">
+            
+            <div class="alterContainer">
             ${quest.opcoes.map(opcao => {
                 return `
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"
-                required ${verifiPass[quest.id] ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}/>
+                required ${verifiPass[quest.id]  ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `; 
             }).join('')}
-
-                <div class="btns">
-                    <button type="button" id="volt">Voltar</button>
-                    <button type="submit" id="verif">corrigir</button>
-                    <button type="button" id="estatic">Estastisticas</button>
-                    <button type="button" id="prox">Proxima</button>
-                    <button type="button" id="final">Finalizar</button>
-                </div>
-            </form>
-
-            <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
-        </article>
+            </div>
+    <form id="form" action="#">
+        <div class="btns">
+            <button type="button" id="volt">Voltar</button>
+            <button type="submit" id="verif">corrigir</button>
+            <button type="button" id="estatic">Estastisticas</button>
+            <button type="button" id="prox">Proxima</button>
+            <button type="button" id="final">Finalizar</button>
+        </div>
+    </form>
+    <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
+    </article>
     `;
+
+    quest.opcoes.forEach(opcao =>{
+        const input = document.getElementById(`${quest.id}_${opcao.id}`);
+        input.addEventListener('change', ()=>{
+            if(input.checked){
+                armazQuest(
+                    quest.id,
+                    input.value == quest.opcaoCorreta,
+                    input.value
+                )
+            }
+        })
+    })
 
     //atribuição de ação ao botão "Verificar" para envio do formulário
     document.querySelector('#form').addEventListener('submit', e =>{
@@ -82,8 +95,11 @@ export function showQuest(indice){
 
     //atribuição de ação para o botão "finalizar"
     document.querySelector('#final').addEventListener('click', ()=>{
-        window.alert('Prova finalizada!'); //exibe popUp genérico para confirmação de encerramento do simulado
-        location.assign('final.html'); //realoca o usuário para a página final.html
+        if(window.confirm('Deseja finalizar a prova?')){
+            location.assign('final.html')
+        } else {
+            return false;
+        }
     });
 };
 
@@ -96,12 +112,15 @@ function altQuest(direcao){
         indiceAtual++;
         //se valor de indiceAtual ultrapassar extenssão do gaba.js finaliza a prova automáticamente
         if(indiceAtual>gaba.length -1){
-            window.alert('Prova finalizada!');
-            location.assign('final.html');
+            if(confirm('Deseja finalizar a prova?')){
+                location.assign('final.html');
+            } else {
+                return false;
+            }
         }
         //se valor = false retira 1 da variavel indiceAtual
     } else {
-        indiceAtual-=1;
+        indiceAtual--;
         //se indiceAtual for menor q 0 permanece com valor 0 no indice
         if(indiceAtual<gaba.length){
             indiceAtual = indiceAtual;
@@ -109,6 +128,7 @@ function altQuest(direcao){
     }
     //executa a função showQuest com novo indiceAtual
     showQuest(indiceAtual);
+    scrollTo(top);
 }
 
 //função para criação e armazenamento das respostas no localStorage
@@ -117,6 +137,7 @@ function armazQuest(questPosi, acertou, opcaoSelect){
     paraObjt[questPosi] = [acertou, opcaoSelect]; //formatação do objeto
     const paraJson = JSON.stringify(paraObjt);  //contante para troca de objeto para JSON
     localStorage.setItem('Simulado', paraJson); //passar objeto para JSON para atribuição de valores
+    console.log(localStorage);
 };
 
 //função para criação de popUp e seus valores
@@ -139,3 +160,16 @@ function openPop(questao, acertou){
         showPopUp.classList.add('hidden');
     });
 };
+
+for(let i=1; i<gaba.length+1; i++){
+    const li = document.createElement("li");
+    li.id = i;
+    const navBar = document.querySelector('#navBar')
+    li.textContent = i
+    navBar.appendChild(li)
+    li.addEventListener('click', ()=>{
+        showQuest(i-1);
+        indiceAtual = i-1;
+        scrollTo(top);
+    })
+}
