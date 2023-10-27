@@ -23,8 +23,7 @@ export function showQuest(indice){
             <div class="alterContainer">
             ${quest.opcoes.map(opcao => {
                 return `
-                <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"
-                required ${verifiPass[quest.id]  ? 'disabled' : '' /*verifica se a já ouve uma resposta atrávez do localStorage */}/>
+                <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `; 
             }).join('')}
@@ -39,6 +38,7 @@ export function showQuest(indice){
         </div>
     </form>
     <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
+    <ul id="navBar" class="navBar"></ul>
     </article>
     `;
 
@@ -53,6 +53,12 @@ export function showQuest(indice){
                 )
             }
         })
+        if(verifiPass[quest.id]){
+            input.disabled = true;
+            if(verifiPass[quest.id][1] == opcao.id){
+                input.checked = true;
+            }
+        }
     })
 
     //atribuição de ação ao botão "Verificar" para envio do formulário
@@ -101,6 +107,19 @@ export function showQuest(indice){
             return false;
         }
     });
+
+    for(let i=1; i<gaba.length+1; i++){
+        const li = document.createElement("li");
+        li.id = i;
+        const navBar = document.querySelector('#navBar')
+        li.textContent = i
+        navBar.appendChild(li)
+        li.addEventListener('click', ()=>{
+            showQuest(i-1);
+            indiceAtual = i-1;
+            scrollTo(top);
+        })
+    }
 };
 
 showQuest(0); //execução da função showQuest no indice 0
@@ -160,16 +179,3 @@ function openPop(questao, acertou){
         showPopUp.classList.add('hidden');
     });
 };
-
-for(let i=1; i<gaba.length+1; i++){
-    const li = document.createElement("li");
-    li.id = i;
-    const navBar = document.querySelector('#navBar')
-    li.textContent = i
-    navBar.appendChild(li)
-    li.addEventListener('click', ()=>{
-        showQuest(i-1);
-        indiceAtual = i-1;
-        scrollTo(top);
-    })
-}
