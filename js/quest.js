@@ -1,17 +1,17 @@
 import {gaba} from "./gaba.js"; //importação do array gaba.js
 
-let indiceAtual = 0; //variavel para definição de indice da página
-const change = document.querySelector('#change'); //constante para alteração de innerHTML atrávez de ID
-const bgPop = document.querySelector('#bgPop'); //constante para aparição do PopUp background atrávez de ID
-const popUp = document.querySelector('#popUp'); //constante para aparição do PopUp atrávez de ID
-const showPopUp = document.querySelector('#showPopUp'); //constante para containser do PopUp
+let indiceAtual = 0; //variável para definição de índice da página
+const change = document.querySelector('#change'); //constante para alteração de innerHTML através de ID
+const bgPop = document.querySelector('#bgPop'); //constante para aparição do PopUp background através de ID
+const popUp = document.querySelector('#popUp'); //constante para aparição do PopUp através de ID
+const showPopUp = document.querySelector('#showPopUp'); //constante para container do pop-up
 
 //função para troca de conteudo da página direcionado pelo indiceAtual atrávez de innerHTML
 export function showQuest(indice){
     const quest = gaba[indice]; //constante para chamar array gana.js
-    const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta ja foi respondida
+    const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta já foi respondida
     
-    //novo conteudo da página atrávez de innerHTML
+    //novo conteudo da página através de innerHTML
     change.innerHTML = `
     <article class="questContainer">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1>
@@ -137,10 +137,10 @@ function altQuest(direcao){
                 return false;
             }
         }
-        //se valor = false retira 1 da variavel indiceAtual
+        //se valor = false retira 1 da variável indiceAtual
     } else {
         indiceAtual--;
-        //se indiceAtual for menor q 0 permanece com valor 0 no indice
+        //se indiceAtual for menor q 0 permanece com valor 0 no índice
         if(indiceAtual<gaba.length){
             indiceAtual = indiceAtual;
         }
@@ -164,7 +164,7 @@ function openPop(questao, acertou){
     showPopUp.classList.add('show'); //adiciona a classe "show" para o CSS
     const resPopUp = questao.opcoes.filter(e => e.id == questao.opcaoCorreta); //constante para filtro de acerto ou erro da resposta
 
-    //atribuição de conteudo no popUp atrávez de innerHTML
+    //atribuição de conteudo no popUp através de innerHTML
     popUp.innerHTML= `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
       <div class="popUpContainer">

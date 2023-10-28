@@ -33,3 +33,34 @@
     max-width: 40%;
     max-height: 50px;
 }
+
+.integrantes {
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.integrantes {
+    text-align: center;
+}
+
+.integrantes h4 {
+    margin-bottom: 10px;
+}
+
+.lista-esquerda,
+.lista-direita {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.lista-esquerda li,
+.lista-direita li {
+    flex: 0 0 calc(33.33% - 10px);
+    text-align: center;
+    margin: 5px;
+}
