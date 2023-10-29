@@ -61,6 +61,10 @@ export function showQuest(indice){
         }
     })
 
+    if(indiceAtual == 3 && indiceAtual == 33){
+        input.disabled = true;
+    }
+
     //atribuição de ação ao botão "Verificar" para envio do formulário
     document.querySelector('#form').addEventListener('submit', e =>{
         e.preventDefault(); //função para prevenir a ação padrão do formulário
