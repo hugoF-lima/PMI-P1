@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2461C8;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     padding: 1.5em;
 }
 
@@ -16,6 +17,6 @@
 }
 
 .botomNav a img{
-    max-width: 5em;
-    max-height: 3em;
+    max-width: 8em;
+    max-height: 8em;
 }

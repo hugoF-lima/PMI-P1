@@ -18,6 +18,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-image: url('../img/fundo.jpg');
+    background-size: cover; 
+    background-attachment: fixed; 
+}
+
 footer{
     position: relative;
     bottom: 0;

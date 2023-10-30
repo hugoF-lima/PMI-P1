@@ -1,32 +1,99 @@
 .content_container{
-    columns: 10em 2;
-    column-gap: 1.5em;
-    margin: 5%  25%;
-    padding: 10px 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto; 
+    width: 100%;
+    margin: 0 auto; 
+    margin-top: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    background-color: #CAE3FB;
-    padding: 30px 20px 20px 20px;
+    padding: 20px; 
 }
 
-.content_container img{
-    height: 350px;
-    width: 350px;
+.collum1 {
+    width: 600px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin: 0 auto;
 }
 
-.collum1 h3{
-    display: block;
-    padding-bottom: 1em;
+.collum1 h3 {
+    color: #44C1F2;
+    font-size: 100px;
+    text-align: center; 
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8; 
+    max-width: 800px; 
 }
 
-.collum1 button{
-    margin: 10% 20%;
-    background-color: #2461C8;
-    border-radius: .75em;
+hr {
+    border-radius: 5px;
+    border-style: none;
+    height: 5px; 
+    width: 550px;
+    background: #44C1F2; 
+    margin: 0 auto; 
+    margin-bottom: 10px; 
+}
+
+.collum1 p {
+    color: #44C1F2;
+    text-align: center; 
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8; 
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.collum1 button {
+    margin-top: 20px; 
+}
+
+.collum1 button {
+    height: 80px;
+    width: 300px;
+    background-color: #44C1F2;
+    border-radius: .85em;
+    border-style: none;
     padding: .5em 0px;
+    transition: transform 0.3s; 
 }
 
-.collum1 button a{
+.collum1 button:hover {
+    transform: scale(1.1); 
+}
+
+.collum1 button a {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1em;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#div1{
+    margin-top: 10px;
+}
+
+#div2{
+    margin-top: 150px;
+}
+.collum1 button {
+    height: 80px;
+    width: 300px;
+    background-color: #44C1F2;
+    border-radius: .85em;
+    border-style: none;
+    padding: .5em 0px;
+    transition: transform 0.3s; 
+    margin-top: 20px; 
+}
+
+.collum1 button:hover {
+    transform: scale(1.1); 
+}
+
+.collum1 button a {
+    font-size: 20px;
+    font-weight: bold;
     padding: 1em;
     text-decoration: none;
     color: whitesmoke;
