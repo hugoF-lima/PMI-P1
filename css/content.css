@@ -1,50 +1,50 @@
-.content_container{
+.content_container {
     background-color: rgba(0, 0, 0, 0.2);
-    height: auto; 
+    height: auto;
     width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-top: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px; 
+    padding: 20px;
 }
 
 .collum1 {
     width: 600px;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
 }
 
 .collum1 h3 {
     color: #44C1F2;
     font-size: 100px;
-    text-align: center; 
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8; 
-    max-width: 800px; 
+    text-align: center;
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    max-width: 800px;
 }
 
 hr {
     border-radius: 5px;
     border-style: none;
-    height: 5px; 
+    height: 5px;
     width: 550px;
-    background: #44C1F2; 
-    margin: 0 auto; 
-    margin-bottom: 10px; 
+    background: #44C1F2;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .collum1 p {
     color: #44C1F2;
-    text-align: center; 
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8; 
+    text-align: center;
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
     font-size: 25px;
     font-weight: bold;
 }
 
 .collum1 button {
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .collum1 button {
@@ -54,11 +54,11 @@ hr {
     border-radius: .85em;
     border-style: none;
     padding: .5em 0px;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
 }
 
 .collum1 button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .collum1 button a {
@@ -69,13 +69,14 @@ hr {
     color: whitesmoke;
 }
 
-#div1{
+#div1 {
     margin-top: 10px;
 }
 
-#div2{
+#div2 {
     margin-top: 150px;
 }
+
 .collum1 button {
     height: 80px;
     width: 300px;
@@ -83,12 +84,12 @@ hr {
     border-radius: .85em;
     border-style: none;
     padding: .5em 0px;
-    transition: transform 0.3s; 
-    margin-top: 20px; 
+    transition: transform 0.3s;
+    margin-top: 20px;
 }
 
 .collum1 button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .collum1 button a {

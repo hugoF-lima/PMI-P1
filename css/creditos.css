@@ -1,8 +1,8 @@
-.enadeQuest{
+.enadeQuest {
     margin: 0% 42%;
 }
 
-.creditosContent{
+.creditosContent {
     color: white;
     margin: 0 auto;
     margin-top: 50px;
@@ -12,27 +12,27 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.creditosContent h3{
+.creditosContent h3 {
     text-align: center;
     margin: 5% 2% 2% 0px;
 }
 
-.creditosContent p{
+.creditosContent p {
     margin: 0px 5% 10% 0%;
     text-align: center;
 }
 
-.creditosImg img{
+.creditosImg img {
     margin-left: 10rem;
 }
 
-.creditosImg a{
+.creditosImg a {
     margin-right: 20px;
     columns: 10em 2;
     column-gap: 2em;
 }
 
-.creditosImg a img{
+.creditosImg a img {
     max-width: 40%;
     max-height: 50px;
 }
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 

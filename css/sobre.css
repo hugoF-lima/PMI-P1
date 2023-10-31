@@ -1,4 +1,4 @@
-.containerSobre{
+.containerSobre {
     height: 610px;
     width: 100%;
     margin: 0 auto;
@@ -6,37 +6,37 @@
     padding: 10px 5px;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    text-align: center; 
+    text-align: center;
     color: white;
 }
 
-.containerSobre h3{
+.containerSobre h3 {
     text-align: center;
     font-size: 25px;
 }
 
-.containerSobre p{
+.containerSobre p {
     margin-bottom: 20px;
 
 }
 
-.containerSobre img{
+.containerSobre img {
     margin-left: 2.5em;
-    display: block; 
+    display: block;
     margin: 0 auto;
 }
 
-.containerSobre button{
+.containerSobre button {
     margin-left: 4em;
     padding: .5em 1em;
     border-radius: .5em;
     background-color: #2461C8;
-    display: block; 
-    margin: 0 auto; 
+    display: block;
+    margin: 0 auto;
     margin-top: 1em;
 }
 
-.containerSobre button a{
+.containerSobre button a {
     text-decoration: none;
     color: whitesmoke;
 }

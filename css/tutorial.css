@@ -1,4 +1,4 @@
-.containerTutorial{
+.containerTutorial {
     height: auto;
     width: 100%;
     margin: 5% auto;
@@ -6,32 +6,33 @@
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     color: white;
 }
 
-.containerTutorial button{
+.containerTutorial button {
     margin: 1em auto;
     padding: .5em 1em;
     background-color: #2461C8;
     border-radius: 1em;
 }
 
-.containerTutorial button a{
+.containerTutorial button a {
     padding: 0px 15px 0px 15px;
     text-decoration: none;
     color: whitesmoke;
     font-size: medium;
 }
 
-.containerTutorial h3{
+.containerTutorial h3 {
     text-align: center;
     font-size: 25px;
 }
 
-.containerTutorial h3,p{
+.containerTutorial h3,
+p {
     margin: .5em 1em .5em 1em;
 }

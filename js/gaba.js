@@ -26,7 +26,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E', //id da alternativa correta
-
+        estatisticas: [
+            { porSudeste: '49.2%', porUF: '45.1%', porBrasil: '50.5%', }
+        ],
     },
     {
         id: '02',
@@ -54,7 +56,10 @@ export const gaba = [
                 texto: 'As asserções I e II são proposições falsas.',
             }
         ],
-        opcaoCorreta: 'C'
+        opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '25.5%', porUF: '23.8%', porBrasil: '26.7%' }
+        ],
     },
     {
         id: '03',
@@ -83,6 +88,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '57%', porUF: '54%', porBrasil: '58.3%' }
+        ],
     },
     {
         id: '04',
@@ -111,6 +119,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '37.2%', porUF: '32.1%', porBrasil: '39.4%' }
+        ],
     },
     {
         id: '05',
@@ -139,6 +150,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '45.2%', porUF: '40.5%', porBrasil: '50.4%' }
+        ],
     },
     {
         id: '06',
@@ -167,6 +181,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '63.7%', porUF: '61.6%', porBrasil: '63.3%' }
+        ],
     },
     {
         id: '07',
@@ -195,6 +212,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '65.6%', porUF: '62.5%', porBrasil: '67.6%' }
+        ],
     },
     {
         id: '08',
@@ -223,6 +243,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'D',
+        estatisticas: [
+            { porSudeste: '22.2%', porUF: '21.7%', porBrasil: '22.5%' }
+        ],
     },
     {
         id: '09',
@@ -251,6 +274,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '39.3%', porUF: '38.8%', porBrasil: '40.7%' }
+        ],
     },
     {
         id: '10',
@@ -279,6 +305,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '38.3%', porUF: '34.4%', porBrasil: '40.1%' }
+        ],
     },
     {
         id: '11',
@@ -307,6 +336,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'D',
+        estatisticas: [
+            { porSudeste: '60.6%', porUF: '54.7%', porBrasil: '64.4%' }
+        ],
     },
     {
         id: '12',
@@ -335,6 +367,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '13',
@@ -363,6 +398,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '14',
@@ -391,6 +429,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '23.9%', porUF: '21.8%', porBrasil: '25%' }
+        ],
     },
     {
         id: '15',
@@ -423,6 +464,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '49.7%', porUF: '46.6%', porBrasil: '51%' }
+        ],
     },
     {
         id: '16',
@@ -455,6 +499,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '58.9%', porUF: '53.7%', porBrasil: '62.7%' }
+        ],
     },
     {
         id: '17',
@@ -487,6 +534,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '18',
@@ -519,6 +569,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '40.8%', porUF: '40%', porBrasil: '42.2%' }
+        ],
     },
     {
         id: '19',
@@ -551,6 +604,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'D',
+        estatisticas: [
+            { porSudeste: '37.4%', porUF: '36.9%', porBrasil: '38.1%' }
+        ],
     },
     {
         id: '20',
@@ -583,6 +639,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '30.5%', porUF: '20.8%', porBrasil: '35%' }
+        ],
     },
     {
         id: '21',
@@ -612,6 +671,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '22',
@@ -640,6 +702,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '50.9%', porUF: '47.6%', porBrasil: '53%' }
+        ],
     },
     {
         id: '23',
@@ -670,6 +735,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '45%', porUF: '44.1%', porBrasil: '44.9%' }
+        ],
     },
     {
         id: '24',
@@ -702,6 +770,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '26.5%', porUF: '24.4%', porBrasil: '28.4%' }
+        ],
     },
     {
         id: '25',
@@ -734,6 +805,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '26',
@@ -766,6 +840,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '14.1%', porUF: '13.5%', porBrasil: '15.3%' }
+        ],
     },
     {
         id: '27',
@@ -798,6 +875,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'D',
+        estatisticas: [
+            { porSudeste: '50%', porUF: '44.3%', porBrasil: '51.3%' }
+        ],
     },
     {
         id: '28',
@@ -830,6 +910,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'B',
+        estatisticas: [
+            { porSudeste: '32.4%', porUF: '29.4%', porBrasil: '33.8%' }
+        ],
     },
     {
         id: '29',
@@ -862,6 +945,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: '#',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '30',
@@ -890,6 +976,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '42.2%', porUF: '38.4%', porBrasil: '45.4%' }
+        ],
     },
     {
         id: '31',
@@ -922,6 +1011,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'E',
+        estatisticas: [
+            { porSudeste: '21.4%', porUF: '17.8%', porBrasil: '23.1%' }
+        ],
     },
     {
         id: '32',
@@ -954,6 +1046,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'A',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '33',
@@ -986,6 +1081,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: '#',
+        estatisticas: [
+            { porSudeste: '-%', porUF: '-%', porBrasil: '-%' }
+        ],
     },
     {
         id: '34',
@@ -1018,6 +1116,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'C',
+        estatisticas: [
+            { porSudeste: '23.2%', porUF: '22.1%', porBrasil: '22.8%' }
+        ],
     },
     {
         id: '35',
@@ -1050,6 +1151,9 @@ export const gaba = [
             },
         ],
         opcaoCorreta: 'D',
+        estatisticas: [
+            { porSudeste: '46.7%', porUF: '39.5%', porBrasil: '51.4%' }
+        ],
     },
 
 ];

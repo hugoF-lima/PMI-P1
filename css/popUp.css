@@ -1,76 +1,88 @@
 #showPopUp {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 1;
-  }
-  
-  #bgPop {
-    background-color: black;
-    opacity: 0.6;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 1;
-  }
-  
-  #popUp {
-    position: relative;
-    margin: auto;
-    width: 500px;
-    height: 250px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 8px;
-    z-index: 2;
-    margin-top: 25vh;
-  }
-  
-  .popUp__title {
-    text-align: center;
-    padding: 16px 0;
-    border-bottom: 1px solid black;
-  }
-  
-  .popUp__container {
-    padding: 16px 8px;
-  }
-  
-  .popUp__opcao__titulo {
-    border-start-start-radius: 8px;
-    border-start-end-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 8px;
-  }
-  
-  .popUp__opcao__texto {
-    padding: 16px 12px;
-    text-align: justify;
-  }
-  
-  .popUp__opcao__texto__id {
-    font-weight: bold;
-  }
-  
-  .acertou {
-    border-start-start-radius: 8px;
-    border-start-end-radius: 8px;
-    background-color: greenyellow;
-  }
-  
-  .errou {
-    border-start-start-radius: 8px;
-    border-start-end-radius: 8px;
-    background-color: red;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .show {
-    display: block;
-  }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+#bgPop {
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+#popUp {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  z-index: 2;
+  margin-top: 25vh;
+}
+
+/* #popUp-stats {
+  position: center;
+  margin: auto;
+  width: 500px;
+  height: 550px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  z-index: 2;
+  margin-top: 25vh;
+} */
+
+.popUp__title {
+  text-align: center;
+  padding: 16px 0;
+  border-bottom: 1px solid black;
+}
+
+.popUp__container {
+  padding: 16px 8px;
+}
+
+.popUp__opcao__titulo {
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.popUp__opcao__texto {
+  padding: 16px 12px;
+  text-align: justify;
+}
+
+.popUp__opcao__texto__id {
+  font-weight: bold;
+}
+
+.acertou {
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  background-color: greenyellow;
+}
+
+.errou {
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
