@@ -1,38 +1,86 @@
-.containerTutorial {
-    height: auto;
-    width: 100%;
-    margin: 5% auto;
-    padding: 10px 5px;
-    background-color: rgba(0, 0, 0, 0.4);
+.containerTutorial{
+    margin: 0 auto; /* Centraliza horizontalmente */
+    height: 800px; /* Ajustado para altura automática */
+    width: 1200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    text-align: center;
+    padding: 20px; /* Ajustado para espaçamento uniforme */
+}
+
+.divTit{
+    text-align: center; /* Alinha o texto horizontalmente ao centro */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    color: white;
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: center; /* Alinha o conteúdo verticalmente ao centro */
 }
 
-.containerTutorial button {
-    margin: 1em auto;
-    padding: .5em 1em;
-    background-color: #2461C8;
-    border-radius: 1em;
+.divTit h3{
+    color: #44C1F2;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    max-width: 800px;
 }
 
-.containerTutorial button a {
-    padding: 0px 15px 0px 15px;
+.divPar{
+    width: 750px;
+    margin: auto;
+    font-size: 20px;
+    padding-left: 70px;
+}
+
+.divPar p {
+    margin-bottom: 20px; /* Adicione o espaçamento desejado entre os parágrafos */
+}
+
+.divPar p:hover{
+    color: #44C1F2; /* Cor que desejar ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o mouse */
+    transition: color 0.3s, transform 0.3s; /* Adiciona uma transição suave */
+}
+  
+.importante{
+        font-weight: bold;
+        color: white; /* Cor padrão do texto */
+        transition: color 0.3s, font-weight 0.3s, transform 0.3s; /* Adiciona transições suaves */
+}
+
+.importante:hover{
+    font-weight: 700; /* Aumenta a espessura da fonte para dar mais ênfase */
+    color: #44C1F2; /* Altera a cor ao passar o mouse para destacar */
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+  }
+
+.btnInstr{
+    height: 80px;
+    width: 300px;
+    background-color: #44C1F2;
+    border-radius: 0.85em;
+    border-style: none;
+    padding: 0.5em 0px;
+    transition: transform 0.3s;
+}
+
+.divBtn{
+    display: flex;
+    flex-direction: column; /* Alinhar os elementos verticalmente (um abaixo do outro) */
+    align-items: center; /* Centralizar os elementos horizontalmente */
+    text-align: center; /* Ajustado para centralizar o texto */
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.btnInstr a{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1em;
     text-decoration: none;
     color: whitesmoke;
-    font-size: medium;
 }
 
-.containerTutorial h3 {
-    text-align: center;
-    font-size: 25px;
-}
-
-.containerTutorial h3,
-p {
-    margin: .5em 1em .5em 1em;
+button:hover {
+    transform: scale(1.1); /* Aumenta a escala do botão ao passar o mouse */
 }
