@@ -1,21 +1,33 @@
 .containerSobre {
-    height: 610px;
-    width: 100%;
+    height: 750px;
+    width: 1200px;
     margin: 0 auto;
-    margin-top: 50px;
-    padding: 10px 5px;
+    margin-bottom: 100px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
     text-align: center;
     color: white;
 }
 
+.divSobTit{
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
 .containerSobre h3 {
     text-align: center;
-    font-size: 25px;
+    color: #44C1F2;
+    font-size: 80px;
+    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
 }
 
 .containerSobre p {
+    font-size: 23px;
     margin-bottom: 20px;
 
 }
@@ -26,17 +38,34 @@
     margin: 0 auto;
 }
 
-.containerSobre button {
-    margin-left: 4em;
-    padding: .5em 1em;
-    border-radius: .5em;
-    background-color: #2461C8;
-    display: block;
+.divBtnSob{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
     margin: 0 auto;
-    margin-top: 1em;
+    margin-top: 100px;
 }
 
-.containerSobre button a {
+.btnSob{
+    height: 80px;
+    width: 300px;
+    margin-top: 20px;
+    background-color: #44C1F2;
+    border-radius: 0.85em;
+    border-style: none;
+    padding: 0.5em 0px;
+    transition: transform 0.3s;
+}
+
+.btnSob a{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1em;
     text-decoration: none;
     color: whitesmoke;
+}
+
+button:hover {
+    transform: scale(1.1); 
 }
