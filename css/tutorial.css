@@ -1,20 +1,20 @@
 .containerTutorial{
-    margin: 0 auto; /* Centraliza horizontalmente */
-    height: 800px; /* Ajustado para altura automática */
+    margin: 0 auto; 
+    height: 800px; 
     width: 1200px;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    padding: 20px; /* Ajustado para espaçamento uniforme */
+    padding: 20px; 
 }
 
 .divTit{
-    text-align: center; /* Alinha o texto horizontalmente ao centro */
+    text-align: center; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
-    justify-content: center; /* Alinha o conteúdo verticalmente ao centro */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .divTit h3{
@@ -33,26 +33,26 @@
 }
 
 .divPar p {
-    margin-bottom: 20px; /* Adicione o espaçamento desejado entre os parágrafos */
+    margin-bottom: 20px; 
 }
 
 .divPar p:hover{
-    color: #44C1F2; /* Cor que desejar ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o mouse */
-    transition: color 0.3s, transform 0.3s; /* Adiciona uma transição suave */
+    color: #44C1F2; 
+    transform: scale(1.05); 
+    transition: color 0.3s, transform 0.3s; 
 }
   
 .importante{
         font-weight: bold;
-        color: white; /* Cor padrão do texto */
-        transition: color 0.3s, font-weight 0.3s, transform 0.3s; /* Adiciona transições suaves */
+        color: white; 
+        transition: color 0.3s, font-weight 0.3s, transform 0.3s; 
 }
 
 .importante:hover{
-    font-weight: 700; /* Aumenta a espessura da fonte para dar mais ênfase */
-    color: #44C1F2; /* Altera a cor ao passar o mouse para destacar */
-    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
-  }
+    font-weight: 700; 
+    color: #44C1F2; 
+    transform: scale(1.1); 
+}
 
 .btnInstr{
     height: 80px;
@@ -66,9 +66,9 @@
 
 .divBtn{
     display: flex;
-    flex-direction: column; /* Alinhar os elementos verticalmente (um abaixo do outro) */
-    align-items: center; /* Centralizar os elementos horizontalmente */
-    text-align: center; /* Ajustado para centralizar o texto */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
     margin: 0 auto;
     margin-top: 60px;
 }
@@ -82,5 +82,5 @@
 }
 
 button:hover {
-    transform: scale(1.1); /* Aumenta a escala do botão ao passar o mouse */
+    transform: scale(1.1); 
 }
