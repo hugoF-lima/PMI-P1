@@ -3,12 +3,13 @@
 }
 
 .creditosContent {
+    height: auto;
+    width: 1200px;
     color: white;
     margin: 0 auto;
     margin-top: 50px;
-    width: 100%;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
