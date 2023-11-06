@@ -101,3 +101,23 @@ hr {
     text-decoration: none;
     color: whitesmoke;
 }
+
+/*@media screen and (max-width: 767px) {
+    .navbar {
+        height: auto;
+        line-height: inherit;
+    }
+    .navbar li {
+        display: block;
+        margin: 0;
+    }
+
+    .content_container{
+        width: 200px;
+    }
+
+    .collum1 h3{
+        font-size: 20px;
+    }
+}
+*/
