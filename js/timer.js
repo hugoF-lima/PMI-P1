@@ -1,4 +1,4 @@
-document.getElementById('btn').addEventListener('click', ()=>{
+document.getElementById('').addEventListener('click', ()=>{
   var inter = setInterval(timer, 1000);
 });
 
@@ -17,5 +17,5 @@ function timer(){
       }
     }
   }
-  document.getElementById('screen').innerHTML = `${hour}h ${min}m ${sec}s`;
+  document.getElementById('').innerHTML = `${hour}h ${min}m ${sec}s`;
 }
