@@ -296,3 +296,4 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         showPopUp.classList.add('hidden');
     });
 };
+timer();

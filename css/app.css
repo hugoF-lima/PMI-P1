@@ -9,6 +9,7 @@
 @import url(./navBar.css);
 @import url(./graphics.css);
 @import url(./statsBar.css);
+@import url(./timer.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap');
 
 
@@ -24,6 +25,7 @@ body {
     background-image: url('../img/fundo.jpg');
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 footer {
