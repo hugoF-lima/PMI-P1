@@ -1,0 +1,14 @@
+.navBar{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navBar li{
+    margin: .30em;
+}
+
+.navBar li:hover{
+    color: blue;
+}
