@@ -11,7 +11,9 @@
   border-radius: 1rem 0rem 0rem 1rem;
   transform: translateX(70%);
   transition: all .3s ease-out;
-}:hover{
+}
+
+.timer-container:hover{
   transform: translateX(0%);
   transition: all .3s ease-in;
 }
