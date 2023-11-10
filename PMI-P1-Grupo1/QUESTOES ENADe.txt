@@ -1,0 +1,107 @@
+Questao 1
+
+A alternativa E está correta porque ela indica que a ascensão social depende de fatores que estão fora do alcance das camadas mais pobres da sociedade. Isso significa que, para uma criança de baixa renda ter a chance de ter um futuro melhor que a realidade em que nasceu, ela dependeria de acesso a recursos como educação de qualidade, saúde, oportunidades de emprego e outros fatores que muitas vezes estão limitados para essas camadas sociais mais baixas. Portanto, a falta de acesso a esses fatores viabilizadores cria conflitos sociais, uma vez que a mobilidade social se torna mais difícil de ser alcançada.
+
+Questao 2
+
+A alternativa correta é a letra C porque a asserção I é verdadeira, ao afirmar que o texto I sintetiza uma informação do texto II ao apresentar critérios distintos de alterações visuais em produtos alimentícios. Já a asserção II é falsa, pois o texto II não divulga que o aumento das perdas na cadeia produtiva de hortaliças no Brasil é proporcional à elevação de exigências dos consumidores pela aparência dos produtos agropecuários.
+
+Questao 3
+
+A alternativa B está correta porque afirma que o uso das bicicletas como meio de transporte contribui para a melhoria da qualidade de vida nas grandes metrópoles, devido ao fato de não emitirem poluentes e também por proporcionarem a prática de atividade física. Ambos os pontos são mencionados no texto II, que é utilizado como base para a criação das afirmativas. Portanto, a resposta correta é a alternativa B.
+
+Questao 4
+
+A alternativa B está correta porque ambas as asserções são verdadeiras, mas a segunda não é uma justificativa correta da primeira. A asserção I afirma que trabalhadores autônomos informais que atuam em plataformas digitais sem vínculo empregatício compõem a Gig Economy, o que é confirmado pelo texto. A asserção II afirma que os trabalhadores na Gig Economy arcam com todos os custos necessários para desempenhar o seu trabalho, ganham por produção e enfrentam longas jornadas diárias, o que pode levar a problemas de saúde. Embora essas informações sejam verdadeiras, a segunda asserção não justifica diretamente a primeira, apenas complementa o cenário de precariedade e desproteção enfrentado por esses trabalhadores.
+
+Questao 5
+
+A alternativa A está correta porque o elevado índice de suicídios entre crianças e adolescentes indígenas no país evidencia a necessidade de ações como nos direitos fundamentais desses indivíduos. Isso significa que é necessário ir o acesso a serviços saúde mental, educação de e inclusão social para população, visando promover sua saúde e bem- e prevenir casos de suicidio.
+
+Questao 6
+
+A alternativa A está correta porque tanto a asserção I quanto a asserção II são verdadeiras e a II é uma justificativa correta da I. A asserção I afirma que o efeito desproporcional da pandemia na expectativa de vida da população negra e latina-americana está relacionado à sua situação de vulnerabilidade social, o que é verdadeiro, considerando que essas populações geralmente enfrentam maior desigualdade social, acesso limitado a serviços de saúde e condições de trabalho precárias. A asserção II levanta a hipótese de que as precárias condições de trabalho dessas populações podem levar a uma maior exposição ao contágio pelo novo Coronavírus, o que também é verdadeiro, considerando que muitas vezes trabalham em setores essenciais, com menor possibilidade de trabalho remoto e maior contato com o público. Portanto, a opção A é a correta.
+
+Questao 7
+
+A letra C está correta porque as afirmações I e II verdadeiras de acordo com o conteúdo dos textos.
+
+Na afirmação I, os textos mencionam o perigo do autodiagnóstico e da automedicação, ressaltando a importância de critérios nas buscas por informações de saúde na internet. Isso porque algumas informações podem ser equivocadas e levar a compreensões erradas de sintomas e tratamentos, colocando em risco a saúde das pessoas.
+
+Na afirmação II, o texto I afirma que a divulgação de temas médicos pode contribuir para o esclarecimento da população sobre hábitos saudáveis. Isso é exemplificado pelo aumento nos diagnósticos precoces de câncer de mama e pela diminuição do tabagismo, que são resultados de uma maior informação sobre essas doenças e seus fatores de risco.
+
+Portanto, as afirmações I e II são corroboradas pelos textos I e II, tornando a opção C correta.
+
+Questao 8
+
+A letra D está correta porque todas as afirmações apresentadas estão de acordo com os argumentos expostos no texto. 
+
+- A afirmativa I está correta, pois o texto menciona que o bem comum nem sempre está associado às opiniões da maioria do povo.
+- A afirmativa II também está correta, já que a democracia consensual busca o consenso entre situação e oposição nas decisões governamentais.
+- A afirmativa III também está correta, pois a polarização e a competição entre posições divergentes caracterizam um modelo de democracia majoritária.
+- A afirmativa IV está correta, pois a democracia consensual pressupõe considerar as necessidades das minorias em suas decisões governamentais.
+
+Questao 9 
+
+A E está correta porque o escalonamento por prioridades é propício para sistemas interativos. Em um ambiente interativo, é necessário dar prioridade aos processos que demandam interação constante com o usuário, como por exemplo, processos de entrada e saída, para proporcionar uma resposta rápida e eficiente. O escalonador irá analisar as prioridades atribuídas a cada processo e selecionar o próximo processo a ser executado com base nessa prioridade. Dessa forma, o escalonamento por prioridades garante a priorização dos processos mais importantes em um ambiente interativo.
+
+Questao 10
+
+A letra B está correta porque as estruturas de dados implementadas pelas classes A, B, C e D são:
+
+A - Deque (Double Ended Queue)
+B - Lista simplesmente ligada
+C - Pilha
+D - Fila
+
+Questao 11
+
+A afirmação D está correta porque aumentar o número de amostras de treinamento pode levar a uma melhoria na acurácia da rede. Quanto mais amostras de treinamento são utilizadas, maior é a quantidade de informações disponíveis para a rede aprender e, consequentemente, melhor será a sua capacidade de classificação. No entanto, isso também aumentará o tempo de treinamento, uma vez que a rede precisará processar um maior número de amostras.
+
+Questao 12
+
+A letra B está correta porque as afirmações I e III são verdadeiras. A afirmação I está correta porque a LGPD realmente reprime o uso indiscriminado de dados pessoais considerados sensíveis, como origem racial ou étnica, convicção religiosa e opinião política. A afirmação III está correta porque a LGPD garante ao indivíduo o direito de saber se uma empresa possui seus dados pessoais e também o direito de solicitar correção, atualização ou exclusão desses dados.
+
+Questao 13
+
+A letra E está correta porque o teste de usabilidade deve contemplar os critérios de acessibilidade para garantir que o sistema possa ser utilizado por todos os usuários, incluindo aqueles com algum tipo de deficiência. A acessibilidade é um aspecto importante a ser considerado no desenvolvimento de sistemas, e o teste de usabilidade é o momento adequado para verificar se esses critérios estão sendo atendidos.
+
+Questao 14
+
+A alternativa correta é a letra C porque a asserção I é falsa. Embora a arquitetura de Von Neumann seja muito importante e tenha sido influente no desenvolvimento dos computadores modernos, ela não se manteve inalterada até os dias atuais. Desde sua concepção, várias melhorias e modificações foram feitas nas arquiteturas de computadores para atender às demandas crescentes de desempenho e funcionalidade. Portanto, a afirmação de que a arquitetura de Von Neumann tem se mantido até os dias atuais não é verdadeira. A asserção II também é falsa porque a arquitetura de Von Neumann não inclui a técnica mencionada de buscar uma ou mais instruções além da próxima a ser executada para acelerar a velocidade de operação da CPU.
+
+Questao 15
+
+A alternativa "C" está correta porque as afirmações I e II estão corretas. 
+
+A afirmação I é correta porque o papel do Scrum Master atuar como um facilitador do processo ágil, orientando a equipe no uso efetivo da metodologia SCRUM, removendo obstáculos e promovendo a colaboração dentro da equipe.
+
+A afirmação II também é correta porque o papel do Product Owner é representar os interesses do cliente ou do negócio, garantindo que as necessidades do cliente sejam atendidas e mantendo o foco no produto, evitando que a equipe se perca em questões técnicas menos relevantes.
+
+Já a afirmação III está incorreta. Tanto o Scrum Master quanto o Product Owner têm responsabilidades e influências sobre a equipe, mas o Scrum Master não tem autoridade direta sobre a equipe. O Scrum Master facilita o processo e promove a colaboração, mas não tem poder de hierarquia sobre a equipe.
+
+Questao 16
+
+A alternativa "B" está correta porque é a única que corresponde à expressão booleana apresentada no circuito combinacional. 
+
+A expressão booleana correspondente ao circuito é: 
+
+(X3 . (X2') + (X1'))'
+
+Vamos analisar a expressão passo a passo:
+
+1) A porta "ou" (or) possui a operação "+", portanto, a expressão "(X2') + (X1')" representa uma operação de "ou" entre as variáveis X2' e X1'.
+
+2) Em seguida, a operação de "e" (and) é representada pelo ponto ".", portanto, "(X3 . (X2') + (X1'))" representa uma operação de "e" entre a variável X3 e a expressão "(X2') + (X1')".
+
+3) Por fim, a porta "não" (not) é representada pelo símbolo "'", portanto, todo o conjunto de expressões "(X3 . (X2') + (X1'))" é negado, ficando assim:  "(X3 . (X2') + (X1'))'".
+
+Portanto, a alternativa "B" está correta: (X3 . (X2') + (X1'))'.
+
+Questao 17
+
+A alternativa C está correta porque a asserção I é verdadeira, mas a asserção II é falsa.
+
+A asserção I é verdadeira porque, de fato, a exclusão mútua pode ser alcançada pela desabilitação das interrupções controladas pelo sistema operacional. Ao desabilitar as interrupções, o processador garante que nenhum outro código será executado durante o tempo em que o processo está na região crítica. Isso evita que outros processos acessem recursos compartilhados simultaneamente, garantindo assim a exclusão mútua.
+
+No entanto, a asserção II é falsa, pois a desabilitação da interrupção não é mais eficiente em sistemas de multiprocessadores devido à quantidade de processos concorrentes. Em sistemas multiprocessadores, outros processadores podem estar executando simultaneamente outros processos, e desabilitar as interrupções em apenas um processador não impedirá que outros processos acessem recursos compartilhados simultaneamente em outros processadores. Portanto, a desabilitação da interrupção não é uma técnica eficiente para alcançar a exclusão mútua em sistemas multiprocessadores.

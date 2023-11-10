@@ -1,0 +1,44 @@
+.questContainer{
+    margin: 5% 15%;
+    padding: .75em 1em;
+    border: .5px solid lightgray;
+    background-color: rgb(216, 216, 216);
+    border-radius: 1em;
+}
+
+.questContainer h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+.questContainer h3{
+    margin: 1em 2em;
+    font-size: 1.25em;
+}
+
+.questContainer img{
+    max-width: fit-content;
+    max-height: 70em;
+    border-radius: 1em;
+}
+
+.alterContainer{
+    margin: 1em 1.5em;
+}
+
+.alterId{
+    font-weight: bolder;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns button{
+    padding: .25em 2em;
+    border-radius: .75em;
+    background-color: #2461C8;
+    color: whitesmoke;
+    cursor: pointer;
+}
