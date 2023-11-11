@@ -1,11 +1,16 @@
 const final = document.querySelector('#final'); //constante para seleção da area com ID "final"
-const simulado = JSON.parse(localStorage.getItem('Simulado')); //constante para leitura do localStorage
+const simulado = JSON.parse(localStorage.getItem('Simulado')); //constante para leitura das respostas do simulado no localStorage
+const tempoIni = JSON.parse(localStorage.getItem('TempoIni')); //constante para leitura do tempo de inicio do simulado no locaStorage
 let acertos = 0; //variavel para contabilidade de acertos
 let erros = 0; //variavel para contabilidade de erros
 let total = 0; //variavel para contabilidade de total respondido
 const maxRes = 35; //constante para máximo possivel de respostas
 const anuladas = 2; //constante para questões anuladas
-const tempoTranscorrido = "-"; //Valor para tempo transcorrido do teste.
+const data = new Date(); //constante para criação do metodo Date()
+const [horaFin,minFin,secFin] = [data.getHours(),data.getMinutes(),data.getSeconds()]; //atribuição de valores para hora Finalizada do simulado
+const [horaIni,minIni,secIni] = [tempoIni[data.getDay()][0],tempoIni[data.getDay()][1],tempoIni[data.getDay()][2]] //atribuição de valores para hora de inicio do simulado guardado no localStorage
+const tempoTranscorrido = (horaFin-horaIni)+"h "+(minFin-minIni)+"m "+(secFin-secIni)+"s"; //Valor para tempo transcorrido do teste.
+
 //contabilização de acertos e erros
 for (let info in simulado) {
     //se simulado info é verdadeiro ele soma mais para acertos e para o total
@@ -114,7 +119,7 @@ function mostrarRes() {
                         <h2>Erros</h2>
                 </div>
                 <div>
-                    <h3>Tempo Transcorrido: ${tempoTranscorrido} min </h3>
+                    <h3>Tempo Transcorrido: ${tempoTranscorrido} </h3>
                     <h3> Total Respondido: ${total}/${maxRes} <br> (${objetoTotal.porcentagem.toFixed(1)}%)</h3>
                 </div>
             </div>

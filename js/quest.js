@@ -9,7 +9,7 @@ const popUp = document.querySelector('#popUp'); //constante para aparição do P
 const showPopUp = document.querySelector('#showPopUp'); //constante para containser do PopUp
 
 //função para troca de conteudo da página direcionado pelo indiceAtual atrávez de innerHTML
-export function showQuest(indice) {
+export default function showQuest(indice) {
     const quest = gaba[indice]; //constante para chamar array gaba.js
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta ja foi respondida
 
@@ -296,4 +296,16 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         showPopUp.classList.add('hidden');
     });
 };
-timer();
+
+const data = new Date(); //constante para uso do metodo Date()
+const [horaIni,minIni,secIni] = [data.getHours(),data.getMinutes(),data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
+armazTemp(data.getDay(),horaIni, minIni, secIni); //execução da função armazTemp
+//função que recebe parametros para guardar no localStorage
+function armazTemp(date,horaIni, minIni, secIni) {
+    const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {}; //criação do objeto "Simulado"
+    Objt[date] = [horaIni,minIni,secIni]; //formatação dos parametros para o localStorage
+    const Json = JSON.stringify(Objt);  //contante para troca de objeto para JSON
+    localStorage.setItem('TempoIni', Json); //passar objeto para JSON para atribuição de valores
+};
+
+timer(); //execução da função timer() do arquivo timer.js

@@ -1,7 +1,8 @@
-var inter = setInterval(timer, 1000);
+var inter = setInterval(timer, 1000); //seta o valor de intervalo de loop para execução da função timer()
 
-var [hour, min, sec] = [2,0,0];
+var [hour, min, sec] = [2,0,0]; //seta tempo limite para prova
 
+//função para calculo de tempo corrido do cronometro
 function timer(){
   sec--;
   if(hour==0 && min==0 && sec==0){
