@@ -230,6 +230,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     if (buttonId == "verif") {
         popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
+    <p class="fecharPopUp" id="fechar">Fechar</p>
       <div class="popUpContainer">
         <p class="popUpTitulo"> A resposta correta da Questão <span>${questao.id}:</span></p>
         <p class="popUpText"><span class="popUpTextId">${resPopUp[0].id}) </span>${resPopUp[0].texto}</p>
@@ -242,6 +243,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         //Caso o usuário queira conferir as estatísticas
         popUp.innerHTML = `
         <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
+        <p class="fecharPopUp" id="fechar">Fechar</p>
         <div class="popUpContents special">
             <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
             <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
@@ -316,6 +318,11 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         showPopUp.classList.remove('show');
         showPopUp.classList.add('hidden');
     });
+
+    document.querySelector('#fechar').addEventListener('click', ()=>{
+        showPopUp.classList.remove('show');
+        showPopUp.classList.add('hidden');
+    })
 };
 
 const data = new Date(); //constante para uso do metodo Date()
