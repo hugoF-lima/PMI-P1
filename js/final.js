@@ -91,7 +91,6 @@ function mostrarRes() {
     //convertendo objetos para "inteiro"
     const acertosFinais = +objetoAcertos.porcentagem.toFixed(0);
     const errosFinais = +objetoErros.porcentagem.toFixed(0);
-    console.log(acertosFinais, typeof acertosFinais);
     final.innerHTML = `
         <div class="container">
             <div class="content">
@@ -123,6 +122,10 @@ function mostrarRes() {
                     <h3> Total Respondido: ${total}/${maxRes} <br> (${objetoTotal.porcentagem.toFixed(1)}%)</h3>
                 </div>
             </div>
+            <div>
+                <button type="button" id="refazer">Refazer a prova</button>
+                <button type="button" id="sair">Sair</button>
+            </div>
         </div>
         `;
 
@@ -144,6 +147,23 @@ function mostrarRes() {
 
     updateProgress("acertos", acertosFinais);
     updateProgress("erros", errosFinais);
+
+    document.querySelector('#sair').addEventListener('click', ()=>{
+        if (confirm('Deseja voltar a tela inicial?')){
+            location.assign('index.html');
+        }else{
+            return false;
+        }
+    });
+
+    document.querySelector('#refazer').addEventListener('click', ()=>{
+        if (confirm('Deseja voltar ao tutorial?')){
+            location.assign('tutorial.html');
+        }else{
+            return false;
+        }
+    });
 };
 
 mostrarRes();
+localStorage.clear();

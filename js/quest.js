@@ -32,11 +32,13 @@ export default function showQuest(indice) {
             </div>
     <form id="form" action="#">
         <div class="btns">
+            <button type="button" id="resetar">Refazer prova</button>
             <button type="button" id="volt">Voltar</button>
             <button type="submit" id="verif">corrigir</button>
             <button type="button" id="estatic">Estastisticas</button>
             <button type="button" id="prox">Proxima</button>
             <button type="button" id="final">Finalizar</button>
+            <button type="button" id="sair">Sair</button>
         </div>
     </form>
     <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
@@ -149,6 +151,25 @@ export default function showQuest(indice) {
             scrollTo(top);
         })
     }
+
+    //atribuição de evento ao clicar no botão "sair"
+    document.querySelector('#sair').addEventListener('click', ()=>{
+        if (confirm('Deseja sair do simulado e voltar ao inicio?')){
+            location.assign('index.html');
+        } else {
+            return false;
+        }
+    });
+
+    //atribuição de evento ao clicar no botão "refazer prova"
+    document.querySelector('#resetar').addEventListener('click', ()=>{
+        if (confirm('Deseja resetar a prova?')){
+            localStorage.clear()
+            location.assign('tutorial.html')
+        } else {
+            return false;
+        }
+    });
 };
 
 showQuest(0); //execução da função showQuest no indice 0
