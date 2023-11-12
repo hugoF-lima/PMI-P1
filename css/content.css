@@ -102,6 +102,63 @@ hr {
     color: whitesmoke;
 }
 
+@media screen and (min-width: 767px) and (max-width: 1023px){
+
+    .content_container{
+        width: 650px;
+    }
+
+    #div1{
+        margin-top: 10px;
+    }
+
+    .collum1 {
+        width: 550px;
+    }
+
+    .collum1 h3{
+        font-size: 60px;
+    }
+
+    hr{
+        border-radius: 5px;
+        border-style: none;
+        height: 5px; 
+        width: 100px;
+        background: #44C1F2; 
+        margin: 0 auto; 
+        margin-bottom: 10px; 
+    }
+
+    .collum1 p{
+        font-size: 22px;
+    }
+
+    .collum1 button {
+        height: 40px;
+        width: 200px;
+        background-color: #44C1F2;
+        border-radius: .85em;
+        border-style: none;
+        padding: .5em 0px;
+        transition: transform 0.3s; 
+        margin-top: 20px; 
+    }
+
+    .collum1 button a {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 1em;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    #div2{
+        margin-top: 80px;
+    }
+    
+}
+
 @media screen and (max-width: 767px) {
     .content_container{
         width: 400px;
