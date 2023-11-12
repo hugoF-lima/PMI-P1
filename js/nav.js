@@ -1,7 +1,7 @@
 const navBar = document.querySelector('#topNav'); //constante para seleção da area com ID topNav
 const botomBar = document.querySelector('#botomNav'); //constante para seleção de area com ID botomNav
 
-//atribuição de conteudo da topNav por innerHTML
+//atribuição de conteúdo da topNav por innerHTML
 navBar.innerHTML = `
 <header>
 <ul class="topNav_container">
