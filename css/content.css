@@ -122,11 +122,8 @@ hr {
 
     hr{
         border-radius: 5px;
-        border-style: none;
         height: 5px; 
         width: 100px;
-        background: #44C1F2; 
-        margin: 0 auto; 
         margin-bottom: 10px; 
     }
 
@@ -137,9 +134,7 @@ hr {
     .collum1 button {
         height: 40px;
         width: 200px;
-        background-color: #44C1F2;
         border-radius: .85em;
-        border-style: none;
         padding: .5em 0px;
         transition: transform 0.3s; 
         margin-top: 20px; 
@@ -149,8 +144,6 @@ hr {
         font-size: 20px;
         font-weight: bold;
         padding: 1em;
-        text-decoration: none;
-        color: whitesmoke;
     }
 
     #div2{
@@ -170,11 +163,6 @@ hr {
 
     .collum1 {
         width: 350px;
-        display: flex;
-        flex-direction: column; /* Alinhar os elementos verticalmente (um abaixo do outro) */
-        align-items: center; /* Centralizar os elementos horizontalmente */
-        text-align: center; /* Ajustado para centralizar o texto */
-        margin: 0 auto;
     }
 
     .collum1 h3{
@@ -182,14 +170,10 @@ hr {
     }
 
     hr{
-            border-radius: 5px;
-            border-style: none;
-            height: 5px; /* Define a altura da linha */
-            width: 100px;
-            background: #44C1F2; /* Define a cor da linha */
-            margin: 0 auto; /* Centralize a linha horizontalmente */
-            margin-bottom: 10px; /* Ajusta o espaçamento abaixo da linha */
-        
+        border-radius: 5px;
+        height: 5px; 
+        width: 100px;
+        margin-bottom: 10px; 
     }
 
     .collum1 p{
@@ -199,20 +183,16 @@ hr {
     .collum1 button {
         height: 80px;
         width: 200px;
-        background-color: #44C1F2;
         border-radius: .85em;
         border-style: none;
         padding: .5em 0px;
-        transition: transform 0.3s; /* Adiciona uma transição de escala */
-        margin-top: 20px; /* Adicionado espaço superior para o botão */
+        transition: transform 0.3s; 
+        margin-top: 20px; 
     }
 
     .collum1 button a {
         font-size: 20px;
-        font-weight: bold;
         padding: 1em;
-        text-decoration: none;
-        color: whitesmoke;
     }
 
     #div2{
