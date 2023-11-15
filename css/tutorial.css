@@ -85,3 +85,19 @@
 button:hover {
     transform: scale(1.1); 
 }
+
+@media screen and (max-width: 767px) {
+
+    .containerTutorial{
+        width: 410px;
+    }
+
+    .divTit h3{
+        font-size: 30px;
+    }
+
+    .divPar{
+        padding-left: 10px;
+        width: 380px;
+    }
+}
