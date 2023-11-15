@@ -70,6 +70,23 @@ button:hover {
     transform: scale(1.1); 
 }
 
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .containerSobre {
+        height: 800px;
+        width: 700px;
+    }
+
+    .containerSobre h3{
+        font-size: 60px;
+    }
+
+    .containerSobre p {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+}
+
 @media screen and (max-width: 767px) {
     .containerSobre {
         height: 950px;
@@ -83,6 +100,5 @@ button:hover {
     .containerSobre p {
         font-size: 16px;
         margin-bottom: 20px;
-    
     }
 }
