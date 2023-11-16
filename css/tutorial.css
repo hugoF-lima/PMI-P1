@@ -86,6 +86,27 @@ button:hover {
     transform: scale(1.1); 
 }
 
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    
+    .containerTutorial{
+        height: 1350px;
+        width: 810px;
+    }
+
+    .divTit h3{
+        font-size: 60px;
+    }
+
+    .divPar{
+        padding-left: 10px;
+        width: 380px;
+    }
+
+    .divPar p{
+        font-size: 22px;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     .containerTutorial{
