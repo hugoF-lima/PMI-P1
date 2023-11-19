@@ -1,4 +1,5 @@
 import { gaba } from "./gaba.js"; //importação do array gaba.js
+import { timer } from "./timer.js"; //importação da função timer();
 
 /* import { estat } from "./estat.js"; // importação do array de estatísticas */
 
