@@ -14,11 +14,34 @@
     justify-content: center;
     text-decoration: none;
     color: black;
-    margin-left: 10em;
-    margin-right: 10em;
+    margin: 0 10rem;
 }
 
 .botomNav a img {
     max-width: 8em;
     max-height: 8em;
+}
+
+@media screen and (max-height: 40em){
+    .botomNav{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 40em){
+    .botomNav a{
+        margin: 0;
+    }
+    
+    .botomNav{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 55em) {
+    .botomNav{
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
