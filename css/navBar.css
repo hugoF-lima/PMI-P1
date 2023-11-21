@@ -1,14 +1,18 @@
 .navBar{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  gap: .5rem;
+  overflow-x: scroll;
+  margin: 2rem 0;
 }
 
 .navBar li{
-    margin: .30em;
+  cursor: pointer;
 }
 
 .navBar li:hover{
-    color: blue;
+  transition: all .3s ease-in;
+  color: blue;
 }

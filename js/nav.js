@@ -3,24 +3,38 @@ const botomBar = document.querySelector('#botomNav'); //constante para seleção
 
 //atribuição de conteúdo da topNav por innerHTML
 navBar.innerHTML = `
-<header>
-<ul class="topNav_container">
+<header class="navTopBar">
     <li id="dif"><a href="./index.html"><img src="../img/branca png.png" alt="LOGO"></a></li>
+    <button class="nav-ham" arial><span class="sr-only">Menu</span></button>
+<ul class="topNav_container" data-visible="false">
     <li><a href="./index.html">Início</a></li>
     <li><a href="./tutorial.html">Instruções</a></li>
     <li><a href="./sobre.html">Sobre</a></li>
     <li><a href="./credito.html">Créditos</a></li>
     <li>
-        <a href="#">Acessibilidade</a>
-        <div class="dropdown">
-            <a href="#">Modo Noturno</a>
-            <a href="#">Modo Escuro</a>
-            <a href="#">Alto Contraste</a>
-        </div>    
+    <a href="#">Acessibilidade</a>
+    <div class="dropdown">
+    <a href="#">Modo Noturno</a>
+    <a href="#">Modo Escuro</a>
+    <a href="#">Alto Contraste</a>
+    </div>    
     </li>
 </ul>
 </header>
-`;
+`
+var header = document.querySelector('.topNav_container');
+document.querySelector('.nav-ham').addEventListener('click', ()=>{
+    const visible = header.getAttribute('data-visible');
+
+    if(visible === "false"){
+        header.setAttribute('data-visible', true);
+    } else{
+        header.setAttribute('data-visible', false);
+    }
+});
+
+
+;
 
 //atribuição de conteudo da bottomNav por innerHTML
 botomBar.innerHTML = `
