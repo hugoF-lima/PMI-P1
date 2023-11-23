@@ -1,5 +1,7 @@
 .enadeQuest {
-    margin: 0% 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .creditosContent {
@@ -21,31 +23,27 @@
     margin: 5% 2% 2% 0px;
 }
 
+.creditosImg{
+    display: grid;
+}
+
 .creditosImg a {
     margin-right: 20px;
     columns: 10em 2;
     column-gap: 2em;
+    color: blue;
 }
 
 .creditosImg a img {
     max-width: 40%;
-    max-height: 50px;
+    max-height: 3rem;
 }
-
-
 
 .creditosImg{
     width: 100%; 
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around; 
-    
-}
-
-
-.creditosImg a img {
-    max-width: 40%;
-    max-height: 50px;
 }
 
 .divCred, .divGrupo {

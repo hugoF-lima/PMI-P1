@@ -22,3 +22,9 @@
   max-width: 2rem;
   max-height: 1.5rem;
 }
+
+@media (max-width: 1000px){
+  .timer-container{
+    display: none;
+  }
+}

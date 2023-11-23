@@ -16,8 +16,15 @@
     font-size: 1.25em;
 }
 
+.img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
 .questContainer img{
-    max-width: fit-content;
+    max-width: 95%;
     max-height: 70em;
     border-radius: 1em;
 }
@@ -31,8 +38,7 @@
 }
 
 .btns{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
 }
 
 .btns button{
@@ -41,4 +47,20 @@
     background-color: #2461C8;
     color: whitesmoke;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+    .questContainer img{
+        max-width: 100%;
+    }
+
+    .questContainer {
+        font-size: small;
+        text-wrap: balance;
+    }
+
+    .questContainer a{
+        font-size: smaller;
+    }
 }

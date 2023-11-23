@@ -19,7 +19,9 @@ export default function showQuest(indice) {
     <article class="questContainer">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1>
             <h3>Questão ${quest.id} / ${gaba.length}</h3>
-            <img src="${quest.img}" alt="Imagem da Questão">
+            <div class="img-cont">
+                <img src="${quest.img}" alt="Imagem da Questão">
+            </div>
             <p><b>${quest.enunciado}</b></p>
 
             
@@ -33,16 +35,16 @@ export default function showQuest(indice) {
             </div>
     <form id="form" action="#">
         <div class="btns">
-            <button type="button" id="resetar">Refazer prova</button>
             <button type="button" id="volt">Voltar</button>
-            <button type="submit" id="verif">corrigir</button>
-            <button type="button" id="estatic">Estastisticas</button>
-            <button type="button" id="prox">Proxima</button>
+            <button type="button" id="prox">Próxima</button>
+            <button type="submit" id="verif">Corrigir</button>
+            <button type="button" id="estatic">Estastísticas</button>
+            <button type="button" id="resetar">Refazer Prova</button>
             <button type="button" id="final">Finalizar</button>
             <button type="button" id="sair">Sair</button>
         </div>
     </form>
-    <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf</a></p>
+    <p>Fonte: <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf" target="_blank">https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado/ciencia_computacao.pdf</a></p>
     <ul id="navBar" class="navBar"></ul>
     </article>
     `;
