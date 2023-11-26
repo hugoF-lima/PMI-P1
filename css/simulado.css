@@ -49,6 +49,17 @@
     cursor: pointer;
 }
 
+.resultContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.p a {
+    text-decoration: none;
+}
+
 @media (max-width: 1000px) {
 
     .questContainer img{
