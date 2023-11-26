@@ -126,6 +126,12 @@ function mostrarRes() {
                 <button type="button" id="refazer">Refazer a prova</button>
                 <button type="button" id="sair">Sair</button>
             </div>
+            <div class="resultContainer">
+                <div class="btns">
+                    <button type="button"><a href="./simulado.html" onclick="limparLocalStorage()">Refazer Simulado</a></button>
+                    <button type="button" id="sair">Sair</button>
+                </div>
+            </div>
         </div>
         `;
 
