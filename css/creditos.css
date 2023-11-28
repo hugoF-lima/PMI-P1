@@ -9,10 +9,9 @@
     flex-direction: column;
     align-items: center; 
     height: auto;
-    width: 1200px;
+    max-width: 1200px;
     color: white;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px 5rem 5rem 5rem;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -21,6 +20,12 @@
 .creditosContent h3 {
     text-align: center;
     margin: 5% 2% 2% 0px;
+    font-size: 80px;
+}
+
+.creditosContent p{
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .creditosImg{
@@ -28,9 +33,6 @@
 }
 
 .creditosImg a {
-    margin-right: 20px;
-    columns: 10em 2;
-    column-gap: 2em;
     color: blue;
 }
 
@@ -41,13 +43,28 @@
 
 .creditosImg{
     width: 100%; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 5rem;
+    width: 80%;
+    margin: 2rem 0;
+}
+
+.title{
+    font-size: 30px;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around; 
+    justify-content: center;
+    margin: 0 0 2rem 0;
 }
 
-.divCred, .divGrupo {
-    margin-top: 50px;
-    margin-bottom: 40px;
+.Grupo-name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
+
+.divCred p, .divGrupo p{
+    font-size: 20px;
+}
