@@ -1,8 +1,6 @@
 import { gaba } from "./gaba.js"; //importação do array gaba.js
 import { timer } from "./timer.js"; //importação da função timer();
 
-/* import { estat } from "./estat.js"; // importação do array de estatísticas */
-
 let indiceAtual = 0; //variavel para definição de indice da página
 const change = document.querySelector('#change'); //constante para alteração de innerHTML atrávez de ID
 const bgPop = document.querySelector('#bgPop'); //constante para aparição do PopUp background atrávez de ID
@@ -13,19 +11,25 @@ const showPopUp = document.querySelector('#showPopUp'); //constante para contain
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante para chamar array gaba.js
 
-    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada!
+    let radios = document.querySelectorAll('input[type="radio"]');
+
+    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
         alert("Questão Anulada");
-        var radios = document.querySelectorAll('input[type="radio"]');
 
         // Fazendo loop em todos os elementos radio e os desativando.
         radios.forEach(function (radio) {
             radio.disabled = true;
         });
+    } else {
+        radios.forEach(function (radio) {
+            radio.disabled = false;
+        });
+
     }
-    
+
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta ja foi respondida
 
-    //novo conteudo da página atrávez de innerHTML
+    //novo conteudo da página atráves de innerHTML
     change.innerHTML = `
     <article class="questContainer">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1>
@@ -167,8 +171,8 @@ export default function showQuest(indice) {
     }
 
     //atribuição de evento ao clicar no botão "sair"
-    document.querySelector('#sair').addEventListener('click', ()=>{
-        if (confirm('Deseja sair do simulado e voltar ao inicio?')){
+    document.querySelector('#sair').addEventListener('click', () => {
+        if (confirm('Deseja sair do simulado e voltar ao inicio?')) {
             location.assign('index.html');
         } else {
             return false;
@@ -176,8 +180,8 @@ export default function showQuest(indice) {
     });
 
     //atribuição de evento ao clicar no botão "refazer prova"
-    document.querySelector('#resetar').addEventListener('click', ()=>{
-        if (confirm('Deseja resetar a prova?')){
+    document.querySelector('#resetar').addEventListener('click', () => {
+        if (confirm('Deseja resetar a prova?')) {
             localStorage.clear()
             location.assign('tutorial.html')
         } else {
@@ -262,6 +266,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
             <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
             <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
             <h3 id="letraCorreta">Alternativa correta: ${resPopUp[0].id})</h3>
+            <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
         </div>
         <div class="popUpContainer">
             <section class="bar-graph bar-graph-vertical bar-graph-two">
@@ -278,8 +283,9 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
                     <span class="uf">Brasil</span>
                 </div>
             </section>
-        </div>
-        
+            </div>
+        <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+            
         <style>
         @-webkit-keyframes show-bar-one-vertical {
             0% {
@@ -321,11 +327,9 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
             }
         }
         </style>
-        <p id="rodape">Fonte: <a id="rodapeLink" href="https://enade.inep.gov.br/enade/#!/relatorioCursos" target="_blank">https://enade.inep.gov.br/enade/#!/relatorioCursos</a></p>
-        
         `;
         popUp.style.width = "580px";
-        popUp.style.height = "550px";
+        popUp.style.height = "620px";
     }
     //adiciona classe "show" para bgPop e adiciona evento de click para adicionar classe "hidden"
     bgPop.addEventListener('click', () => {
@@ -333,19 +337,27 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         showPopUp.classList.add('hidden');
     });
 
-    document.querySelector('#fechar').addEventListener('click', ()=>{
+    document.querySelector('#fechar').addEventListener('click', () => {
         showPopUp.classList.remove('show');
         showPopUp.classList.add('hidden');
     })
+
+    /* Aparentemente o querySelector não se dá muito bem com elementos escondidos, logo se adicionou evento dessa maneira */
+    document.addEventListener('click', (e) => {
+        if (event.target.id === 'ver-mais') {
+            e.stopImmediatePropagation();
+            alert("De acordo com a fonte da pesquisa para as Estatísticas, a presente questão foi 'Desconsiderada pelo Bisserial' no que tangem as porcentagens de acerto!");
+        }
+    });
 };
 
 const data = new Date(); //constante para uso do metodo Date()
-const [horaIni,minIni,secIni] = [data.getHours(),data.getMinutes(),data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
-armazTemp(data.getDay(),horaIni, minIni, secIni); //execução da função armazTemp
+const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
+armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
 //função que recebe parametros para guardar no localStorage
-function armazTemp(date,horaIni, minIni, secIni) {
+function armazTemp(date, horaIni, minIni, secIni) {
     const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {}; //criação do objeto "Simulado"
-    Objt[date] = [horaIni,minIni,secIni]; //formatação dos parametros para o localStorage
+    Objt[date] = [horaIni, minIni, secIni]; //formatação dos parametros para o localStorage
     const Json = JSON.stringify(Objt);  //contante para troca de objeto para JSON
     localStorage.setItem('TempoIni', Json); //passar objeto para JSON para atribuição de valores
 };
