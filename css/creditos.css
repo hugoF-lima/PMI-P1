@@ -7,7 +7,7 @@
 .creditosContent {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     height: auto;
     max-width: 1200px;
     color: white;
@@ -23,12 +23,12 @@
     font-size: 80px;
 }
 
-.creditosContent p{
+.creditosContent p {
     font-size: 50px;
     font-weight: bold;
 }
 
-.creditosImg{
+.creditosImg {
     display: grid;
 }
 
@@ -36,13 +36,19 @@
     color: blue;
 }
 
+/* Validar se isso não interfere nos demais elementos */
+.creditosContent a {
+    color: var(--btn-bg-color);
+}
+
 .creditosImg a img {
     max-width: 40%;
     max-height: 3rem;
+    color: var(--btn-bg-color);
 }
 
-.creditosImg{
-    width: 100%; 
+.creditosImg {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -51,20 +57,21 @@
     margin: 2rem 0;
 }
 
-.title{
+.title {
     font-size: 30px;
     display: flex;
     justify-content: center;
     margin: 0 0 2rem 0;
 }
 
-.Grupo-name{
+.Grupo-name {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
 
-.divCred p, .divGrupo p{
+.divCred p,
+.divGrupo p {
     font-size: 20px;
 }

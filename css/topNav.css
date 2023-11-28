@@ -11,6 +11,12 @@
     gap: 1.2rem;
 }
 
+/* Estilo para o label que aparece em Brilho (?) */
+.label {
+    color: var(--text-color);
+}
+
+
 .topNav_container li {
     position: relative;
     display: inline;
@@ -26,7 +32,7 @@
     text-decoration: none;
 }
 
-.topNav_container li > a > img{
+.topNav_container li>a>img {
     max-width: 1.5rem;
     max-height: 1.5rem;
     position: static;
@@ -40,9 +46,22 @@
     max-height: 5rem;
 }
 
+.slider-container {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container label {
+    color: white;
+}
+
+/* bloco responsável por inverter as cores do png de brilho */
+a .inverted-image {
+    filter: invert(1);
+}
 
 .topNav_container li a:hover {
-    color: #44C1F2;
+    color: var(--btn-bg-color);
 }
 
 .topNav_container .dropdown {
@@ -77,12 +96,12 @@
     padding-bottom: 10px;
 }
 
-.nav-ham{
+.nav-ham {
     display: none;
 }
 
-@media (max-width: 1000px){
-    .topNav_container{
+@media (max-width: 1000px) {
+    .topNav_container {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -98,26 +117,26 @@
         transition: all .5s ease-in-out;
     }
 
-    .topNav_container[data-visible="true"]{
+    .topNav_container[data-visible="true"] {
         transform: translateX(0%);
         transition: all .5s ease-in-out;
     }
 
-    .navTopBar li{
+    .navTopBar li {
         padding: 0;
         margin: 0;
         top: 5rem;
     }
 
-    .topNav_container li a{
+    .topNav_container li a {
         margin: 0 0 0 2rem;
     }
 
-    .topNav_container li:last-child{
+    .topNav_container li:last-child {
         display: none;
     }
 
-    .nav-ham{
+    .nav-ham {
         display: block;
         position: fixed;
         z-index: 99999;
@@ -130,13 +149,13 @@
         background-repeat: no-repeat;
     }
 
-    .navTopBar img{
+    .navTopBar img {
         top: 0;
     }
 }
 
-@media (max-width: 800px){
-    .navTopBar img{
+@media (max-width: 800px) {
+    .navTopBar img {
         left: 0;
     }
 }

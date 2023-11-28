@@ -1,7 +1,7 @@
-.containerTutorial{
-    margin: 0 auto; 
+.containerTutorial {
+    margin: 0 auto;
     margin-bottom: 100px;
-    min-height: 800px; 
+    min-height: 800px;
     width: 1200px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -10,23 +10,23 @@
     padding: 1.4rem;
 }
 
-.divTit{
-    text-align: center; 
+.divTit {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
-.divTit h3{
-    color: #44C1F2;
+.divTit h3 {
+    color: var(--btn-bg-color);
     font-size: 80px;
     text-align: center;
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
     max-width: 800px;
 }
 
-.divPar{
+.divPar {
     width: 750px;
     margin: auto;
     font-size: 20px;
@@ -34,47 +34,53 @@
 }
 
 .divPar p {
-    margin-bottom: 20px; 
+    color: var(--tutorial-text);
+    margin-bottom: 20px;
 }
 
-.divPar p:hover{
-    color: #44C1F2; 
-    transform: scale(1.05); 
-    transition: color 0.3s, transform 0.3s; 
-}
-  
-.importante{
-        font-weight: bold;
-        color: white; 
-        transition: color 0.3s, font-weight 0.3s, transform 0.3s; 
+.divPar p:hover {
+    color: var(--btn-bg-color);
+    transform: scale(1.05);
+    transition: color 0.3s, transform 0.3s;
 }
 
-.importante:hover{
-    font-weight: 700; 
-    color: #44C1F2; 
-    transform: scale(1.1); 
+.importante {
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s, font-weight 0.3s, transform 0.3s;
 }
 
-.btnInstr{
+.importante:hover {
+    font-weight: 700;
+    color: var(--btn-bg-color);
+    transform: scale(1.1);
+}
+
+.btnInstr {
     height: 80px;
     width: 300px;
-    background-color: #44C1F2;
+    background-color: var(--btn-bg-color);
     border-radius: 0.85em;
     border-style: none;
     padding: 0.5em 0px;
     transition: transform 0.3s;
 }
 
-.divBtn{
+.divBtn {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
     margin-top: 60px;
 }
 
-.btnInstr a{
+.button {
+    background-color: var(--btn-simul);
+    color: var(--txt-btn-simul);
+}
+
+.btnInstr a {
     font-size: 20px;
     font-weight: bold;
     padding: 1em;
@@ -83,41 +89,41 @@
 }
 
 button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-@media screen and (min-width: 767px) and (max-width: 1200px){
-    
-    .containerTutorial{
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+
+    .containerTutorial {
         height: 1350px;
         width: 810px;
     }
 
-    .divTit h3{
+    .divTit h3 {
         font-size: 60px;
     }
 
-    .divPar{
+    .divPar {
         padding-left: 10px;
         width: 380px;
     }
 
-    .divPar p{
+    .divPar p {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 767px) {
 
-    .containerTutorial{
+    .containerTutorial {
         width: 410px;
     }
 
-    .divTit h3{
+    .divTit h3 {
         font-size: 30px;
     }
 
-    .divPar{
+    .divPar {
         padding-left: 10px;
         width: 380px;
     }

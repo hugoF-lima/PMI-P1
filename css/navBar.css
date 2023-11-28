@@ -1,4 +1,4 @@
-.navBar{
+.navBar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -6,13 +6,14 @@
   gap: .5rem;
   overflow-x: scroll;
   margin: 2rem 0;
+  color: var(--ul-color);
 }
 
-.navBar li{
+.navBar li {
   cursor: pointer;
 }
 
-.navBar li:hover{
+.navBar li:hover {
   transition: all .3s ease-in;
-  color: blue;
+  color: var(--ul-highlight);
 }

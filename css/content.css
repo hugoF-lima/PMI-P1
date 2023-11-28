@@ -20,10 +20,10 @@
 }
 
 .collum1 h3 {
-    color: #44C1F2;
+    color: var(--btn-bg-color);
     font-size: 100px;
     text-align: center;
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
     max-width: 800px;
 }
 
@@ -32,15 +32,15 @@ hr {
     border-style: none;
     height: 5px;
     width: 550px;
-    background: #44C1F2;
+    background: var(--btn-bg-color);
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
 .collum1 p {
-    color: #44C1F2;
+    color: var(--btn-bg-color);
     text-align: center;
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
     font-size: 25px;
     font-weight: bold;
 }
@@ -52,7 +52,7 @@ hr {
 .collum1 button {
     height: 80px;
     width: 300px;
-    background-color: #44C1F2;
+    background-color: var(--btn-color);
     border-radius: .85em;
     border-style: none;
     padding: .5em 0px;
@@ -68,7 +68,9 @@ hr {
     font-weight: bold;
     padding: 1em;
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--text-color-btn);
+    /* A linha a seguir causa probleminhas visuais de responsividade */
+    border: 5px solid var(--btn-border);
 }
 
 #div1 {
@@ -82,7 +84,7 @@ hr {
 .collum1 button {
     height: 80px;
     width: 300px;
-    background-color: #44C1F2;
+    background-color: var(--btn-color);
     border-radius: .85em;
     border-style: none;
     padding: .5em 0px;
@@ -102,13 +104,13 @@ hr {
     color: whitesmoke;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1200px){
+@media screen and (min-width: 767px) and (max-width: 1200px) {
 
-    .content_container{
+    .content_container {
         width: 650px;
     }
 
-    #div1{
+    #div1 {
         margin-top: 10px;
     }
 
@@ -116,18 +118,18 @@ hr {
         width: 550px;
     }
 
-    .collum1 h3{
+    .collum1 h3 {
         font-size: 60px;
     }
 
-    hr{
+    hr {
         border-radius: 5px;
-        height: 5px; 
+        height: 5px;
         width: 100px;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
-    .collum1 p{
+    .collum1 p {
         font-size: 22px;
     }
 
@@ -136,8 +138,8 @@ hr {
         width: 200px;
         border-radius: .85em;
         padding: .5em 0px;
-        transition: transform 0.3s; 
-        margin-top: 20px; 
+        transition: transform 0.3s;
+        margin-top: 20px;
     }
 
     .collum1 button a {
@@ -146,18 +148,18 @@ hr {
         padding: 1em;
     }
 
-    #div2{
+    #div2 {
         margin-top: 80px;
     }
-    
+
 }
 
 @media screen and (max-width: 767px) {
-    .content_container{
+    .content_container {
         width: 400px;
     }
 
-    #div1{
+    #div1 {
         margin-top: 10px;
     }
 
@@ -165,18 +167,18 @@ hr {
         width: 350px;
     }
 
-    .collum1 h3{
+    .collum1 h3 {
         font-size: 50px;
     }
 
-    hr{
+    hr {
         border-radius: 5px;
-        height: 5px; 
+        height: 5px;
         width: 100px;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
-    .collum1 p{
+    .collum1 p {
         font-size: 20px;
     }
 
@@ -186,8 +188,8 @@ hr {
         border-radius: .85em;
         border-style: none;
         padding: .5em 0px;
-        transition: transform 0.3s; 
-        margin-top: 20px; 
+        transition: transform 0.3s;
+        margin-top: 20px;
     }
 
     .collum1 button a {
@@ -195,7 +197,7 @@ hr {
         padding: 1em;
     }
 
-    #div2{
+    #div2 {
         margin-top: 80px;
     }
 }

@@ -11,19 +11,19 @@
     color: white;
 }
 
-.divSobTit{
-    text-align: center; 
+.divSobTit {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 .containerSobre h3 {
     text-align: center;
-    color: #44C1F2;
+    color: var(--btn-bg-color);
     font-size: 80px;
-    text-shadow: 0 0 10px #2461C8, 0 0 20px #2461C8, 0 0 30px #2461C8, 0 0 40px #2461C8, 0 0 50px #2461C8;
+    text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
 }
 
 .direitos {
@@ -38,27 +38,27 @@
     margin: 0 auto;
 }
 
-.divBtnSob{
+.divBtnSob {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
     margin-top: 100px;
 }
 
-.btnSob{
+.btnSob {
     height: 80px;
     width: 300px;
     margin-top: 20px;
-    background-color: #44C1F2;
+    background-color: var(--btn-bg-color);
     border-radius: 0.85em;
     border-style: none;
     padding: 0.5em 0px;
     transition: transform 0.3s;
 }
 
-.btnSob a{
+.btnSob a {
     font-size: 20px;
     font-weight: bold;
     padding: 1em;
@@ -67,16 +67,16 @@
 }
 
 button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-@media screen and (min-width: 767px) and (max-width: 1200px){
+@media screen and (min-width: 767px) and (max-width: 1200px) {
     .containerSobre {
         height: 800px;
         width: 700px;
     }
 
-    .containerSobre h3{
+    .containerSobre h3 {
         font-size: 60px;
     }
 
@@ -93,7 +93,7 @@ button:hover {
         width: 400px;
     }
 
-    .containerSobre h3{
+    .containerSobre h3 {
         font-size: 60px;
     }
 
