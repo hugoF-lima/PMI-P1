@@ -12,6 +12,17 @@ const showPopUp = document.querySelector('#showPopUp'); //constante para contain
 //função para troca de conteudo da página direcionado pelo indiceAtual atrávez de innerHTML
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante para chamar array gaba.js
+
+    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada!
+        alert("Questão Anulada");
+        var radios = document.querySelectorAll('input[type="radio"]');
+
+        // Fazendo loop em todos os elementos radio e os desativando.
+        radios.forEach(function (radio) {
+            radio.disabled = true;
+        });
+    }
+    
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta ja foi respondida
 
     //novo conteudo da página atrávez de innerHTML
