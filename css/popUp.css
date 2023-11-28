@@ -16,6 +16,24 @@
   z-index: 1;
 }
 
+/* Os três a seguir vinculados por id, se referem ao "ver mais" das estatisticas */
+#desconsid {
+  color: red;
+}
+
+#desconsid p {
+  font-size: 14px;
+  position: center;
+}
+
+#desconsid p:hover {
+  font-size: 14px;
+  color: white;
+  position: center;
+  cursor: pointer;
+}
+
+
 #popUp {
   position: relative;
   margin: auto;
@@ -27,18 +45,6 @@
   z-index: 2;
   margin-top: 25vh;
 }
-
-/* #popUp-stats {
-  position: center;
-  margin: auto;
-  width: 500px;
-  height: 550px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 8px;
-  z-index: 2;
-  margin-top: 25vh;
-} */
 
 .popUp__title {
   text-align: center;
@@ -87,7 +93,13 @@
   display: block;
 }
 
-.fecharPopUp{
+.popUpContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fecharPopUp {
   cursor: pointer;
   position: absolute;
   top: 0;

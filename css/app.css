@@ -12,6 +12,52 @@
 @import url(./timer.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap');
 
+/* parametros para separação de cores dos temas */
+/* As variaveis presentes em root são essêncialmente parâmetros globais, logo os mesmos são compartilhados com os imports acima */
+:root {
+    --bg-instance: url('../img/fundo.jpg');
+    --bg-color: none;
+    --text-highlight: blue;
+    --tutorial-text: white;
+    --btn-bg-color: #44C1F2;
+    --btn-color: #44c1f2;
+    --text-shadow-param: #2461C8;
+    --text-color: black;
+    --text-color-btn: white;
+    --txt-btn-simul: white;
+    --btn-simul: #2461C8;
+    --btn-border: none;
+    --quest-bg-color: rgb(216, 216, 216);
+    --txt-highli-color: white;
+    --ul-color: black;
+    --ul-highlight: blue;
+    --img-background: none;
+}
+
+.high-contrast {
+    --bg-instance: none;
+    --bg-color: black;
+    --btn-bg-color: #f33bee;
+    --btn-color: black;
+    --text-shadow-param: none;
+    --text-color: white;
+    --tutorial-text: white;
+    --txt-btn-simul: white;
+    --btn-simul: black;
+    --quest-bg-color: black;
+    --ul-color: #f33bee;
+    --ul-highlight: white;
+    --text-color-btn: white;
+    --text-highlight: #1aebff;
+    --btn-border: #1aebff;
+    --txt-highli-color: black;
+    --img-background: white;
+}
+
+::selection {
+    background-color: var(--text-highlight);
+    color: var(--txt-highli-color);
+}
 
 * {
     margin: 0;
@@ -22,10 +68,12 @@
 }
 
 body {
-    background-image: url('../img/fundo.jpg');
+    background-image: var(--bg-instance);
     background-size: cover;
     background-attachment: fixed;
+    background-color: var(--bg-color);
     overflow-x: hidden;
+
 }
 
 footer {
@@ -40,6 +88,6 @@ header {
     width: 100%;
 }
 
-.sr-only{
+.sr-only {
     display: none;
 }

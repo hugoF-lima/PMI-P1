@@ -4,9 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-color);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     padding: 1.5em;
+}
+
+/* A ideia aqui é colocar uma cor diferenciada para o 
+logo de ADS visto o texto branco, eliminar o id mais tarde se possível */
+#logo-ads {
+    background-color: var(--bg-color);
 }
 
 .botomNav a {
@@ -20,27 +26,28 @@
 .botomNav a img {
     max-width: 8em;
     max-height: 8em;
+    background-color: var(--img-background);
 }
 
-@media screen and (max-height: 40em){
-    .botomNav{
+@media screen and (max-height: 40em) {
+    .botomNav {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 40em){
-    .botomNav a{
+@media screen and (max-width: 40em) {
+    .botomNav a {
         margin: 0;
     }
-    
-    .botomNav{
+
+    .botomNav {
         flex-direction: column;
         gap: 3rem;
     }
 }
 
 @media screen and (max-width: 55em) {
-    .botomNav{
+    .botomNav {
         flex-direction: column;
         gap: 3rem;
     }

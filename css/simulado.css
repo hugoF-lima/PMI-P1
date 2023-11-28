@@ -1,51 +1,64 @@
-.questContainer{
+.questContainer {
     margin: 5% 15%;
     padding: .75em 1em;
     border: .5px solid lightgray;
-    background-color: rgb(216, 216, 216);
+    background-color: var(--quest-bg-color);
     border-radius: 1em;
 }
 
-.questContainer h1{
+.questContainer h1 {
     text-align: center;
     font-size: 2em;
+    color: var(--text-color);
 }
 
-.questContainer h3{
+/* estilos para highlight de links */
+.questContainer a {
+    color: var(--btn-bg-color);
+}
+
+.questContainer a:hover {
+    color: var(--text-highlight);
+}
+
+.questContainer h3 {
     margin: 1em 2em;
     font-size: 1.25em;
+    color: var(--text-color);
 }
 
-.img-cont{
+.img-cont {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
 }
 
-.questContainer img{
+.questContainer img {
     max-width: 95%;
     max-height: 70em;
     border-radius: 1em;
 }
 
-.alterContainer{
+.alterContainer {
     margin: 1em 1.5em;
+    color: var(--text-color);
 }
 
-.alterId{
+.alterId {
     font-weight: bolder;
+    color: var(--text-color);
 }
 
-.btns{
+.btns {
     display: grid;
 }
 
-.btns button{
+.btns button {
     padding: .25em 2em;
     border-radius: .75em;
-    background-color: #2461C8;
-    color: whitesmoke;
+    background-color: var(--btn-simul);
+    color: var(--txt-btn-simul);
     cursor: pointer;
 }
 
@@ -62,7 +75,7 @@
 
 @media (max-width: 1000px) {
 
-    .questContainer img{
+    .questContainer img {
         max-width: 100%;
     }
 
@@ -71,7 +84,7 @@
         text-wrap: balance;
     }
 
-    .questContainer a{
+    .questContainer a {
         font-size: smaller;
     }
 }
