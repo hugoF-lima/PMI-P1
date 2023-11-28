@@ -1,5 +1,5 @@
-const navBar = document.querySelector('#topNav'); //constante para seleção da area com ID topNav
-const botomBar = document.querySelector('#botomNav'); //constante para seleção de area com ID botomNav
+const navBar = document.querySelector('#topNav'); //constante que referencia tag HTML para atribuição de conteudo.
+const botomBar = document.querySelector('#botomNav'); //constante que referencia tag HTML para atribuição de conteudo.
 
 //atribuição de conteúdo da topNav por innerHTML
 navBar.innerHTML = `

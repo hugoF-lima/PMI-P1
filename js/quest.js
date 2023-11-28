@@ -1,17 +1,15 @@
-import { gaba } from "./gaba.js"; //importação do array gaba.js
-import { timer } from "./timer.js"; //importação da função timer();
+import { gaba } from "./gaba.js"; //Importação da contante 'gaba' que contem uma ninhagem de arrays com as informações das questões.
+import { timer } from "./timer.js"; //importação da função timer() para contabilização do tempo máximo no cronometro.
 
-/* import { estat } from "./estat.js"; // importação do array de estatísticas */
+let indiceAtual = 0; //variavel para definição de indice da página, definida inicialmente como 0 para inicio da prova
+const change = document.querySelector('#change'); //constante que referencia tag HTML com o ID 'change' para atribuição de conteudo via innerHTML.
+const bgPop = document.querySelector('#bgPop'); //constante que referencia tag HTML com o ID 'bgPop' para atribuição de conteudo via innerHTML.
+const popUp = document.querySelector('#popUp'); //constante que referencia tag HTML com o ID 'popUp' para atribuição de conteudo via innerHTML.
+const showPopUp = document.querySelector('#showPopUp'); //constante que referenciatag HTML com o ID 'showPopUp' para atribuição de contudo via innerHTML.
 
-let indiceAtual = 0; //variavel para definição de indice da página
-const change = document.querySelector('#change'); //constante para alteração de innerHTML atrávez de ID
-const bgPop = document.querySelector('#bgPop'); //constante para aparição do PopUp background atrávez de ID
-const popUp = document.querySelector('#popUp'); //constante para aparição do PopUp atrávez de ID
-const showPopUp = document.querySelector('#showPopUp'); //constante para containser do PopUp
-
-//função para troca de conteudo da página direcionado pelo indiceAtual atrávez de innerHTML
+//Função executada passando o centeudo dentro da contante 'change' atrávez do innerHTML usando o indice como parametro para escolha do conteudo.
 export default function showQuest(indice) {
-    const quest = gaba[indice]; //constante para chamar array gaba.js
+    const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
     if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada!
         alert("Questão Anulada");
@@ -23,9 +21,10 @@ export default function showQuest(indice) {
         });
     }
     
-    const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage para verificação se a pergunta ja foi respondida
+    const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
-    //novo conteudo da página atrávez de innerHTML
+    //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
+    // Nota: Todo e qualquer conteudo dentro da seguinte sintax:"${...}" é o conteudo buscado no array gaba com o indice indicano na função ou criação de uma nova função.
     change.innerHTML = `
     <article class="questContainer">
             <h1>Exame de Ciência da Computação (Bacharelado)</h1>
@@ -42,6 +41,7 @@ export default function showQuest(indice) {
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `;
+                //Atravéz do innerHTML podemos criar um elemento HTML para cada valor encontrado no array gaba.
     }).join('')}
             </div>
     <form id="form" action="#">
@@ -60,6 +60,7 @@ export default function showQuest(indice) {
     </article>
     `;
 
+    //Função que verifica qual alternativa foi clicada pelo usuario e manda as informações: "Indice da questão"(ex: 1, 2, 3, ...), "Acerto da questão"(ex: true ou false) e "Indice da alternativa"(ex: A, B, C, D ou E).
     quest.opcoes.forEach(opcao => {
         const input = document.getElementById(`${quest.id}_${opcao.id}`);
         input.addEventListener('change', () => {
@@ -79,25 +80,28 @@ export default function showQuest(indice) {
         }
     })
 
-    //atribuição de ação ao botão "Verificar" para envio do formulário
+    //Atribuição de evento ao clique do usuario ao botão 'verificar', sendo envio das informações para o popup de resposta.
     document.querySelector('#form').addEventListener('submit', e => {
         e.preventDefault(); //função para prevenir a ação padrão do formulário
-        const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que busca a alternativa selecionada
-        //verifica o valor da constante select para atribuição de função
+        const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que referencia a alternativa selecionada.
+        //verifica o valor da constante select para atribuição de função.
         if (select.value != null) {
-            //caso select for preenchida executa a função openPop
+            //caso select for preenchida executa a função openPop.
             openPop(quest, select.value == quest.opcaoCorreta, select.value);
+        }else{
+            //Caso contrário exibir alerta ao usuario de que nenhuma alternativa foi selecionada.
+            window.alert('Nenhuma alternativa selecionada!');
         };
 
-        const opcoesHTML = document.querySelectorAll('input[type="radio"]'); //seleciona todas as alternativas para desativalas
+        const opcoesHTML = document.querySelectorAll('input[type="radio"]'); //Constante que referencia todas as alternativas presentes na tela.
 
         opcoesHTML.forEach(opcao => {
-            //desativa todas as alternativas para o usuario não trocar a resposta
+            //desativa todas as alternativas para o usuario não trocar a resposta.
             opcao.disabled = true;
         });
 
         if (select.value) {
-            //se select estiver preenchida manda informações para função armazQuest
+            //se select estiver preenchida manda informações para função armazQuest.
             armazQuest(
                 quest.id,
                 select.value == quest.opcaoCorreta,
@@ -134,21 +138,24 @@ export default function showQuest(indice) {
         };
     });
 
-    //atribuição de ação para o botão "Voltar"
+    //Atribuição de evento ao clique do usuario no botão 'Voltar', sendo execução da função responsavel pelo indice.
     document.querySelector('#volt').addEventListener('click', () => {
-        altQuest(false); //executa a função altQuest com valor false
+        altQuest(false); //executa a função altQuest com valor false.
     });
 
-    //atribuição de ação para o botão "próximo"
+    //Atribuição de eventro ao clique do usuario no botão 'Proximo', sendo execução da função responsavel pelo indice.
     document.querySelector('#prox').addEventListener('click', () => {
-        altQuest(true); //executa a função altQuest com valor true
+        altQuest(true); //executa a função altQuest com valor true.
     });
 
-    //atribuição de ação para o botão "finalizar"
+    //Atribuição de evento ao clique do usuario no botão 'Finalizar'.
     document.querySelector('#final').addEventListener('click', () => {
+        //Exibição de janela de confirmação do usuario se realmente deseja finalizar a prova.
         if (window.confirm('Deseja finalizar a prova?')) {
+            //Caso o usuario confirme a ação: relocaliza o usuario para página 'final.html'
             location.assign('final.html')
         } else {
+            //Caso contrário fecha janela de confirmção e nada acontece.
             return false;
         }
     });
@@ -166,21 +173,27 @@ export default function showQuest(indice) {
         })
     }
 
-    //atribuição de evento ao clicar no botão "sair"
+    //Atribuição de evento ao clique do usuario no botão 'Sair'.
     document.querySelector('#sair').addEventListener('click', ()=>{
+        //Exibição de janela de confirmação do usuario se realmente deseja sair da prova.
         if (confirm('Deseja sair do simulado e voltar ao inicio?')){
+            //Caso o usuario confirme a ação: relocaliza o usuario para a página 'Index.html'.
             location.assign('index.html');
         } else {
+            //Caso contrário fecha janela de confirmação e nada acontece.
             return false;
         }
     });
 
-    //atribuição de evento ao clicar no botão "refazer prova"
+    //Atribuição de evento ao clique do usuario no botão 'Refazer a prova'.
     document.querySelector('#resetar').addEventListener('click', ()=>{
+        //Exibição de janela de confirmação do usuario se realmete deseja refazer a prova.
         if (confirm('Deseja resetar a prova?')){
+            //Caso o usuario confirme a ação: limpa todas as informações guardadas no localStorage e relocaliza o usuario para pagina 'tutorial.html'.
             localStorage.clear()
             location.assign('tutorial.html')
         } else {
+            //Caso contrário fecha a janela de confirmação e nada acontece.
             return false;
         }
     });
@@ -188,16 +201,18 @@ export default function showQuest(indice) {
 
 showQuest(0); //execução da função showQuest no indice 0
 
-//função para alterar o indiceAtual da página de simulado
+//função para alterar o indiceAtual da página de simulado.
 function altQuest(direcao) {
     //se valor = true adiciona 1 a variavel indiceAtual
     if (direcao) {
         indiceAtual++;
-        //se valor de indiceAtual ultrapassar extenssão do gaba.js finaliza a prova automáticamente
+        //se valor de indiceAtual ultrapassar extenssão do gaba.js exibe alerta de confirmação para finaliza a prova
         if (indiceAtual > gaba.length - 1) {
             if (confirm('Deseja finalizar a prova?')) {
+                //Caso o usuario confirme a ação: relocaliza o usuario para pagina 'final.html'.
                 location.assign('final.html');
             } else {
+                //Caso contrario fecha janela de confirmação e nada acontece.
                 return false;
             }
         }
