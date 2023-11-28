@@ -6,20 +6,14 @@ navBar.innerHTML = `
 <header class="navTopBar">
     <li id="dif"><a href="./index.html"><img src="../img/branca png.png" alt="LOGO"></a></li>
     <button class="nav-ham" arial><span class="sr-only">Menu</span></button>
-<ul class="topNav_container" data-visible="false">
-    <li><a href="./index.html">Início</a></li>
-    <li><a href="./tutorial.html">Instruções</a></li>
-    <li><a href="./sobre.html">Sobre</a></li>
-    <li><a href="./credito.html">Créditos</a></li>
-    <li>
-    <a href="#">Acessibilidade</a>
-    <div class="dropdown">
-    <a href="#">Modo Noturno</a>
-    <a href="#">Modo Escuro</a>
-    <a href="#">Alto Contraste</a>
-    </div>    
-    </li>
-</ul>
+    <ul class="topNav_container" data-visible="false">
+        <li><a href="./index.html">Início</a></li>
+        <li><a href="./tutorial.html">Instruções</a></li>
+        <li><a href="./sobre.html">Sobre</a></li>
+        <li><a href="./credito.html">Créditos</a></li>
+        <li><a id="brightness"><img src="../img/brilho.png" /></a></li>
+        <li><a id="high-contrast" data-depressed="0"><img src="../img/alto-contraste.png" /></a></li>
+    </ul>
 </header>
 `
 var header = document.querySelector('.topNav_container');

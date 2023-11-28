@@ -26,6 +26,12 @@
     text-decoration: none;
 }
 
+.topNav_container li > a > img{
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    position: static;
+}
+
 .navTopBar img {
     position: absolute;
     left: 2rem;
