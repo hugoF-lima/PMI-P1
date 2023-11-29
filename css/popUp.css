@@ -24,6 +24,7 @@
 #desconsid p {
   font-size: 14px;
   position: center;
+  color: red;
 }
 
 #desconsid p:hover {
