@@ -36,14 +36,13 @@
 
 #popUp {
   position: relative;
-  margin: auto;
-  width: 500px;
-  height: 250px;
+  margin: 5% 30%;
+  min-width: 500px;
+  min-height: 250px;
   background-color: white;
   border: 1px solid black;
   border-radius: 8px;
-  z-index: 2;
-  margin-top: 25vh;
+  z-index: 2; 
 }
 
 .popUp__title {

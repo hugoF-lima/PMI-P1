@@ -21,7 +21,7 @@
 
 #rodape {
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     position: relative;
     top: 35px;
     left: 25px;
@@ -32,7 +32,7 @@
 #letraEscolhida,
 #letraCorreta {
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     position: relative;
     top: 25px;
     left: 10px;

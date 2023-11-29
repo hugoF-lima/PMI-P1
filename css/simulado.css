@@ -62,11 +62,15 @@
     cursor: pointer;
 }
 
+.btns button a{
+    text-decoration: none;
+    color: var(--text-color-btn);
+}
+
 .resultContainer {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .p a {

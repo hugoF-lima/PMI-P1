@@ -346,7 +346,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         </style>
         `;
         popUp.style.width = "580px";
-        popUp.style.height = "620px";
+        popUp.style.height = "80%";
     }
     //adiciona classe "show" para bgPop e adiciona evento de click para adicionar classe "hidden"
     bgPop.addEventListener('click', () => {
