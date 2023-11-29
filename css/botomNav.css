@@ -1,54 +1,76 @@
-/* TODO: Ajustar tamanho do Logo de ADS? */
-
+/* Importa estilos para a barra de navegação inferior */
 .botomNav {
+    /* Define o modelo de layout como flexível */
     display: flex;
+    /* Centraliza os itens ao longo do eixo principal (horizontal) */
     justify-content: center;
+    /* Centraliza os itens ao longo do eixo secundário (vertical) */
     align-items: center;
+    /* Cor de fundo da barra de navegação */
     background-color: var(--bg-color);
+    /* Adiciona sombra à barra de navegação */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Adiciona espaçamento interno à barra de navegação */
     padding: 1.5em;
 }
 
-/* A ideia aqui é colocar uma cor diferenciada para o 
-logo de ADS visto o texto branco, eliminar o id mais tarde se possível */
+/* A presença de # indica a referência por 'id', enquanto a de . indica a referência via 'class' */
 #logo-ads {
+    /* Cor de fundo para o elemento com id 'logo-ads' */
     background-color: var(--bg-color);
 }
 
 .botomNav a {
+    /* Define o modelo de layout como flexível para os elementos âncora */
     display: flex;
+    /* Centraliza o conteúdo dos elementos âncora horizontalmente */
     justify-content: center;
+    /* Remove a decoração de texto (sublinhado) dos elementos âncora */
     text-decoration: none;
+    /* Cor do texto dos elementos âncora */
     color: black;
+    /* Adiciona margem horizontal aos elementos âncora */
     margin: 0 10rem;
 }
 
 .botomNav a img {
+    /* Define a largura máxima para as imagens dentro dos elementos âncora */
     max-width: 8em;
+    /* Define a altura máxima para as imagens dentro dos elementos âncora */
     max-height: 8em;
+    /* Cor de fundo para as imagens dentro dos elementos âncora */
     background-color: var(--img-background);
 }
 
+/* Define estilos para telas com altura máxima de 40em (640px) */
 @media screen and (max-height: 40em) {
     .botomNav {
+        /* Altera a direção dos itens para coluna em telas mais estreitas */
         flex-direction: column;
     }
 }
 
+/* Define estilos para telas com largura máxima de 40em (640px) */
 @media screen and (max-width: 40em) {
     .botomNav a {
+        /* Remove a margem horizontal dos elementos âncora em telas mais estreitas */
         margin: 0;
     }
 
     .botomNav {
+        /* Altera a direção dos itens para coluna em telas mais estreitas */
         flex-direction: column;
+        /* Adiciona espaçamento vertical entre os itens em telas mais estreitas */
         gap: 3rem;
     }
 }
 
+/* Define estilos para telas com largura máxima de 55em (880px) */
 @media screen and (max-width: 55em) {
     .botomNav {
+        /* Altera a direção dos itens para coluna em telas mais estreitas */
         flex-direction: column;
+        /* Adiciona espaçamento vertical entre os itens em telas mais estreitas */
         gap: 3rem;
     }
 }

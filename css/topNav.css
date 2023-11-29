@@ -1,161 +1,258 @@
+/* Estilos para a barra de navegação superior */
 .topNav_container {
     list-style: none;
+    /* Remove marcadores de lista */
     padding: 0;
+    /* Remove o preenchimento padrão */
     text-align: center;
+    /* Alinha o texto ao centro */
     min-height: 4rem;
+    /* Altura mínima da barra de navegação */
     line-height: 80px;
+    /* Altura da linha igual à altura para centralizar verticalmente */
     width: 100%;
+    /* Largura total da barra de navegação */
     display: flex;
+    /* Exibe como flex container */
     justify-content: center;
+    /* Centraliza os itens horizontalmente */
     align-items: center;
+    /* Centraliza os itens verticalmente */
     gap: 1.2rem;
+    /* Espaço entre os itens */
 }
 
 /* Estilo para o label que aparece em Brilho (?) */
 .label {
     color: var(--text-color);
+    /* Cor do texto */
 }
 
-
+/* Estilos para os itens da barra de navegação */
 .topNav_container li {
     position: relative;
+    /* Posição relativa para posicionamento */
     display: inline;
+    /* Exibe como elemento de linha */
     margin: 0 10px;
+    /* Margens horizontal para espaçamento entre os itens */
     transition: .5s;
+    /* Transição suave de meio segundo */
     cursor: pointer;
+    /* Mostra o cursor como ponteiro ao passar o mouse */
 }
 
 .topNav_container li a {
     color: white;
+    /* Cor do texto */
     font-size: 25px;
+    /* Tamanho da fonte */
     font-weight: bolder;
+    /* Peso da fonte */
     text-decoration: none;
+    /* Remove a decoração do link */
 }
 
 .topNav_container li>a>img {
     max-width: 1.5rem;
+    /* Largura máxima da imagem dentro do link */
     max-height: 1.5rem;
+    /* Altura máxima da imagem dentro do link */
     position: static;
+    /* Posição estática para anular a posição relativa do pai */
 }
 
 .navTopBar img {
     position: absolute;
+    /* Posição absoluta para posicionamento personalizado */
     left: 2rem;
+    /* Distância à esquerda */
     top: 1rem;
+    /* Distância ao topo */
     max-width: 5rem;
+    /* Largura máxima da imagem */
     max-height: 5rem;
+    /* Altura máxima da imagem */
 }
 
+/* Estilos para o slider */
 .slider-container {
     display: flex;
+    /* Exibe como flex container */
     justify-content: center;
+    /* Centraliza horizontalmente */
 }
 
 .slider-container label {
     color: white;
+    /* Cor do texto */
 }
 
-/* bloco responsável por inverter as cores do png de brilho */
+/* Bloco responsável por inverter as cores do png de brilho */
 a .inverted-image {
     filter: invert(1);
+    /* Inverte as cores da imagem */
 }
 
+/* Efeito de cor ao passar o mouse sobre os links */
 .topNav_container li a:hover {
     color: var(--btn-bg-color);
+    /* Cor do texto ao passar o mouse */
 }
 
+/* Estilos para o menu suspenso */
 .topNav_container .dropdown {
     min-height: 130px;
+    /* Altura mínima do menu suspenso */
     width: 220px;
+    /* Largura do menu suspenso */
     padding: 10px 10px;
+    /* Preenchimento interno do menu suspenso */
     box-sizing: border-box;
+    /* A caixa inclui preenchimento e borda */
     display: flex;
+    /* Exibe como flex container */
     flex-direction: column;
+    /* Empilha os itens verticalmente */
     gap: 12px;
+    /* Espaço entre os itens */
     position: absolute;
-    /* dropdown não aparecerá corretamente caso left: 0px seja removido */
-    left: 0px;
+    /* Posição absoluta para posicionamento personalizado */
+    left: 0;
+    /* Alinhamento à esquerda */
     top: 40px;
+    /* Distância ao topo */
     border-radius: 8px;
+    /* Bordas arredondadas */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Cor de fundo com transparência */
     box-shadow: rgba(0, 0, 0, .4) 0px 25px 50px -12px;
+    /* Sombra */
     opacity: 0;
+    /* Opacidade inicial */
     visibility: hidden;
+    /* Visibilidade inicial */
     transition: .2s ease-in-out;
+    /* Transição suave */
 }
 
+/* Exibe o menu suspenso ao passar o mouse sobre o item */
 .topNav_container li:hover .dropdown {
     opacity: 1;
+    /* Opacidade ao passar o mouse */
     visibility: visible;
+    /* Torna visível ao passar o mouse */
     top: 60px;
+    /* Distância ao topo ao passar o mouse */
 }
 
+/* Estilos para os links dentro do menu suspenso */
 .dropdown a {
     font-size: 14px;
+    /* Tamanho da fonte */
     border-bottom: 1px solid #000000;
+    /* Linha separadora entre os itens */
     padding-bottom: 10px;
+    /* Espaçamento inferior */
 }
 
+/* Estilos para o ícone do menu hamburger em telas pequenas */
 .nav-ham {
     display: none;
+    /* Inicialmente oculto em telas grandes */
 }
 
+/* Estilos para a barra de navegação em telas pequenas (< 1000px) */
 @media (max-width: 1000px) {
     .topNav_container {
         flex-direction: column;
+        /* Empilha os itens verticalmente */
         justify-content: flex-start;
+        /* Alinha ao topo */
         align-items: flex-start;
+        /* Alinha à esquerda */
         gap: 0;
+        /* Remove o espaço entre os itens */
         z-index: 1000;
+        /* Z-index alto para estar acima de outros elementos */
         position: fixed;
+        /* Posição fixa na tela */
         top: 0;
+        /* Alinhado ao topo */
         right: 0;
+        /* Alinhado à direita */
         left: 50%;
+        /* Alinhado ao centro */
         bottom: 0;
+        /* Alinhado à parte inferior */
         background: rgba(0, 0, 0, .5);
+        /* Cor de fundo com transparência */
         transform: translateX(100%);
+        /* Inicialmente fora da tela à direita */
         transition: all .5s ease-in-out;
+        /* Transição suave */
     }
 
+    /* Exibe a barra de navegação ao ser marcado como visível */
     .topNav_container[data-visible="true"] {
         transform: translateX(0%);
+        /* Exibe a barra de navegação */
         transition: all .5s ease-in-out;
+        /* Transição suave */
     }
 
     .navTopBar li {
         padding: 0;
+        /* Remove o preenchimento padrão */
         margin: 0;
+        /* Remove as margens padrão */
         top: 5rem;
+        /* Distância ao topo */
     }
 
     .topNav_container li a {
         margin: 0 0 0 2rem;
+        /* Espaçamento à esquerda dos links */
     }
 
     .topNav_container li:last-child {
         display: none;
+        /* Oculta o último item da lista */
     }
 
     .nav-ham {
         display: block;
+        /* Exibe o ícone do menu hamburger */
         position: fixed;
+        /* Posição fixa na tela */
         z-index: 99999;
+        /* Z-index alto para estar acima de outros elementos */
         top: 1rem;
+        /* Distância ao topo */
         right: 2rem;
+        /* Distância à direita */
         width: 2.2rem;
+        /* Largura do ícone */
         aspect-ratio: 1;
+        /* Proporção de aspecto quadrado */
         background: url(../img/Hamburger-menu.svg);
+        /* Imagem do ícone do menu hamburger */
         border: 0;
+        /* Remove a borda */
         background-repeat: no-repeat;
+        /* Não repete o plano de fundo */
     }
 
     .navTopBar img {
         top: 0;
+        /* Alinha ao topo */
     }
 }
 
+/* Estilos para telas ainda menores (< 800px) */
 @media (max-width: 800px) {
     .navTopBar img {
         left: 0;
+        /* Alinha à esquerda */
     }
 }

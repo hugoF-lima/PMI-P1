@@ -1,35 +1,63 @@
-.timer-container{
+/* Estilos para o container do temporizador */
+.timer-container {
   position: fixed;
+  /* Posição fixa na tela */
   z-index: 1;
+  /* Colocado acima de outros elementos */
   top: 7rem;
+  /* Distância do topo */
   right: 0;
+  /* Alinhado à direita */
   width: 10rem;
+  /* Largura */
   height: 2rem;
+  /* Altura */
   background-color: white;
+  /* Cor de fundo */
   display: flex;
+  /* Exibe como flex container */
   justify-content: space-around;
+  /* Espaço uniforme entre os itens */
   align-items: center;
+  /* Alinhamento vertical ao centro */
   border-radius: 1rem 0rem 0rem 1rem;
+  /* Bordas arredondadas */
   transform: translateX(70%);
+  /* Inicialmente, deslocado 70% para a direita */
   animation: timer-animation 8s none;
+  /* Animação do temporizador */
   transition: all .3s ease-out;
+  /* Transição suave */
 }
 
-.timer-container:hover{
+/* Efeito de transição ao passar o mouse sobre o container */
+.timer-container:hover {
   transform: translateX(0%);
+  /* Deslocado para a esquerda ao passar o mouse */
   transition: all .3s ease-in;
+  /* Transição suave */
 }
 
-.timer-container img{
+/* Estilos para a imagem dentro do container */
+.timer-container img {
   max-width: 2rem;
+  /* Largura máxima da imagem */
   max-height: 1.5rem;
+  /* Altura máxima da imagem */
 }
 
+/* Animação do temporizador */
 @keyframes timer-animation {
-  0%, 50%{
+
+  0%,
+  50% {
     transform: translateX(0%);
+    /* Inicial e meio da animação, não deslocado */
   }
-  80%, 100%{
+
+  80%,
+  100% {
     transform: translateX(70%);
+    /* Final da animação, deslocado 70% para a direita */
   }
 }

@@ -1,94 +1,147 @@
+/* Estilos para o contêiner de questões com a classe 'questContainer' */
 .questContainer {
     margin: 5% 15%;
+    /* Margem superior e inferior de 5%, margem à direita e à esquerda de 15% */
     padding: .75em 1em;
+    /* Preenchimento de .75em acima e abaixo, 1em à esquerda e à direita */
     border: .5px solid lightgray;
+    /* Borda de .5px sólida em lightgray */
     background-color: var(--quest-bg-color);
+    /* Cor de fundo da questão */
     border-radius: 1em;
+    /* Borda arredondada com raio de 1em */
 }
 
+/* Estilos para o título h1 dentro do contêiner de questões */
 .questContainer h1 {
     text-align: center;
+    /* Alinhamento do texto no centro */
     font-size: 2em;
+    /* Tamanho da fonte de 2em */
     color: var(--text-color);
+    /* Cor do texto */
 }
 
-/* estilos para highlight de links */
+/* Estilos para os links dentro do contêiner de questões */
 .questContainer a {
     color: var(--btn-bg-color);
+    /* Cor do link */
 }
 
+/* Estilos para o hover dos links dentro do contêiner de questões */
 .questContainer a:hover {
     color: var(--text-highlight);
+    /* Cor do link ao passar o mouse */
 }
 
+/* Estilos para o subtítulo h3 dentro do contêiner de questões */
 .questContainer h3 {
     margin: 1em 2em;
+    /* Margem superior de 1em, margem inferior de 2em */
     font-size: 1.25em;
+    /* Tamanho da fonte de 1.25em */
     color: var(--text-color);
+    /* Cor do texto */
 }
 
+/* Estilos para o contêiner de imagens com a classe 'img-cont' */
 .img-cont {
     display: flex;
+    /* Exibição flexível */
     justify-content: center;
+    /* Alinhamento do conteúdo ao centro horizontalmente */
     align-items: center;
+    /* Alinhamento do conteúdo ao centro verticalmente */
     max-width: 100%;
+    /* Largura máxima de 100% */
 }
 
+/* Estilos para as imagens dentro do contêiner de questões */
 .questContainer img {
     max-width: 95%;
+    /* Largura máxima de 95% */
     max-height: 70em;
+    /* Altura máxima de 70em */
     border-radius: 1em;
+    /* Borda arredondada com raio de 1em */
 }
 
+/* Estilos para o contêiner de alternativas com a classe 'alterContainer' */
 .alterContainer {
     margin: 1em 1.5em;
+    /* Margem superior de 1em, margem inferior de 1.5em */
     color: var(--text-color);
+    /* Cor do texto */
 }
 
+/* Estilos para o identificador de alternativas com a classe 'alterId' */
 .alterId {
     font-weight: bolder;
+    /* Fonte em negrito */
     color: var(--text-color);
+    /* Cor do texto */
 }
 
+/* Estilos para o contêiner de botões com a classe 'btns' */
 .btns {
     display: grid;
+    /* Exibição em grid */
 }
 
+/* Estilos para os botões dentro do contêiner de botões */
 .btns button {
+    /* Preenchimento interno de .25em acima e abaixo, 2em à esquerda e à direita */
     padding: .25em 2em;
+    /* Borda arredondada com raio de .75em */
     border-radius: .75em;
+    /* Cor de fundo do botão simul */
     background-color: var(--btn-simul);
+    /* Cor do texto do botão simul */
     color: var(--txt-btn-simul);
+    /* Altera o cursor para indicar que o elemento é clicável */
     cursor: pointer;
 }
 
-.btns button a{
+/* Estilos para os links dentro dos botões */
+.btns button a {
+    /* Remove a decoração do link */
     text-decoration: none;
+    /* Cor do texto do link */
     color: var(--text-color-btn);
 }
 
+/* Estilos para o contêiner de resultado com a classe 'resultContainer' */
 .resultContainer {
+    /* Margem superior de 40px */
     margin-top: 40px;
+    /* Exibição flexível */
     display: flex;
+    /* Espaço entre os elementos filhos */
     justify-content: space-between;
 }
 
+/* Estilos para o link dentro do parágrafo com a classe 'p' */
 .p a {
+    /* Remove a decoração do link */
     text-decoration: none;
 }
 
+/* Estilos para a mídia de consulta com uma largura máxima de 1000px */
 @media (max-width: 1000px) {
-
     .questContainer img {
+        /* Largura máxima de 100% para garantir responsividade */
         max-width: 100%;
     }
 
     .questContainer {
+        /* Tamanho da fonte pequeno */
         font-size: small;
+        /* Quebra de texto balanceada */
         text-wrap: balance;
     }
 
     .questContainer a {
+        /* Tamanho da fonte menor para links */
         font-size: smaller;
     }
 }
