@@ -43,7 +43,7 @@
     flex-direction: column;
 }
 
-.resultados-estats h2 {
+.resultados-estats h2:not(.popUpTitle) {
     color: var(--text-color);
 }
 
