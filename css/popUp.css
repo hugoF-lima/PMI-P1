@@ -72,6 +72,14 @@
   font-weight: bold;
 }
 
+.popUpTitle {
+  color: black;
+}
+
+.popUpContents h2 {
+  color: black;
+}
+
 .acertou {
   border-start-start-radius: 8px;
   border-start-end-radius: 8px;
