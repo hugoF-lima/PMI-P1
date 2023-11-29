@@ -23,25 +23,30 @@ export function setStyle(style) {
 function toggleSlider() {
     const sliderContainer = document.querySelector('.slider-container');
     const isSliderVisible = sliderContainer.style.display === 'flex';
+
+    // Retrieve the stored brightness value from localStorage
     const storedBrightness = localStorage.getItem('brightnessValue');
 
-    // Apply the stored brightness value to the webpage
-    if (storedBrightness !== null) {
-        adjustFilterIntensity(storedBrightness * 50); // Multiply by 50 to convert back to the slider scale (0-100)
+    // Get the default brightness of the body element
+    const defaultBrightness = parseFloat(getComputedStyle(document.body).filter);
 
-        // Set the slider value to the stored brightness
-        const slider = document.getElementById('filterIntensity');
-        if (slider) {
-            slider.value = storedBrightness * 100; // Assuming the slider range is 0-100
-        }
+    // Use the stored brightness value if available; otherwise, use the default brightness
+    const brightnessValue = storedBrightness !== null ? parseFloat(storedBrightness) : defaultBrightness;
+
+    // Apply the brightness value to the webpage
+    adjustFilterIntensity(brightnessValue * 100); // Assuming the slider range is 0-100
+
+    // Set the slider value to the brightness value
+    const slider = document.getElementById('filterIntensity');
+    if (slider) {
+        slider.value = brightnessValue * 100; // Assuming the slider range is 0-100
     }
 
+    // Toggle the visibility of the slider container
     if (isSliderVisible) {
-        // Fazer com que obtenha o valor do slider!
         sliderContainer.style.display = 'none';
         /* resetFilter(); */
     } else {
-        // If the slider is hidden, show it
         sliderContainer.style.display = 'flex';
     }
 }
@@ -60,6 +65,8 @@ export function adjustFilterIntensity(intensity) {
 
     // Store the brightness value in localStorage
     localStorage.setItem('brightnessValue', brightnessValue);
+
+    console.log("valor de brilho", brightness);
 
     // You can also apply the filter to specific elements if needed
     // For example, adjust the brightness of an element with the ID 'content'

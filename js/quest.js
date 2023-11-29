@@ -7,26 +7,26 @@ const bgPop = document.querySelector('#bgPop'); //constante que referencia tag H
 const popUp = document.querySelector('#popUp'); //constante que referencia tag HTML com o ID 'popUp' para atribuição de conteudo via innerHTML.
 const showPopUp = document.querySelector('#showPopUp'); //constante que referenciatag HTML com o ID 'showPopUp' para atribuição de contudo via innerHTML.
 
-//Função executada passando o centeudo dentro da contante 'change' atrávez do innerHTML usando o indice como parametro para escolha do conteudo.
+//Função executada passando o centeudo dentro da contante 'change' atráves do innerHTML usando o indice como parametro para escolha do conteudo.
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
-    let radios = document.querySelectorAll('input[type="radio"]');
-
+    let radios = document.querySelectorAll('input[type="radio"]'); //Const responsável por verificar a presença dos radios
     if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
-        alert("Questão Anulada");
+        alert("Questão Anulada"); //mensagem exibida ao usuário
 
-        // Fazendo loop em todos os elementos radio e os desativando.
+        // Fazendo loop em todos os elementos radio e os desativando (visto o condicional de questão anulada).
         radios.forEach(function (radio) {
             radio.disabled = true;
         });
     } else {
+       //Caso contrário, ele mantem desmarcado. 
         radios.forEach(function (radio) {
             radio.disabled = false;
         });
 
     }
-    
+
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
     //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
@@ -47,7 +47,7 @@ export default function showQuest(indice) {
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `;
-                //Atravéz do innerHTML podemos criar um elemento HTML para cada valor encontrado no array gaba.
+        //Através do innerHTML podemos criar um elemento HTML para cada valor encontrado no array gaba.
     }).join('')}
             </div>
     <form id="form" action="#">
@@ -94,7 +94,7 @@ export default function showQuest(indice) {
         if (select.value != null) {
             //caso select for preenchida executa a função openPop.
             openPop(quest, select.value == quest.opcaoCorreta, select.value);
-        }else{
+        } else {
             //Caso contrário exibir alerta ao usuario de que nenhuma alternativa foi selecionada.
             window.alert('Nenhuma alternativa selecionada!');
         };
@@ -180,9 +180,9 @@ export default function showQuest(indice) {
     }
 
     //Atribuição de evento ao clique do usuario no botão 'Sair'.
-    document.querySelector('#sair').addEventListener('click', ()=>{
+    document.querySelector('#sair').addEventListener('click', () => {
         //Exibição de janela de confirmação do usuario se realmente deseja sair da prova.
-        if (confirm('Deseja sair do simulado e voltar ao inicio?')){
+        if (confirm('Deseja sair do simulado e voltar ao inicio?')) {
             //Caso o usuario confirme a ação: relocaliza o usuario para a página 'Index.html'.
             location.assign('index.html');
         } else {
@@ -192,9 +192,9 @@ export default function showQuest(indice) {
     });
 
     //Atribuição de evento ao clique do usuario no botão 'Refazer a prova'.
-    document.querySelector('#resetar').addEventListener('click', ()=>{
+    document.querySelector('#resetar').addEventListener('click', () => {
         //Exibição de janela de confirmação do usuario se realmete deseja refazer a prova.
-        if (confirm('Deseja resetar a prova?')){
+        if (confirm('Deseja resetar a prova?')) {
             //Caso o usuario confirme a ação: limpa todas as informações guardadas no localStorage e relocaliza o usuario para pagina 'tutorial.html'.
             localStorage.clear()
             location.assign('tutorial.html')

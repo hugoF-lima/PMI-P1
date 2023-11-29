@@ -59,8 +59,11 @@ const cardContent = [
     },
 ];
 
+/* Função responsável por animar o elemento no gráfico de resultado final */
 function updateProgress(elementId, ref_value) {
+    /* obtenção do elemento id */
     const progressBar = document.getElementById(elementId);
+
     let percentage = 0;
 
     const interval = setInterval(() => {
@@ -68,39 +71,45 @@ function updateProgress(elementId, ref_value) {
         percentage++;
 
         if (percentage > ref_value) {
+            //chamando uma função interna do JS, clearInterval
             clearInterval(interval);
         }
     }, 10); // Ajustar o intervalo o quanto necessário para a velocidade de animação
 }
 
+/* Função responsável por exibir os gráficos de todas as questões na tela final, quando o usuário 
+pressiona 'visualizar estatísticas' */
 function mostrarEstatsAll() {
-    let popUpsHTML = ''; // Initialize an empty string to accumulate HTML content
+    let popUpsHTML = ''; // Inicia se com uma varável vazia para acumular o conteúdo html posterior
 
+    //Aproveita-se a tag de article class para encapsular os resultados
     change.innerHTML = `
     <article class="questContainer"></article>
     `;
 
-    console.log(localStorage);
 
+    /* Inicia se o loop verificando o total de questões, subtrae-se 1 para que o valor seja 34 (Total das questões)*/
     for (var i = 0; i <= maxRes - 1; i++) {
-        // Fazer essas variaveis obter a leitura do localStorage
-        /* console.log("This", i, simulado[i.toString().padStart(2, '0')]); */
-
+        //Faz se a chamada do objeto gaba em 'quest' para se obter o numero da questão
         let quest = gaba[i];
-        console.log("questão atual", i, simulado[i.toString().padStart(2, '0')]?.[1]);
-        let acertou = simulado[(i + 1).toString().padStart(2, '0')]?.[0] || false;
+
         /* O padrão de leitura abaixo é usado devido ao objeto ser lido como simulado["02"] por exemplo
         E caso o mesmo seja vazio, retorna '-' */
+        /* Corrige se o index i para a exibição correta da questão correspondente */
+        /* em acertou o tipo correspondente é Boolean, por isso retorna falso se vazio, a tecnica em questão é o uso do 'ternary' */
+        let acertou = simulado[(i + 1).toString().padStart(2, '0')]?.[0] || false;
         let altMarcada = simulado[(i + 1).toString().padStart(2, '0')]?.[1] || '-';
         let resPopUp = quest.opcaoCorreta || '-';
-
+        //Faz se a chamada do objeto gaba em 'estatBusca' para se obter as estatisticas
         const estatBusca = gaba[i];
 
         //variável que faz a leitura dos campos contidos em 'estatisticas'
         const estatDados = estatBusca.estatisticas[0];
+        /* criação de uma div para acomodar os elementos a seguir */
         const popUp = document.createElement('div');
+        /* Adicionando resultados-estats para a div criada */
         popUp.classList.add('resultados-estats');
-
+        /* Estrutura do Inner html para cada container de estatística, a qual se repete o número de vezes do loop */
         popUp.innerHTML = `
             <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> Questão ${quest.id}:  ${acertou ? 'Acertou!' : 'Errou!'}</h2>
             
@@ -249,21 +258,30 @@ function mostrarRes() {
         </div>
     `;
 
-    /* Por algum motivo, essa const precisa estar posterior ao inner html para que as barras
-    de progresso animem */
+    /* Codigo referente a animação da barra de progresso */
+    // Seleciona todos os elementos com a classe 'progress' e atribui a 'bars'
     const bars = document.querySelectorAll('.progress');
-    /* bloco responsável pelo intervalo de animação do gráfico */
+
+    // Itera sobre cada elemento com a classe 'progress'
     bars.forEach(item => {
+        // Obtém o valor da propriedade 'id' do elemento
         let value = item.id;
+        // Inicializa um contador para a animação
         let contador = 0;
+        // Cria um intervalo para animar o aumento da largura do elemento
         let interval = setInterval(function () {
+            // Define a largura do elemento de acordo com o contador
             item.style.width = contador + "%";
+            // Verifica se o contador atingiu o valor final
             if (contador == value) {
+                // Limpa o intervalo se o contador atingiu o valor final
                 clearInterval(interval);
             }
+            // Incrementa o contador para a próxima iteração
             contador++;
-        }, 8);
-    })
+        }, 8); // Intervalo de 8 milissegundos entre cada iteração da animação
+    });
+
 
     updateProgress("acertos", acertosFinais);
     updateProgress("erros", errosFinais);
@@ -292,5 +310,6 @@ function mostrarRes() {
     });
 };
 
+/* Chamada da função que contabiliza o total, sempre que a pagina é carregada */
 mostrarRes();
 /* localStorage.clear(); */
