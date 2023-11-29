@@ -301,7 +301,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
                 </div>
             </section>
             </div>
-        <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+        <p id="rodape" style="color:black;">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
             
         <style>
         @-webkit-keyframes show-bar-one-vertical {
