@@ -22,6 +22,10 @@
     /* Cor do texto */
 }
 
+.questContainer b {
+    color: var(--text-color);
+}
+
 /* Estilos para os links dentro do contêiner de questões */
 .questContainer a {
     color: var(--btn-bg-color);
