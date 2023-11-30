@@ -11,21 +11,7 @@ const showPopUp = document.querySelector('#showPopUp'); //constante que referenc
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
-    let radios = document.querySelectorAll('input[type="radio"]'); //Const responsável por verificar a presença dos radios
-    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
-        alert("Questão Anulada"); //mensagem exibida ao usuário
-
-        // Fazendo loop em todos os elementos radio e os desativando (visto o condicional de questão anulada).
-        radios.forEach(function (radio) {
-            radio.disabled = true;
-        });
-    } else {
-       //Caso contrário, ele mantem desmarcado. 
-        radios.forEach(function (radio) {
-            radio.disabled = false;
-        });
-
-    }
+    
 
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
@@ -66,6 +52,21 @@ export default function showQuest(indice) {
     </article>
     `;
 
+    let radios = document.querySelectorAll('input[type="radio"]'); //Const responsável por verificar a presença dos radios
+    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
+        alert(`A Questão ${quest.id} foi Anulada! Não será possível escolher alternativas.`); //mensagem exibida ao usuário
+
+        // Fazendo loop em todos os elementos radio e os desativando (visto o condicional de questão anulada).
+        radios.forEach(function (radio) {
+            radio.disabled = true;
+        });
+    } else {
+        //Caso contrário, ele mantem desmarcado. 
+        radios.forEach(function (radio) {
+            radio.disabled = false;
+        });
+
+    }
     //Função que verifica qual alternativa foi clicada pelo usuario e manda as informações: "Indice da questão"(ex: 1, 2, 3, ...), "Acerto da questão"(ex: true ou false) e "Indice da alternativa"(ex: A, B, C, D ou E).
     quest.opcoes.forEach(opcao => {
         const input = document.getElementById(`${quest.id}_${opcao.id}`);
