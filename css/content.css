@@ -276,7 +276,7 @@ hr {
 
     .collum1 button a {
         /* Tamanho da fonte do link dentro do botão */
-        font-size: 20px;
+        font-size: 15px;
         /* Peso da fonte do link dentro do botão */
         font-weight: bold;
         /* Preenchimento interno do link dentro do botão */
@@ -347,7 +347,7 @@ hr {
 
     .collum1 button a {
         /* Tamanho da fonte do link dentro do botão */
-        font-size: 20px;
+        font-size: 15px;
         /* Preenchimento interno do link dentro do botão */
         padding: 1em;
     }

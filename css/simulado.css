@@ -141,10 +141,11 @@
     .btns button a {
         font-size: 15px;
     }
+
     .questContainer h3 {
         font-size: 15px;
     }
-    
+
     .questContainer {
         /* Tamanho da fonte pequeno */
         font-size: small;

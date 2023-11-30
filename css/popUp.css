@@ -55,7 +55,6 @@
 }
 
 /* Define estilos para o popup com o id 'popUp' */
-/* Define estilos para o popup com o id 'popUp' */
 #popUp {
   /* Posição relativa em relação ao bloco pai */
   position: relative;
@@ -134,7 +133,7 @@
 /* Define estilos para os títulos h2 dentro do contêiner com a classe 'popUpContents' */
 .popUpContents h2 {
   /* Cor do texto em preto */
-  color: black;
+  color: var(--text-color);
 }
 
 /* Define estilos para a classe 'acertou', utilizada para destacar opções corretas */
@@ -175,6 +174,7 @@
   display: flex;
   /* Direção da flexbox como coluna */
   flex-direction: column;
+  color: var(--text-color);
 }
 
 /* Define estilos para o botão de fechar popup com a classe 'fecharPopUp' */
@@ -221,5 +221,10 @@
 
   .popUpContainer {
     max-height: 150px;
+  }
+
+  .popUpTitle {
+    /* Cor do texto em preto */
+    max-width: 250px;
   }
 }

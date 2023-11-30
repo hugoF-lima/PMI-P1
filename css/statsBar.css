@@ -126,6 +126,58 @@
     animation: show-bar-four-vertical 1.2s 0.4s forwards;
 }
 
+@media screen and (max-width: 1000px) {
+
+    
+
+    .resultados-estats h2,
+    h3,
+    h4,
+    p {
+        font-size: 15px;
+    }
+
+    .bar-graph-vertical {
+        margin-top: 100px;
+        max-width: 10px;
+        margin-left: 5px;
+    }
+
+    .bar-graph-vertical .bar-container {
+        padding: 120%;
+        width: 15px;
+    }
+
+    .bar-graph-two {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+
+    .bar-graph-vertical .uf {
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: right;
+        position: center;
+        right: 0;
+        font-size: 14px;
+    }
+
+
+    .bar-graph-vertical .bar-container {
+        float: left;
+        top: 10px;
+        width: 10px;
+        height: 100px;
+        margin-right: 40px;
+        position: relative;
+        text-align: center;
+    }
+
+}
+
 @media screen and (max-width: 767px) {
 
     .resultados-estats h2,
