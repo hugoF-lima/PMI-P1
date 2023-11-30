@@ -135,7 +135,14 @@
         font-size: 15px;
     }
 
+    .bar-graph-vertical {
+        margin-top: 100px;
+        max-width: 10px;
+        margin-left: 5px;
+    }
+
     .bar-graph-vertical .bar-container {
+        padding: 120%;
         width: 15px;
     }
 
@@ -145,16 +152,22 @@
         width: 100%;
     }
 
-    .bar-graph-vertical {
-        margin-top: 100px;
-        max-width: 10px;
-        margin-left: 20px;
+
+    .bar-graph-vertical .uf {
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: right;
+        position: center;
+        right: 0;
+        font-size: 14px;
     }
+
 
     .bar-graph-vertical .bar-container {
         float: left;
         top: 10px;
-        width: 100px;
+        width: 10px;
         height: 100px;
         margin-right: 40px;
         position: relative;
