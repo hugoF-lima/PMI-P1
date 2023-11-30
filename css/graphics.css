@@ -244,3 +244,25 @@
     /* Tamanho da fonte do título */
     font-size: 25px;
 }
+
+@media screen and (max-width: 767px) {
+    .content div .bar {
+        /* Altura da barra */
+        height: 50px;
+        /* Largura da barra */
+        width: 250px;
+    }
+
+    .content div {
+        width: 450px;
+    }
+
+    .content div .bar h2 {
+        font-size: 15px;
+    }
+
+    .content div h2.resultado {
+        font-size: 20px;
+    }
+
+}
