@@ -199,8 +199,6 @@
     min-width: 150px;
     /* Altura mínima do popup */
     min-height: 50px;
-    /* Cor de fundo branca */
-    background-color: white;
     /* Borda preta de 1 pixel */
     border: 1px solid black;
     /* Borda arredondada com raio de 8 pixels */
