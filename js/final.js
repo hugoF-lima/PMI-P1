@@ -117,7 +117,7 @@ function mostrarEstatsAll() {
                 <h2 id="mediaAcertos">Media de acertos:</h2>
                 <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
                 <h3 id="letraCorreta">Alternativa correta: ${resPopUp})</h3>
-                <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
+                <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível<br> para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
             </div>
             <div class="popUpContainer">
                 <section class="bar-graph bar-graph-vertical bar-graph-two">
