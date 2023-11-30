@@ -127,7 +127,6 @@
 .popUpTitle {
   /* Cor do texto em preto */
   color: black;
-  width: fit-content;
 }
 
 /* Define estilos para os títulos h2 dentro do contêiner com a classe 'popUpContents' */
