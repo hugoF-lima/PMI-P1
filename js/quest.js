@@ -197,7 +197,7 @@ export default function showQuest(indice) {
         //Exibição de janela de confirmação do usuario se realmete deseja refazer a prova.
         if (confirm('Deseja resetar a prova?')) {
             //Caso o usuario confirme a ação: limpa todas as informações guardadas no localStorage e relocaliza o usuario para pagina 'tutorial.html'.
-            localStorage.clear()
+            limparLocalStorage()
             location.assign('tutorial.html')
         } else {
             //Caso contrário fecha a janela de confirmação e nada acontece.
@@ -207,6 +207,15 @@ export default function showQuest(indice) {
 };
 
 showQuest(0); //execução da função showQuest no indice 0
+
+function limparLocalStorage() {
+    const temaValue = localStorage.getItem("Tema");
+    console.log("Restaurado");
+    localStorage.clear();
+
+    // Preserve the "Tema" entry
+    localStorage.setItem("Tema", temaValue);
+}
 
 //função para alterar o indiceAtual da página de simulado.
 function altQuest(direcao) {
