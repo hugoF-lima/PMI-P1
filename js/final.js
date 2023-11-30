@@ -114,7 +114,7 @@ function mostrarEstatsAll() {
             <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> Questão ${quest.id}:  ${acertou ? 'Acertou!' : 'Errou!'}</h2>
             
             <div class="popUpContents special">
-                <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
+                <h2 id="mediaAcertos">Media de acertos:</h2>
                 <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
                 <h3 id="letraCorreta">Alternativa correta: ${resPopUp})</h3>
                 <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
@@ -134,7 +134,7 @@ function mostrarEstatsAll() {
                         <span class="uf">Brasil</span>
                     </div>
                 </section>
-                <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+                <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Estatísticas (Bacharelado)</a></p>
             </div>
             
             <style>
