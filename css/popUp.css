@@ -55,6 +55,7 @@
 }
 
 /* Define estilos para o popup com o id 'popUp' */
+/* Define estilos para o popup com o id 'popUp' */
 #popUp {
   /* Posição relativa em relação ao bloco pai */
   position: relative;
@@ -65,13 +66,18 @@
   /* Altura mínima do popup */
   min-height: 250px;
   /* Cor de fundo branca */
-  background-color: white;
+  background-color: var(--quest-bg-color);
   /* Borda preta de 1 pixel */
   border: 1px solid black;
   /* Borda arredondada com raio de 8 pixels */
   border-radius: 8px;
   /* Z-index para controle de sobreposição acima do fundo */
   z-index: 2;
+  color: var(--text-color);
+}
+
+#fechar {
+  color: var(--quest-bg-color);
 }
 
 /* Define estilos para o título dentro do popup com a classe 'popUp__title' */
