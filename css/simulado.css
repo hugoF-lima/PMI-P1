@@ -137,6 +137,11 @@
         max-width: 100%;
     }
 
+    .btns button,
+    .btns button a {
+        font-size: 15px;
+    }
+
     .questContainer {
         /* Tamanho da fonte pequeno */
         font-size: small;
