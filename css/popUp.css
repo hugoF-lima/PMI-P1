@@ -187,3 +187,36 @@
   /* Alinhado à direita com margem de 5 pixels */
   right: 5px;
 }
+
+/* Define estilos para telas com largura máxima de 767px */
+@media screen and (max-width: 767px) {
+  #popUp {
+    /* Posição relativa em relação ao bloco pai */
+    position: relative;
+    /* Margem superior e inferior de 5%, margem à direita e à esquerda de 30% */
+    margin: 5% 30%;
+    /* Largura mínima do popup */
+    min-width: 150px;
+    /* Altura mínima do popup */
+    min-height: 50px;
+    /* Cor de fundo branca */
+    background-color: white;
+    /* Borda preta de 1 pixel */
+    border: 1px solid black;
+    /* Borda arredondada com raio de 8 pixels */
+    border-radius: 8px;
+    /* Z-index para controle de sobreposição acima do fundo */
+    z-index: 2;
+  }
+
+  h2,
+  h3,
+  h4,
+  p {
+    font-size: 15px;
+  }
+
+  .popUpContainer {
+    max-height: 150px;
+  }
+}
