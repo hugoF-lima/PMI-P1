@@ -134,6 +134,7 @@ function mostrarEstatsAll() {
                         <span class="uf">Brasil</span>
                     </div>
                 </section>
+                <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
             </div>
             
             <style>
@@ -176,9 +177,7 @@ function mostrarEstatsAll() {
                     opacity: 1;
                 }
             }
-            </style>
-            <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
-            
+            </style>            
             `;
         popUp.style.width = "580px";
         popUp.style.height = "620px";
