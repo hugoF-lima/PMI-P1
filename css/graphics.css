@@ -254,7 +254,12 @@
     }
 
     .content div {
-        width: 450px;
+        width: 400px;
+
+    }
+    /* Largura do container em resolução abaixo de 767 */
+    .container div {
+        width: 400px;
     }
 
     .content div .bar h2 {
