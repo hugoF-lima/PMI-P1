@@ -114,10 +114,10 @@ function mostrarEstatsAll() {
             <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> Questão ${quest.id}:  ${acertou ? 'Acertou!' : 'Errou!'}</h2>
             
             <div class="popUpContents special">
-                <h2 id="mediaAcertos">Media de acertos:</h2>
-                <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
-                <h3 id="letraCorreta">Alternativa correta: ${resPopUp})</h3>
-                <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível <br> para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
+            <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
+            <h3 id="letraCorreta">Alternativa correta: ${resPopUp})</h3>
+            <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível <br> para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
+            <h2 id="mediaAcertos">Porcentagem de alternativas <br> corretas por região:</h2>
             </div>
             <div class="popUpContainer">
                 <section class="bar-graph bar-graph-vertical bar-graph-two">
@@ -220,7 +220,10 @@ function mostrarRes() {
         <div class="container">
             <div class="content">
                 <div>
-                    <h2 class="resultado">Teste Finalizado!</h2>
+                    <h2 class="resultado">Teste Finalizado!</h2> 
+                    <div class="btns">
+                        <button type="button"><a href="./gabarito.html" id="gabarito" target="_blank">Ver Gabarito!</a></button>
+                    </div>
                 </div>
                 <div>
                     <div class="image">

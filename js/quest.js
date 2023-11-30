@@ -11,6 +11,7 @@ const showPopUp = document.querySelector('#showPopUp'); //constante que referenc
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
+    console.log("What is it?", quest.id);
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
     //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
@@ -36,7 +37,7 @@ export default function showQuest(indice) {
             </div>
     <form id="form" action="#">
         <div class="btns">
-            <button type="button" id="volt">Voltar</button>
+            <button type="button" id="volt" disabled="${quest.id === "01" ? 'disabled' : ''}">Voltar</button>
             <button type="button" id="prox">Próxima</button>
             <button type="submit" id="verif">Corrigir</button>
             <button type="button" id="estatic">Estastísticas</button>
