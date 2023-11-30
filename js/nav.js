@@ -33,6 +33,7 @@ function toggleSlider() {
     // Use the stored brightness value if available; otherwise, use the default brightness
     const brightnessValue = storedBrightness !== null ? parseFloat(storedBrightness) : defaultBrightness;
 
+    console.log("Brilho atual", storedBrightness);
     // Apply the brightness value to the webpage
     adjustFilterIntensity(brightnessValue * 100); // Assuming the slider range is 0-100
 
@@ -53,26 +54,25 @@ function toggleSlider() {
 
 export function adjustFilterIntensity(intensity) {
     console.log(intensity);
-    // Garantir que o valor esteja entre 0 e 100
+    // Ensure that the value is between 0 and 100
     intensity = Math.max(0, Math.min(100, intensity));
 
     // Convert intensity to a brightness value between 0 and 2
-    const brightnessValue = intensity / 50;
+    const brightnessValue = intensity / 100; // Adjusted the scaling factor
 
     // Apply the brightness filter to the body of the webpage
     document.body.style.filter = `brightness(${brightnessValue})`;
-    /* document.querySelector('.content-container').style.filter = `brightness(${brightnessValue})`; */
 
     // Store the brightness value in localStorage
     localStorage.setItem('brightnessValue', brightnessValue);
 
-    console.log("valor de brilho", brightness);
-
-    // You can also apply the filter to specific elements if needed
-    // For example, adjust the brightness of an element with the ID 'content'
-    // document.getElementById('content').style.filter = `brightness(${brightnessValue})`;
+    console.log("valor de brilho", brightnessValue);
 }
 
+
+// You can also apply the filter to specific elements if needed
+// For example, adjust the brightness of an element with the ID 'content'
+// document.getElementById('content').style.filter = `brightness(${brightnessValue})`;
 //Esse codigo é um resquicio do filtro amarelo
 /* const filterIntensity = value / 100;
 const filterColor = `rgba(255, 255, 0, ${filterIntensity})`; // Yellow filter
@@ -100,7 +100,7 @@ navBar.innerHTML = `
         <li><a id="brightness"><img src="../img/brilho.png" class="inverted-image"/></a></li>
         <li><a id="high-contrast" data-depressed="0"><img src="../img/alto-contraste.png" /></a></li>
     </ul>
-    <div id="slide" class="slider-container" style="display: none;">
+    <div id="slide" class="slider-container" style="display: none; margin-top:50px;">
         <label for="filterIntensity">Brilho: </label>
         <input type="range" name="temp" id="filterIntensity" min="15" max="100" value="0" step="1">
     </div>

@@ -11,8 +11,6 @@ const showPopUp = document.querySelector('#showPopUp'); //constante que referenc
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
-    
-
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
     //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
@@ -67,6 +65,7 @@ export default function showQuest(indice) {
         });
 
     }
+
     //Função que verifica qual alternativa foi clicada pelo usuario e manda as informações: "Indice da questão"(ex: 1, 2, 3, ...), "Acerto da questão"(ex: true ou false) e "Indice da alternativa"(ex: A, B, C, D ou E).
     quest.opcoes.forEach(opcao => {
         const input = document.getElementById(`${quest.id}_${opcao.id}`);
@@ -87,7 +86,7 @@ export default function showQuest(indice) {
         }
     })
 
-    //Atribuição de evento ao clique do usuario ao botão 'verificar', sendo envio das informações para o popup de resposta.
+    //Atribuição de evento ao clique do usuario ao botão 'corrigir', sendo envio das informações para o popup de resposta.
     document.querySelector('#form').addEventListener('submit', e => {
         e.preventDefault(); //função para prevenir a ação padrão do formulário
         const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que referencia a alternativa selecionada.
@@ -282,8 +281,8 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
       </div>
     `;
 
-        popUp.style.width = "580px";
-        popUp.style.height = "250px";
+        popUp.style.width = "50%";
+        popUp.style.height = "80%";
     } else {
         //Caso o usuário queira conferir as estatísticas
         popUp.innerHTML = `
@@ -310,8 +309,8 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
                     <span class="uf">Brasil</span>
                 </div>
             </section>
-            </div>
-        <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+            <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+        </div>
             
         <style>
         @-webkit-keyframes show-bar-one-vertical {
@@ -355,7 +354,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         }
         </style>
         `;
-        popUp.style.width = "580px";
+        popUp.style.width = "50%";
         popUp.style.height = "80%";
     }
     //adiciona classe "show" para bgPop e adiciona evento de click para adicionar classe "hidden"
