@@ -216,6 +216,10 @@
     font-size: 15px;
   }
 
+  p a {
+    font-size: 5px;
+  }
+
   .popUpContainer {
     max-height: 150px;
   }
