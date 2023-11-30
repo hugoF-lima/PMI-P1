@@ -125,3 +125,40 @@
     -moz-animation: show-bar-four-vertical 1.2s 0.4s forwards;
     animation: show-bar-four-vertical 1.2s 0.4s forwards;
 }
+
+@media screen and (max-width: 767px) {
+
+    .resultados-estats h2,
+    h3,
+    h4,
+    p {
+        font-size: 15px;
+    }
+
+    .bar-graph-vertical .bar-container {
+        width: 15px;
+    }
+
+    .bar-graph-two {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .bar-graph-vertical {
+        margin-top: 100px;
+        max-width: 10px;
+        margin-left: 20px;
+    }
+
+    .bar-graph-vertical .bar-container {
+        float: left;
+        top: 10px;
+        width: 100px;
+        height: 100px;
+        margin-right: 40px;
+        position: relative;
+        text-align: center;
+    }
+
+}
