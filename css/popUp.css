@@ -77,7 +77,7 @@
 }
 
 #fechar {
-  color: var(--quest-bg-color);
+  color: var(--text-color);
 }
 
 /* Define estilos para o título dentro do popup com a classe 'popUp__title' */
