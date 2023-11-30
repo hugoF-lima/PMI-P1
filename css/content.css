@@ -106,10 +106,11 @@ hr {
 }
 
 /* Define estilos para o efeito de escala ao passar o mouse sobre o botão */
-.collum1 button:hover {
-    /* Aumenta a escala do botão em 10% ao passar o mouse sobre ele */
+/* Era pra ele não dar hover, porem não funciona... */
+.collum1 button:hover:not([data-disabled="true"]) {
     transform: scale(1.1);
 }
+
 
 /* Define estilos para os links dentro dos botões na primeira coluna */
 .collum1 button a {

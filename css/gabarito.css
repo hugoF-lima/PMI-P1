@@ -1,0 +1,83 @@
+#tabela {
+    margin: 20px 0px 60px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.t_titulo {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.tabela {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #ffffff;
+    color: black;
+}
+
+.tabela th,
+td {
+    border: 1px solid black;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.tabela__head {
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(226, 226, 226);
+    /* Cor de fundo para linhas ímpares */
+}
+
+.gabarito-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#questUsr::before,
+#altGab::before {
+    content: "Questão";
+}
+
+#rodapeG {
+    color: var(--text-color);
+}
+
+#altCorreta::before {
+    content: "Opção Correta";
+}
+
+#altUsr::before {
+    content: "Opção Escolhida";
+}
+
+/* Add any additional styles for your tables */
+/* .tabela {
+} */
+
+@media screen and (max-width: 767px) {
+    .tabela__head__titulo {
+        font-size: 15px;
+    }
+
+    .tabela__body__texto {
+        font-size: 15px;
+    }
+
+    #questUsr::before,
+    #altGab::before {
+        content: "Q";
+    }
+
+    #altUsr::before,
+    #altCorreta::before {
+        content: "Opç";
+    }
+}
