@@ -11,7 +11,18 @@ const anuladas = 2; //constante para questões anuladas
 const data = new Date(); //constante para criação do metodo Date()
 const [horaFin, minFin, secFin] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora Finalizada do simulado
 const [horaIni, minIni, secIni] = [tempoIni[data.getDay()][0], tempoIni[data.getDay()][1], tempoIni[data.getDay()][2]] //atribuição de valores para hora de inicio do simulado guardado no localStorage
+
 const tempoTranscorrido = (horaFin - horaIni) + "h " + (minFin - minIni) + "m " + (secFin - secIni) + "s"; //Valor para tempo transcorrido do teste.
+
+// Checar se o tempo final está no Local Storage
+const tempoFinalArmazenado = localStorage.getItem('Tempo Final');
+
+// Verificador ternary para caso o tempo esteja ou não presente no localStorage
+//A finalidade é evitar que o tempo transcorrido seja calculado duas vezes caso o usuario recarregue a pagina
+const tempoTranscorridoFinal = tempoFinalArmazenado ? JSON.parse(tempoFinalArmazenado) : tempoTranscorrido;
+
+// Save tempoTranscorridoFinal to localStorage
+localStorage.setItem('Tempo Final', JSON.stringify(tempoTranscorridoFinal));
 
 const change = document.querySelector('#change'); //constante para alteração de innerHTML atrávez de ID
 
@@ -246,7 +257,7 @@ function mostrarRes() {
                         <h2>Erros</h2>
                 </div>
                 <div>
-                    <h3>Tempo Transcorrido: ${tempoTranscorrido} </h3>
+                    <h3>Tempo Transcorrido: ${tempoTranscorridoFinal} </h3>
                     <h3> Total Respondido: ${total}/${maxRes} <br> (${objetoTotal.porcentagem.toFixed(1)}%)</h3>
                 </div>
                 <div class="resultContainer">

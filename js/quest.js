@@ -37,7 +37,7 @@ export default function showQuest(indice) {
             </div>
     <form id="form" action="#">
         <div class="btns">
-            <button type="button" id="volt" disabled="${quest.id === "01" ? 'disabled' : ''}">Voltar</button>
+            <button type="button" id="volt">Voltar</button>
             <button type="button" id="prox">Próxima</button>
             <button type="submit" id="verif">Corrigir</button>
             <button type="button" id="estatic">Estastísticas</button>
@@ -50,6 +50,8 @@ export default function showQuest(indice) {
     <ul id="navBar" class="navBar"></ul>
     </article>
     `;
+    /* disabled="${quest.id === "01" ? 'disabled' : 'enabled'}" */
+    console.log("Before:", quest.id);
 
     let radios = document.querySelectorAll('input[type="radio"]'); //Const responsável por verificar a presença dos radios
     if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
@@ -66,6 +68,8 @@ export default function showQuest(indice) {
         });
 
     }
+
+    /* handleCheckboxChange(quest, opcao); Não funciona*/
 
     //Função que verifica qual alternativa foi clicada pelo usuario e manda as informações: "Indice da questão"(ex: 1, 2, 3, ...), "Acerto da questão"(ex: true ou false) e "Indice da alternativa"(ex: A, B, C, D ou E).
     quest.opcoes.forEach(opcao => {
@@ -85,7 +89,33 @@ export default function showQuest(indice) {
                 input.checked = true;
             }
         }
-    })
+    });
+
+    //Parte responsável pelo comportamento dos botões de acordo com a interação com os radio buttons
+    const optionsHtml = document.querySelectorAll('input[type="radio"]'); //Constante que referencia todas as alternativas presentes na tela.
+    const voltElement = document.getElementById("volt"); //constante para referenciar o botão voltar
+    const verifElement = document.getElementById("verif"); //constante para referenciar o botão verificar
+    const estaticElement = document.getElementById("estatic"); //constante para referenciar o botão estatistica
+
+    /* Definindo o estado padrão desses elementos para "desativado" caso o usuário não tenha
+    selecionado uma alternativa ou respondido anteriormente*/
+    verifElement.disabled = !verifiPass[quest.id];
+    estaticElement.disabled = !verifiPass[quest.id];
+
+    //Bloco para monitorar se o usuário está selecionando um RadioButton
+    optionsHtml.forEach(function (radioButton) {
+        radioButton.addEventListener("change", function () {
+            const isAnyChecked = isAnyRadioButtonChecked(optionsHtml);
+            verifElement.disabled = !isAnyChecked;
+            estaticElement.disabled = !isAnyChecked;
+            console.log("Here", isAnyChecked);
+        });
+    });
+
+    //desativar o botão "voltar" caso o usuário esteja na questão 1
+    voltElement.disabled = quest.id === "01";
+
+
 
     //Atribuição de evento ao clique do usuario ao botão 'corrigir', sendo envio das informações para o popup de resposta.
     document.querySelector('#form').addEventListener('submit', e => {
@@ -95,9 +125,6 @@ export default function showQuest(indice) {
         if (select.value != null) {
             //caso select for preenchida executa a função openPop.
             openPop(quest, select.value == quest.opcaoCorreta, select.value);
-        } else {
-            //Caso contrário exibir alerta ao usuario de que nenhuma alternativa foi selecionada.
-            window.alert('Nenhuma alternativa selecionada!');
         };
 
         const opcoesHTML = document.querySelectorAll('input[type="radio"]'); //Constante que referencia todas as alternativas presentes na tela.
@@ -118,8 +145,8 @@ export default function showQuest(indice) {
         };
     });
 
-    document.querySelector('#estatic').addEventListener('click', () => {
-        //e.preventDefault(); //função para prevenir a ação padrão do formulário
+    document.querySelector('#estatic').addEventListener('click', (e) => {
+        e.preventDefault(); //função para prevenir a ação padrão do formulário
         const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que busca a alternativa selecionada
         //verifica o valor da constante select para atribuição de função
         if (select.value != null) {
@@ -207,6 +234,22 @@ export default function showQuest(indice) {
 };
 
 showQuest(0); //execução da função showQuest no indice 0
+
+function handleCheckboxChange(quest, opcao) {
+    const input = document.getElementById(`${quest.id}_${opcao.id}`);
+    input.addEventListener('change', () => {
+        if (input.checked) {
+            // Checkbox is selected
+            console.log(`Checkbox for ${quest.id}_${opcao.id} is selected`);
+            // Add your logic here to handle the selected checkbox
+        } else {
+            // Checkbox is not selected
+            console.log(`Checkbox for ${quest.id}_${opcao.id} is not selected`);
+            // Add your logic here to handle the unselected checkbox
+        }
+    });
+}
+
 
 function limparLocalStorage() {
     const temaValue = localStorage.getItem("Tema");
@@ -378,15 +421,63 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     });
 };
 
-const data = new Date(); //constante para uso do metodo Date()
-const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
-armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
+/* Verifica se o cronômetro foi previamente definido, para evitar que o contador 
+reinicie caso o usuário recarregue a pagina durante o teste */
+/* const storedTime = localStorage.getItem('TempoIni');
+
+if (!storedTime) {
+    const data = new Date(); //constante para uso do metodo Date()
+    const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
+    armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
+} else {
+    const [horaIni, minIni, secIni] = [tempoIni[data.getDay()][0], tempoIni[data.getDay()][1], tempoIni[data.getDay()][2]] //atribuição de valores para hora de inicio do simulado guardado no localStorage
+    armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
+}
 //função que recebe parametros para guardar no localStorage
 function armazTemp(date, horaIni, minIni, secIni) {
     const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {}; //criação do objeto "Simulado"
     Objt[date] = [horaIni, minIni, secIni]; //formatação dos parametros para o localStorage
     const Json = JSON.stringify(Objt);  //contante para troca de objeto para JSON
     localStorage.setItem('TempoIni', Json); //passar objeto para JSON para atribuição de valores
-};
+}; */
+
+const storedTime = JSON.parse(localStorage.getItem('TempoIni'));
+console.log("The time supposedly to go on", storedTime);
+
+const data = new Date();
+
+if (!storedTime) {
+    console.log("This condition happens here if empty");
+    const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()];
+    armazTemp(data.getDay(), horaIni, minIni, secIni);
+} else {
+    const [horaFin, minFin, secFin] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora Finalizada do simulado
+    const [horaIni, minIni, secIni] = storedTime[data.getDay()];
+    const tempoTranscorrido = (horaFin - horaIni) + "h " + (minFin - minIni) + "m " + (secFin - secIni) + "s"; //Valor para tempo transcorrido do teste.
+    console.log("Actually triggered", tempoTranscorrido);
+    armazTemp(data.getDay(), horaIni, minIni, secIni);
+}
+
+function armazTemp(date, horaIni, minIni, secIni) {
+    const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {};
+    Objt[date] = [horaIni, minIni, secIni];
+    const Json = JSON.stringify(Objt);
+    localStorage.setItem('TempoIni', Json);
+}
+
+
+function isAnyRadioButtonChecked(radioButtons) {
+
+    // Iterate through radio buttons
+    for (const radioButton of radioButtons) {
+        // Check if the current radio button is checked
+        if (radioButton.checked) {
+            return true; // At least one radio button is checked
+        }
+    }
+    // No radio button is checked
+    return false;
+}
+
 
 timer(); //execução da função timer() do arquivo timer.js

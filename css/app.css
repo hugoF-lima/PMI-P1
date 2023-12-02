@@ -67,7 +67,6 @@ Assim como uma melhor organização*/
     --ul-highlight: blue;
     /* Fundo da imagem */
     --img-background: none;
-
 }
 
 /* A presença de .high-contrast possui os mesmos parâmetros em root, com a finalidade de implementar acessibilidade */
