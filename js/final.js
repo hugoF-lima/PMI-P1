@@ -3,6 +3,7 @@ import { gaba } from "./gaba.js"; //importação do array gaba.js
 const final = document.querySelector('#final'); //constante para seleção da area com ID "final"
 const simulado = JSON.parse(localStorage.getItem('Simulado')); //constante para leitura das respostas do simulado no localStorage
 const tempoIni = JSON.parse(localStorage.getItem('TempoIni')); //constante para leitura do tempo de inicio do simulado no locaStorage
+console.log(tempoIni)
 let acertos = 0; //variavel para contabilidade de acertos
 let erros = 0; //variavel para contabilidade de erros
 let total = 0; //variavel para contabilidade de total respondido
@@ -128,9 +129,9 @@ function mostrarEstatsAll() {
             <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
             <h3 id="letraCorreta">Alternativa correta: ${resPopUp})</h3>
             <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível <br> para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
-            <h2 id="mediaAcertos">Porcentagem de alternativas <br> corretas por região:</h2>
             </div>
             <div class="popUpContainer">
+            <p id="titulo-table">Porcentagem de alternativas corretas <br> por região:</p>
                 <section class="bar-graph bar-graph-vertical bar-graph-two">
                     <div class="bar-one bar-container">
                         <div class="bar" data-percentage="${estatDados.porUF}"></div>

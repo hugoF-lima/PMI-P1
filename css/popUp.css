@@ -76,7 +76,8 @@
 }
 
 #fechar {
-  color: var(--text-color);
+  color: white;
+
 }
 
 /* Define estilos para o título dentro do popup com a classe 'popUp__title' */
@@ -178,14 +179,22 @@
 
 /* Define estilos para o botão de fechar popup com a classe 'fecharPopUp' */
 .fecharPopUp {
-  /* Altera o cursor para indicar que o elemento é clicável */
   cursor: pointer;
-  /* Posição absoluta em relação ao bloco pai mais próximo */
   position: absolute;
-  /* Alinhado no topo */
   top: 0;
-  /* Alinhado à direita com margem de 5 pixels */
   right: 5px;
+  position: absolute;
+  background-color: black;
+  border: none;
+  width: 25px;
+  height: 35px;
+  border-radius: 50%;
+
+  /* Ajustando para que o 'X' permaneça dentro do circulo*/
+  padding: 5px;
+  /* Adjust this value as needed */
+  margin: 0;
+  /* Ensure no margin is applied */
 }
 
 /* Define estilos para telas com largura máxima de 767px */

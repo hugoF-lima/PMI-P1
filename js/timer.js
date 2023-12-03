@@ -1,29 +1,44 @@
-var inter = setInterval(timer, 1000); //seta o valor de intervalo de loop para execução da função timer().
+let [hour, min, sec] = [2, 0, 0]; // Set initial time limit
+let inter;
 
-var [hour, min, sec] = [2, 0, 0]; //seta tempo limite para prova.
+// Checa se há tempo sendo transcorrido caso o usuário recarregue a pagina durante o teste.
+const savedTime = JSON.parse(localStorage.getItem("timerValues"));
 
-//função para calculo de tempo corrido do cronometro.
+if (savedTime) {
+  //Se houver tempo salvo, ele mantem para que continue sendo calculado.
+  [hour, min, sec] = savedTime;
+}
+
+// Inicia se o timer
+inter = setInterval(timer, 1000);
+
 export function timer() {
-  //Cada vez que a função é executada retira 1 segundo.
   sec--;
-  //Verifiação se segundo, minutos e segundos estão zerados.
+
   if (hour == 0 && min == 0 && sec == 0) {
-    //Caso o tempo tenha se esgotado: abre janela de alerta que o tempo acabou e relocaliza usuario para pagina 'final.html'.
     alert('Tempo Finalizado!');
-    location.assign('final.html');
-    //Tambem para a execução da função timer().
     clearInterval(inter);
+    localStorage.removeItem("timerValues"); // Caso o tempo zere, o item é removido do storage.
   }
-  //Caso segundos seja menor ou igual a 0, atribui 59 segundos e tira 1 minuto.
-  if (sec <= 0) {
+
+  if (sec < 0) {
     sec = 59;
     min--;
-    //Caso minuto seja menor ou igual a 0, atribui 59 segundos e tira 1 hora.
-    if (min <= 0) {
+
+    if (min < 0) {
       min = 59;
       hour--;
+
+      if (hour < 0) {
+        // Timer reached zero, do something if needed
+        clearInterval(inter);
+        localStorage.removeItem("timerValues");
+      }
     }
   }
-  //Passa o conteudo HTML por meio de innerHTML.
+
   document.getElementById('timer-input').innerHTML = `${hour}h ${min < 10 ? "0" + min : min}m ${sec < 10 ? "0" + sec : sec}s`;
+
+  // Save the current timer values in localStorage
+  localStorage.setItem("timerValues", JSON.stringify([hour, min, sec]));
 }

@@ -14,6 +14,7 @@ export default function showQuest(indice) {
     console.log("What is it?", quest.id);
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
+    console.log("Estrutura do local storage", verifiPass);
     //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
     // Nota: Todo e qualquer conteudo dentro da seguinte sintax:"${...}" é o conteudo buscado no array gaba com o indice indicano na função ou criação de uma nova função.
     change.innerHTML = `
@@ -318,7 +319,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     if (buttonId == "verif") {
         popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
-    <p class="fecharPopUp" id="fechar">Fechar</p>
+    <p class="fecharPopUp" id="fechar">X</p>
       <div class="popUpContainer">
         <p class="popUpTitulo"> A resposta correta da Questão <span>${questao.id}:</span></p>
         <p class="popUpText"><span class="popUpTextId">${resPopUp[0].id}) </span>${resPopUp[0].texto}</p>
@@ -331,7 +332,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         //Caso o usuário queira conferir as estatísticas
         popUp.innerHTML = `
         <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
-        <p class="fecharPopUp" id="fechar">Fechar</p>
+        <p class="fecharPopUp" id="fechar">X</p>
         <div class="popUpContents special">
             <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
             <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
@@ -339,6 +340,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
             <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
         </div>
         <div class="popUpContainer">
+        <p id="titulo-table">Porcentagem de alternativas corretas <br> por região:</p>
             <section class="bar-graph bar-graph-vertical bar-graph-two">
                 <div class="bar-one bar-container">
                     <div class="bar" data-percentage="${estatDados.porUF}"></div>
@@ -421,18 +423,9 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     });
 };
 
-/* Verifica se o cronômetro foi previamente definido, para evitar que o contador 
-reinicie caso o usuário recarregue a pagina durante o teste */
-/* const storedTime = localStorage.getItem('TempoIni');
-
-if (!storedTime) {
-    const data = new Date(); //constante para uso do metodo Date()
-    const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
-    armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
-} else {
-    const [horaIni, minIni, secIni] = [tempoIni[data.getDay()][0], tempoIni[data.getDay()][1], tempoIni[data.getDay()][2]] //atribuição de valores para hora de inicio do simulado guardado no localStorage
-    armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
-}
+/* const data = new Date(); //constante para uso do metodo Date()
+const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
+armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
 //função que recebe parametros para guardar no localStorage
 function armazTemp(date, horaIni, minIni, secIni) {
     const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {}; //criação do objeto "Simulado"
@@ -441,23 +434,24 @@ function armazTemp(date, horaIni, minIni, secIni) {
     localStorage.setItem('TempoIni', Json); //passar objeto para JSON para atribuição de valores
 }; */
 
-const storedTime = JSON.parse(localStorage.getItem('TempoIni'));
-console.log("The time supposedly to go on", storedTime);
+const data = new Date(); //constante para uso do metodo Date()
+let [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
 
-const data = new Date();
+//Leitura do valor de tempo Inicial do LocalStorage
+const storedTempoIni = JSON.parse(localStorage.getItem('TempoIni'));
 
-if (!storedTime) {
-    console.log("This condition happens here if empty");
-    const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()];
+// Caso não haja valor definido no localStorage (o que implica que o usuário acabou de começar o simulado)
+/* A razão da verificação se dá para que o tempo Inicial não se armazene duas vezes 
+(no evento do usuário recarregar a pagina e esse script todo rodar novamente). */
+if (!storedTempoIni) {
+    // Armazena o tempo inicial. 
     armazTemp(data.getDay(), horaIni, minIni, secIni);
 } else {
-    const [horaFin, minFin, secFin] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora Finalizada do simulado
-    const [horaIni, minIni, secIni] = storedTime[data.getDay()];
-    const tempoTranscorrido = (horaFin - horaIni) + "h " + (minFin - minIni) + "m " + (secFin - secIni) + "s"; //Valor para tempo transcorrido do teste.
-    console.log("Actually triggered", tempoTranscorrido);
-    armazTemp(data.getDay(), horaIni, minIni, secIni);
+    // Utiliza o tempo previamente definido.
+    [horaIni, minIni, secIni] = storedTempoIni[data.getDay()];
 }
 
+// Function to store values in localStorage
 function armazTemp(date, horaIni, minIni, secIni) {
     const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {};
     Objt[date] = [horaIni, minIni, secIni];
@@ -466,18 +460,20 @@ function armazTemp(date, horaIni, minIni, secIni) {
 }
 
 
+//Função responsável em auxiliar a resposta dos botões no evento do usuário selecionar um radio button
 function isAnyRadioButtonChecked(radioButtons) {
 
-    // Iterate through radio buttons
+    // Loop nos radio buttons
     for (const radioButton of radioButtons) {
-        // Check if the current radio button is checked
+        // Checar se está preenchido
         if (radioButton.checked) {
-            return true; // At least one radio button is checked
+            return true; // Ao menos um foi pressionado
         }
     }
-    // No radio button is checked
+    // Nenhum botão foi pressionado.
     return false;
 }
 
 
 timer(); //execução da função timer() do arquivo timer.js
+
