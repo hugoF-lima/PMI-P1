@@ -2,43 +2,71 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configurações iniciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
     <title>Home</title>
+
+    <!-- Inclusão do ícone da página -->
     <div id="favicon"></div>
+
+    <!-- Inclusão de estilos -->
     <link rel="stylesheet" href="../css/app.css">
+
+    <!-- Pré-conexão com a API do Google Fonts e inclusão das fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap"
+        rel="stylesheet">
+
+    <!-- Inclusão de scripts -->
     <script type="module" src="../js/nav.js" defer></script>
     <script type="module" src="../js/img.js"></script>
 </head>
 
 <body>
+    <!-- Elemento utilizado para ancorar o menu de navegação superior -->
     <span id="topNav"></span>
 
+    <!-- Estrutura principal da página -->
     <article class="content_container">
+        <!-- Primeira coluna com informações de boas-vindas e botão para iniciar o simulado -->
         <div class="collum1" id="div1">
             <h3>BEM-VINDO</h3>
             <hr>
-            <p>Aqui você encontra o simulado para o curso Bacharelado de Ciências da Computação, do</br> Enade 2021!
-                Aqui você encontrará uma versão digital do simulado Enade do ano de 2021.</p>
+            <p>Aqui você encontra o simulado para o curso Bacharelado de Ciências da Computação, do</br> Enade
+                2021! Aqui você encontrará uma versão digital do simulado Enade do ano de 2021.</p>
             <button><a href="./simulado.html" onclick="limparLocalStorage()">Iniciar Simulado</a></button>
         </div>
+
+        <!-- Segunda coluna com informações sobre o ENADE e botão para mais informações -->
         <div class="collum1" id="div2">
             <h3>O QUE É O ENADE?</h3>
             <hr>
             <p>O Enade é uma das ferramentas de avaliação dos cursos superiores no sistema federal de educação superior.
                 Ele é um componente da avaliação que sozinho corresponde a cerca de 55% do CPC – Conceito Preliminar de
                 Curso – uma das modalidades de avaliação do SINAES. (São três modalidades: avaliações in loco, CPC e
-                autovaliação institucional).</p>
+                autoavaliação institucional).</p>
             <button><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade"
                     target="_blank">Saiba Mais</a></button>
+            <button><a
+                    href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_bacharelado_ciencia_computacao.pdf"
+                    target="_blank">PDF da
+                    Prova</a></button>
+            <button><a
+                    href="https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_bacharelado_ciencia_computacao.pdf"
+                    target="_blank">Gabarito</a></button>
+            <button><a href="https://enade.inep.gov.br/enade/" target="_blank">Site Enade</a></button>
+
         </div>
     </article>
 
+    <!-- Elemento utilizado para ancorar o menu de navegação inferior -->
     <span id="botomNav"></span>
 
+    <!-- Script para limpar o armazenamento local ao iniciar o simulado -->
     <script>
         function limparLocalStorage() {
             localStorage.clear();

@@ -1,93 +1,169 @@
+/* Abaixo são importados os demais estilos de css para que evite redundância de chamado dos arquivos
+Assim como uma melhor organização*/
+
+/* Importa estilos para a barra de navegação superior */
 @import url(./topNav.css);
+/* Importa estilos para a barra de navegação inferior */
 @import url(./botomNav.css);
+/* Importa estilos para o conteúdo principal */
 @import url(./content.css);
+/* Importa estilos para a seção de créditos */
 @import url(./creditos.css);
+/* Importa estilos para a seção de tutorial */
 @import url(./tutorial.css);
+/* Importa estilos para a seção "Sobre" */
 @import url(./sobre.css);
+/* Importa estilos para pop-ups */
 @import url(./popUp.css);
+/* Importa estilos para a seção de simulados */
 @import url(./simulado.css);
+/* Importa estilos para a barra de navegação */
 @import url(./navBar.css);
+/* Importa estilos para gráficos */
 @import url(./graphics.css);
+/* Importa estilos para a barra de estatísticas */
 @import url(./statsBar.css);
+/* Importa estilos para o temporizador */
 @import url(./timer.css);
+/* Importa estilos para o gabarito */
+@import url(./gabarito.css);
+/* Importa estilos de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Poppins&display=swap');
 
-/* parametros para separação de cores dos temas */
-/* As variaveis presentes em root são essêncialmente parâmetros globais, logo os mesmos são compartilhados com os imports acima */
+/* Parâmetros para separação de cores dos temas */
+/* As variáveis presentes em root são essencialmente parâmetros globais, logo os mesmos são compartilhados com os imports acima */
 :root {
+    /* Imagem de fundo da página */
     --bg-instance: url('../img/fundo.jpg');
+    /* Cor de fundo padrão */
     --bg-color: none;
+    /* Cor de destaque para texto */
     --text-highlight: blue;
+    /* Cor do texto na seção de tutorial */
     --tutorial-text: white;
+    /* Cor de fundo do botão */
     --btn-bg-color: #44C1F2;
+    /* Cor do texto do botão */
     --btn-color: #44c1f2;
+    /* Parâmetro para sombra do texto */
     --text-shadow-param: #2461C8;
+    /* Cor do texto padrão */
     --text-color: black;
+    /* Cor do texto nos botões */
     --text-color-btn: white;
+    /* Cor do texto nos botões de simulado */
     --txt-btn-simul: white;
+    /* Cor de fundo dos botões de simulado */
     --btn-simul: #2461C8;
+    /* Borda dos botões */
     --btn-border: none;
+    /* Cor de fundo para perguntas */
     --quest-bg-color: rgb(216, 216, 216);
+    /* Cor do texto destacado */
     --txt-highli-color: white;
+    /* Cor da lista não destacada */
     --ul-color: black;
+    /* Cor de destaque para lista */
     --ul-highlight: blue;
+    /* Fundo da imagem */
     --img-background: none;
 }
 
+/* A presença de .high-contrast possui os mesmos parâmetros em root, com a finalidade de implementar acessibilidade */
+
 .high-contrast {
+    /* Remove a imagem de fundo para o modo de alto contraste */
     --bg-instance: none;
+    /* Cor de fundo para o modo de alto contraste */
     --bg-color: black;
+    /* Cor de fundo dos botões no modo de alto contraste */
     --btn-bg-color: #f33bee;
+    /* Cor do texto dos botões no modo de alto contraste */
     --btn-color: black;
+    /* Remove a sombra do texto no modo de alto contraste */
     --text-shadow-param: none;
+    /* Cor do texto no modo de alto contraste */
     --text-color: white;
+    /* Cor do texto na seção de tutorial no modo de alto contraste */
     --tutorial-text: white;
+    /* Cor do texto nos botões de simulado no modo de alto contraste */
     --txt-btn-simul: white;
+    /* Cor de fundo dos botões de simulado no modo de alto contraste */
     --btn-simul: black;
+    /* Cor de fundo para perguntas no modo de alto contraste */
     --quest-bg-color: black;
+    /* Cor da lista não destacada no modo de alto contraste */
     --ul-color: #f33bee;
+    /* Cor de destaque para lista no modo de alto contraste */
     --ul-highlight: white;
+    /* Cor do texto nos botões no modo de alto contraste */
     --text-color-btn: white;
+    /* Cor de destaque para texto no modo de alto contraste */
     --text-highlight: #1aebff;
+    /* Borda dos botões no modo de alto contraste */
     --btn-border: #1aebff;
+    /* Cor do texto destacado no modo de alto contraste */
     --txt-highli-color: black;
+    /* Fundo da imagem no modo de alto contraste */
     --img-background: white;
 }
 
+/* o elemento 'var' nos estilos adiante passa os parâmetros contidos em 'root' ou 'high-contrast', a pesença*/
+/* Em via da implementação de acessibilidade, ::selection é usada como tag para parâmetros adicionais quando o usuário faz seleção de texto */
 ::selection {
+    /* Cor de fundo ao selecionar texto */
     background-color: var(--text-highlight);
+    /* Cor do texto ao selecionar texto */
     color: var(--txt-highli-color);
 }
 
+/* O simbolo '*' Define estilos globais para todos os elementos */
+
 * {
     margin: 0;
+    /* Se define a maneira como width e height serão calculados */
     box-sizing: border-box;
+    /* Fonte padrão para o corpo do documento */
     font-size: 20px;
+    /* Fontes alternativas para o corpo do documento */
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Parâmetro do fundo da página */
 body {
+    /* Imagem de fundo da página */
     background-image: var(--bg-instance);
+    /* Cobertura total do fundo */
     background-size: cover;
+    /* Fundo fixo ao rolar a página */
     background-attachment: fixed;
+    /* Cor de fundo da página */
     background-color: var(--bg-color);
+    /* Oculta a barra de rolagem horizontal */
     overflow-x: hidden;
 
 }
 
 footer {
+    /* Posição relativa para o rodapé */
     position: relative;
+    /* Fixa o rodapé na parte inferior */
     bottom: 0;
+    /* Largura total */
     width: 100%;
 }
 
 header {
+    /* Posição relativa para o cabeçalho */
     position: relative;
+    /* Fixa o cabeçalho no topo */
     top: 0;
+    /* Largura total */
     width: 100%;
 }
 
 .sr-only {
+    /* Esconde elementos visualmente, mas mantém acessíveis para leitores de tela (para acessibilidade) */
     display: none;
 }

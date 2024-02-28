@@ -7,28 +7,14 @@ const bgPop = document.querySelector('#bgPop'); //constante que referencia tag H
 const popUp = document.querySelector('#popUp'); //constante que referencia tag HTML com o ID 'popUp' para atribuição de conteudo via innerHTML.
 const showPopUp = document.querySelector('#showPopUp'); //constante que referenciatag HTML com o ID 'showPopUp' para atribuição de contudo via innerHTML.
 
-//Função executada passando o centeudo dentro da contante 'change' atrávez do innerHTML usando o indice como parametro para escolha do conteudo.
+//Função executada passando o centeudo dentro da contante 'change' atráves do innerHTML usando o indice como parametro para escolha do conteudo.
 export default function showQuest(indice) {
     const quest = gaba[indice]; //constante que referencia a função 'gaba' e seu indice.
 
-    let radios = document.querySelectorAll('input[type="radio"]');
-
-    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
-        alert("Questão Anulada");
-
-        // Fazendo loop em todos os elementos radio e os desativando.
-        radios.forEach(function (radio) {
-            radio.disabled = true;
-        });
-    } else {
-        radios.forEach(function (radio) {
-            radio.disabled = false;
-        });
-
-    }
-    
+    console.log("What is it?", quest.id);
     const verifiPass = JSON.parse(localStorage.getItem('Simulado')) || {}; //constante para consulta ao localStorage, verificando se a questão já havia sido respondida.
 
+    console.log("Estrutura do local storage", verifiPass);
     //Troca/Inserção de conteudo dentro da tag referenciada na constante 'change' atravéz de innerHTML.
     // Nota: Todo e qualquer conteudo dentro da seguinte sintax:"${...}" é o conteudo buscado no array gaba com o indice indicano na função ou criação de uma nova função.
     change.innerHTML = `
@@ -47,7 +33,7 @@ export default function showQuest(indice) {
                 <input type="radio" name="${quest.id}" id="${quest.id}_${opcao.id}" value="${opcao.id}"/>
                 <label for="${quest.id}_${opcao.id}"><span class="alterId">${opcao.id})</span> ${opcao.texto}</label><br><br>
                 `;
-                //Atravéz do innerHTML podemos criar um elemento HTML para cada valor encontrado no array gaba.
+        //Através do innerHTML podemos criar um elemento HTML para cada valor encontrado no array gaba.
     }).join('')}
             </div>
     <form id="form" action="#">
@@ -65,6 +51,26 @@ export default function showQuest(indice) {
     <ul id="navBar" class="navBar"></ul>
     </article>
     `;
+    /* disabled="${quest.id === "01" ? 'disabled' : 'enabled'}" */
+    console.log("Before:", quest.id);
+
+    let radios = document.querySelectorAll('input[type="radio"]'); //Const responsável por verificar a presença dos radios
+    if (quest.opcaoCorreta == "#") { //Verificando se a questão foi anulada
+        alert(`A Questão ${quest.id} foi Anulada! Não será possível escolher alternativas.`); //mensagem exibida ao usuário
+
+        // Fazendo loop em todos os elementos radio e os desativando (visto o condicional de questão anulada).
+        radios.forEach(function (radio) {
+            radio.disabled = true;
+        });
+    } else {
+        //Caso contrário, ele mantem desmarcado. 
+        radios.forEach(function (radio) {
+            radio.disabled = false;
+        });
+
+    }
+
+    /* handleCheckboxChange(quest, opcao); Não funciona*/
 
     //Função que verifica qual alternativa foi clicada pelo usuario e manda as informações: "Indice da questão"(ex: 1, 2, 3, ...), "Acerto da questão"(ex: true ou false) e "Indice da alternativa"(ex: A, B, C, D ou E).
     quest.opcoes.forEach(opcao => {
@@ -84,9 +90,35 @@ export default function showQuest(indice) {
                 input.checked = true;
             }
         }
-    })
+    });
 
-    //Atribuição de evento ao clique do usuario ao botão 'verificar', sendo envio das informações para o popup de resposta.
+    //Parte responsável pelo comportamento dos botões de acordo com a interação com os radio buttons
+    const optionsHtml = document.querySelectorAll('input[type="radio"]'); //Constante que referencia todas as alternativas presentes na tela.
+    const voltElement = document.getElementById("volt"); //constante para referenciar o botão voltar
+    const verifElement = document.getElementById("verif"); //constante para referenciar o botão verificar
+    const estaticElement = document.getElementById("estatic"); //constante para referenciar o botão estatistica
+
+    /* Definindo o estado padrão desses elementos para "desativado" caso o usuário não tenha
+    selecionado uma alternativa ou respondido anteriormente*/
+    verifElement.disabled = !verifiPass[quest.id];
+    estaticElement.disabled = !verifiPass[quest.id];
+
+    //Bloco para monitorar se o usuário está selecionando um RadioButton
+    optionsHtml.forEach(function (radioButton) {
+        radioButton.addEventListener("change", function () {
+            const isAnyChecked = isAnyRadioButtonChecked(optionsHtml);
+            verifElement.disabled = !isAnyChecked;
+            estaticElement.disabled = !isAnyChecked;
+            console.log("Here", isAnyChecked);
+        });
+    });
+
+    //desativar o botão "voltar" caso o usuário esteja na questão 1
+    voltElement.disabled = quest.id === "01";
+
+
+
+    //Atribuição de evento ao clique do usuario ao botão 'corrigir', sendo envio das informações para o popup de resposta.
     document.querySelector('#form').addEventListener('submit', e => {
         e.preventDefault(); //função para prevenir a ação padrão do formulário
         const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que referencia a alternativa selecionada.
@@ -94,9 +126,6 @@ export default function showQuest(indice) {
         if (select.value != null) {
             //caso select for preenchida executa a função openPop.
             openPop(quest, select.value == quest.opcaoCorreta, select.value);
-        }else{
-            //Caso contrário exibir alerta ao usuario de que nenhuma alternativa foi selecionada.
-            window.alert('Nenhuma alternativa selecionada!');
         };
 
         const opcoesHTML = document.querySelectorAll('input[type="radio"]'); //Constante que referencia todas as alternativas presentes na tela.
@@ -117,8 +146,8 @@ export default function showQuest(indice) {
         };
     });
 
-    document.querySelector('#estatic').addEventListener('click', () => {
-        //e.preventDefault(); //função para prevenir a ação padrão do formulário
+    document.querySelector('#estatic').addEventListener('click', (e) => {
+        e.preventDefault(); //função para prevenir a ação padrão do formulário
         const select = document.querySelector(`input[name="${quest.id}"]:checked`); //constante que busca a alternativa selecionada
         //verifica o valor da constante select para atribuição de função
         if (select.value != null) {
@@ -180,9 +209,9 @@ export default function showQuest(indice) {
     }
 
     //Atribuição de evento ao clique do usuario no botão 'Sair'.
-    document.querySelector('#sair').addEventListener('click', ()=>{
+    document.querySelector('#sair').addEventListener('click', () => {
         //Exibição de janela de confirmação do usuario se realmente deseja sair da prova.
-        if (confirm('Deseja sair do simulado e voltar ao inicio?')){
+        if (confirm('Deseja sair do simulado e voltar ao inicio?')) {
             //Caso o usuario confirme a ação: relocaliza o usuario para a página 'Index.html'.
             location.assign('index.html');
         } else {
@@ -192,11 +221,11 @@ export default function showQuest(indice) {
     });
 
     //Atribuição de evento ao clique do usuario no botão 'Refazer a prova'.
-    document.querySelector('#resetar').addEventListener('click', ()=>{
+    document.querySelector('#resetar').addEventListener('click', () => {
         //Exibição de janela de confirmação do usuario se realmete deseja refazer a prova.
-        if (confirm('Deseja resetar a prova?')){
+        if (confirm('Deseja resetar a prova?')) {
             //Caso o usuario confirme a ação: limpa todas as informações guardadas no localStorage e relocaliza o usuario para pagina 'tutorial.html'.
-            localStorage.clear()
+            limparLocalStorage()
             location.assign('tutorial.html')
         } else {
             //Caso contrário fecha a janela de confirmação e nada acontece.
@@ -206,6 +235,31 @@ export default function showQuest(indice) {
 };
 
 showQuest(0); //execução da função showQuest no indice 0
+
+function handleCheckboxChange(quest, opcao) {
+    const input = document.getElementById(`${quest.id}_${opcao.id}`);
+    input.addEventListener('change', () => {
+        if (input.checked) {
+            // Checkbox is selected
+            console.log(`Checkbox for ${quest.id}_${opcao.id} is selected`);
+            // Add your logic here to handle the selected checkbox
+        } else {
+            // Checkbox is not selected
+            console.log(`Checkbox for ${quest.id}_${opcao.id} is not selected`);
+            // Add your logic here to handle the unselected checkbox
+        }
+    });
+}
+
+
+function limparLocalStorage() {
+    const temaValue = localStorage.getItem("Tema");
+    console.log("Restaurado");
+    localStorage.clear();
+
+    // Preserve the "Tema" entry
+    localStorage.setItem("Tema", temaValue);
+}
 
 //função para alterar o indiceAtual da página de simulado.
 function altQuest(direcao) {
@@ -265,43 +319,45 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     if (buttonId == "verif") {
         popUp.innerHTML = `
     <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
-    <p class="fecharPopUp" id="fechar">Fechar</p>
+    <p class="fecharPopUp" id="fechar">X</p>
       <div class="popUpContainer">
         <p class="popUpTitulo"> A resposta correta da Questão <span>${questao.id}:</span></p>
         <p class="popUpText"><span class="popUpTextId">${resPopUp[0].id}) </span>${resPopUp[0].texto}</p>
       </div>
     `;
 
-        popUp.style.width = "580px";
-        popUp.style.height = "250px";
+        popUp.style.width = "50%";
+        popUp.style.height = "80%";
     } else {
         //Caso o usuário queira conferir as estatísticas
         popUp.innerHTML = `
         <h2 class="popUpTitle ${acertou ? 'acertou' : 'errou'}"> ${acertou ? 'Acertou!' : 'Errou!'}</h2>
-        <p class="fecharPopUp" id="fechar">Fechar</p>
-        <div class="popUpContents special">
-            <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
-            <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
-            <h3 id="letraCorreta">Alternativa correta: ${resPopUp[0].id})</h3>
-            <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
-        </div>
+        <p class="fecharPopUp" id="fechar">X</p>
         <div class="popUpContainer">
-            <section class="bar-graph bar-graph-vertical bar-graph-two">
-                <div class="bar-one bar-container">
-                    <div class="bar" data-percentage="${estatDados.porUF}"></div>
-                    <span class="uf">SP</span>
-                </div>
-                <div class="bar-two bar-container">
-                    <div class="bar" data-percentage="${estatDados.porSudeste}"></div>
-                    <span class="uf">Sudeste</span>
-                </div>
-                <div class="bar-three bar-container">
-                    <div class="bar" data-percentage="${estatDados.porBrasil}"></div>
-                    <span class="uf">Brasil</span>
-                </div>
-            </section>
+            <div class="popUpContents special">
+                <h2 id="mediaAcertos">Media de acertos para essa questão:</h2>
+                <h3 id="letraEscolhida">Opção assinalada: ${altMarcada})</h3>
+                <h3 id="letraCorreta">Alternativa correta: ${resPopUp[0].id})</h3>
+                <h4 id="desconsid" ${estatDados.porUF === '-%' ? '' : 'style="display: none;"'}><br>Estatística Indisponível para essa questão! <p id="ver-mais">(Ver mais...)</p></h4>
             </div>
-        <p id="rodape" style="color:black;">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+
+            <p id="titulo-table">% de alternativas corretas <br> por região:</p>
+                <section class="bar-graph bar-graph-vertical bar-graph-two">
+                    <div class="bar-one bar-container">
+                        <div class="bar" data-percentage="${estatDados.porUF}"></div>
+                        <span class="uf">SP</span>
+                    </div>
+                    <div class="bar-two bar-container">
+                        <div class="bar" data-percentage="${estatDados.porSudeste}"></div>
+                        <span class="uf">Sudeste</span>
+                    </div>
+                    <div class="bar-three bar-container">
+                        <div class="bar" data-percentage="${estatDados.porBrasil}"></div>
+                        <span class="uf">Brasil</span>
+                    </div>
+                </section>
+            <p id="rodape">Fonte: <a id="rodapeLink" href='../doc/ciencias_computacao_estatisticas.pdf' target="_blank">Ciências da Computação (Bacharelado)</a></p>
+        </div>
             
         <style>
         @-webkit-keyframes show-bar-one-vertical {
@@ -345,7 +401,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
         }
         </style>
         `;
-        popUp.style.width = "580px";
+        popUp.style.width = "50%";
         popUp.style.height = "80%";
     }
     //adiciona classe "show" para bgPop e adiciona evento de click para adicionar classe "hidden"
@@ -368,7 +424,7 @@ function openPop(questao, acertou, altMarcada, buttonId = "verif") {
     });
 };
 
-const data = new Date(); //constante para uso do metodo Date()
+/* const data = new Date(); //constante para uso do metodo Date()
 const [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
 armazTemp(data.getDay(), horaIni, minIni, secIni); //execução da função armazTemp
 //função que recebe parametros para guardar no localStorage
@@ -377,6 +433,48 @@ function armazTemp(date, horaIni, minIni, secIni) {
     Objt[date] = [horaIni, minIni, secIni]; //formatação dos parametros para o localStorage
     const Json = JSON.stringify(Objt);  //contante para troca de objeto para JSON
     localStorage.setItem('TempoIni', Json); //passar objeto para JSON para atribuição de valores
-};
+}; */
+
+const data = new Date(); //constante para uso do metodo Date()
+let [horaIni, minIni, secIni] = [data.getHours(), data.getMinutes(), data.getSeconds()]; //atribuição de valores para hora de inicio do simulado
+
+//Leitura do valor de tempo Inicial do LocalStorage
+const storedTempoIni = JSON.parse(localStorage.getItem('TempoIni'));
+
+// Caso não haja valor definido no localStorage (o que implica que o usuário acabou de começar o simulado)
+/* A razão da verificação se dá para que o tempo Inicial não se armazene duas vezes 
+(no evento do usuário recarregar a pagina e esse script todo rodar novamente). */
+if (!storedTempoIni) {
+    // Armazena o tempo inicial. 
+    armazTemp(data.getDay(), horaIni, minIni, secIni);
+} else {
+    // Utiliza o tempo previamente definido.
+    [horaIni, minIni, secIni] = storedTempoIni[data.getDay()];
+}
+
+// Function to store values in localStorage
+function armazTemp(date, horaIni, minIni, secIni) {
+    const Objt = JSON.parse(localStorage.getItem('TempoIni')) || {};
+    Objt[date] = [horaIni, minIni, secIni];
+    const Json = JSON.stringify(Objt);
+    localStorage.setItem('TempoIni', Json);
+}
+
+
+//Função responsável em auxiliar a resposta dos botões no evento do usuário selecionar um radio button
+function isAnyRadioButtonChecked(radioButtons) {
+
+    // Loop nos radio buttons
+    for (const radioButton of radioButtons) {
+        // Checar se está preenchido
+        if (radioButton.checked) {
+            return true; // Ao menos um foi pressionado
+        }
+    }
+    // Nenhum botão foi pressionado.
+    return false;
+}
+
 
 timer(); //execução da função timer() do arquivo timer.js
+

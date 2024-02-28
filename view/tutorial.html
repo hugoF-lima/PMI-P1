@@ -2,33 +2,57 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configurações iniciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
     <title>Instruções</title>
+
+    <!-- Inclusão do ícone da página -->
     <div id="favicon"></div>
+
+    <!-- Inclusão de scripts -->
     <script type="module" src="../js/img.js"></script>
     <link rel="stylesheet" href="../css/app.css">
     <script type="module" src="../js/nav.js" defer></script>
 </head>
 
 <body>
+    <!-- Elemento utilizado para ancorar o menu de navegação superior -->
     <span id="topNav"></span>
 
+    <!-- Container principal para o conteúdo sobre as instruções -->
     <div class="containerTutorial">
+        <!-- Título principal -->
         <div class="divTit">
             <h3>Como usar o site:</h3>
         </div>
+        <!-- Parágrafos com as instruções -->
         <div class="divPar">
-        <p>A utilização desse site é razoavelmente autodescritiva. Há um simulado com 35 questões de 5 alternativas cada, sendo apenas uma a correta.</p>
-        <p>Ao assinalar uma alternativa e clicar no botão "Verificar", o usuário terá feedback imediato de acerto ou erro.</p>
-        <p class="importante">IMPORTANTE!<br> Após apertar o botão "Verificar será impossível a troca de resposta!</p>
-        <p>O usuário pode navegar livremente entre as questões, escolhendo não responder caso deseje, ao apertar o botão "Finalizar" o simulado será automaticamente finalizado e mostrará a tela de resultados, caso haja.</p>
-        <p>Na parte superior do website, o usuário poderá visualizar opções de acessibilidade, podendo habilitar funções como modo escuro, alto contraste, brilho e luz noturna.</p>
+            <p>A utilização desse site é razoavelmente autodescritiva. Há um simulado com 35 questões de 5 alternativas
+                cada, sendo apenas uma a correta.</p>
+            <p>Ao assinalar uma alternativa e clicar no botão "Verificar", o usuário terá feedback imediato de acerto ou
+                erro.</p>
+            <!-- Parágrafo importante destacado -->
+            <p class="importante">IMPORTANTE!<br> Caso o usuário navegue para outra questão ou pressione o botão
+                "Corrigir" ou "Estatísticas", não será possível a troca de resposta! <br> Caso não tenha confirmado,
+                Evite recarregar a pagina com
+                uma alternativa assinalada, pois não será possível remarcar na questão.
+            </p>
+            <p>O usuário pode navegar livremente entre as questões, somente marque uma alternativa caso esteja ciente.
+                Ao
+                apertar o
+                botão "Finalizar" o simulado será automaticamente finalizado e mostrará a tela de resultados, caso haja.
+            </p>
+            <p>Na parte superior do website, o usuário poderá visualizar opções de acessibilidade, podendo habilitar
+                funções como alto contraste e brilho.</p>
         </div>
+        <!-- Botão para iniciar o simulado -->
         <div class="divBtn"><button class="btnInstr"><a href="./simulado.html">Iniciar Simulado!</a></button></div>
-</div>
+    </div>
 
-
+    <!-- Elemento utilizado para ancorar o menu de navegação inferior -->
     <span id="botomNav"></span>
 </body>
 

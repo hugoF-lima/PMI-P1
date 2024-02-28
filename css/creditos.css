@@ -1,9 +1,11 @@
+/* Define estilos para a classe 'enadeQuest' */
 .enadeQuest {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Define estilos para a classe 'creditosContent' */
 .creditosContent {
     display: flex;
     flex-direction: column;
@@ -17,36 +19,42 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Define estilos para os títulos dentro da classe 'creditosContent' */
 .creditosContent h3 {
     text-align: center;
     margin: 5% 2% 2% 0px;
     font-size: 80px;
 }
 
+/* Define estilos para os parágrafos dentro da classe 'creditosContent' */
 .creditosContent p {
     font-size: 50px;
     font-weight: bold;
 }
 
+/* Define estilos para a classe 'creditosImg' */
 .creditosImg {
     display: grid;
 }
 
+/* Define estilos para os links dentro da classe 'creditosImg' */
 .creditosImg a {
     color: blue;
 }
 
-/* Validar se isso não interfere nos demais elementos */
+/* Validação para garantir que isso não interfere em outros elementos */
 .creditosContent a {
     color: var(--btn-bg-color);
 }
 
+/* Define estilos para as imagens dentro dos links na classe 'creditosImg' */
 .creditosImg a img {
     max-width: 40%;
     max-height: 3rem;
     color: var(--btn-bg-color);
 }
 
+/* Redefine estilos para a classe 'creditosImg' com grid e margens específicas */
 .creditosImg {
     width: 100%;
     display: grid;
@@ -57,6 +65,7 @@
     margin: 2rem 0;
 }
 
+/* Define estilos para a classe 'title' */
 .title {
     font-size: 30px;
     display: flex;
@@ -64,13 +73,14 @@
     margin: 0 0 2rem 0;
 }
 
+/* Define estilos para a classe 'Grupo-name' com grid e espaçamento entre colunas */
 .Grupo-name {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
-
+/* Define estilos para os parágrafos dentro das classes 'divCred' e 'divGrupo' */
 .divCred p,
 .divGrupo p {
     font-size: 20px;

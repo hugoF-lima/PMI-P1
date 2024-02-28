@@ -1,130 +1,203 @@
+/* Estilos para o container tutorial */
 .containerTutorial {
     margin: 0 auto;
+    /* Centraliza o container na tela */
     margin-bottom: 100px;
+    /* Margem inferior de 100 pixels */
     min-height: 800px;
+    /* Altura mínima de 800 pixels */
     width: 1200px;
+    /* Largura de 1200 pixels */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Cor de fundo com transparência */
     color: white;
+    /* Cor do texto branco */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra do container */
     border-radius: 20px;
+    /* Borda arredondada */
     padding: 1.4rem;
+    /* Preenchimento interno de 1.4 rem */
 }
 
+/* Estilos para a parte do título */
 .divTit {
     text-align: center;
+    /* Alinha o texto ao centro */
     display: flex;
+    /* Usa o modelo flexível de layout */
     flex-direction: column;
+    /* Coluna como direção principal */
     align-items: center;
+    /* Alinha os itens ao centro no eixo transversal */
     justify-content: center;
+    /* Alinha os itens ao centro no eixo principal */
 }
 
 .divTit h3 {
     color: var(--btn-bg-color);
+    /* Cor do título */
     font-size: 80px;
+    /* Tamanho da fonte */
     text-align: center;
+    /* Alinha o texto ao centro */
     text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
+    /* Sombra do texto */
     max-width: 800px;
+    /* Largura máxima do título */
 }
 
+/* Estilos para a parte do parágrafo */
 .divPar {
     width: 750px;
+    /* Largura do parágrafo */
     margin: auto;
+    /* Centraliza o parágrafo */
     font-size: 20px;
+    /* Tamanho da fonte */
     padding-left: 70px;
+    /* Preenchimento à esquerda de 70 pixels */
 }
 
 .divPar p {
     color: var(--tutorial-text);
+    /* Cor do texto do parágrafo */
     margin-bottom: 20px;
+    /* Margem inferior de 20 pixels */
 }
 
 .divPar p:hover {
     color: var(--btn-bg-color);
+    /* Cor do texto ao passar o mouse */
     transform: scale(1.05);
+    /* Efeito de escala ao passar o mouse */
     transition: color 0.3s, transform 0.3s;
+    /* Transições suaves */
 }
 
+/* Estilos para partes importantes do texto */
 .importante {
     font-weight: bold;
+    /* Peso da fonte em negrito */
     color: white;
+    /* Cor do texto */
     transition: color 0.3s, font-weight 0.3s, transform 0.3s;
+    /* Transições suaves */
 }
 
 .importante:hover {
     font-weight: 700;
+    /* Peso da fonte ao passar o mouse */
     color: var(--btn-bg-color);
+    /* Cor do texto ao passar o mouse */
     transform: scale(1.1);
+    /* Efeito de escala ao passar o mouse */
 }
 
+/* Estilos para o botão de instruções */
 .btnInstr {
     height: 80px;
+    /* Altura do botão */
     width: 300px;
+    /* Largura do botão */
     background-color: var(--btn-bg-color);
+    /* Cor de fundo do botão */
     border-radius: 0.85em;
+    /* Borda arredondada */
     border-style: none;
+    /* Sem borda */
     padding: 0.5em 0px;
+    /* Preenchimento interno */
     transition: transform 0.3s;
+    /* Transição suave */
 }
 
+/* Estilos para a parte do botão */
 .divBtn {
     display: flex;
+    /* Usa o modelo flexível de layout */
     flex-direction: column;
+    /* Coluna como direção principal */
     align-items: center;
+    /* Alinha os itens ao centro no eixo transversal */
     text-align: center;
+    /* Alinha o texto ao centro */
     margin: 0 auto;
+    /* Centraliza o botão */
     margin-top: 60px;
+    /* Margem superior de 60 pixels */
 }
 
 .button {
     background-color: var(--btn-simul);
+    /* Cor de fundo do botão */
     color: var(--txt-btn-simul);
+    /* Cor do texto do botão */
 }
 
 .btnInstr a {
     font-size: 20px;
+    /* Tamanho da fonte do link */
     font-weight: bold;
+    /* Peso da fonte em negrito */
     padding: 1em;
+    /* Preenchimento interno do link */
     text-decoration: none;
+    /* Sem decoração de texto */
     color: whitesmoke;
+    /* Cor do texto do link */
 }
 
 button:hover {
     transform: scale(1.1);
+    /* Efeito de escala ao passar o mouse */
 }
 
+/* Estilos responsivos para telas médias (767px a 1200px) */
 @media screen and (min-width: 767px) and (max-width: 1200px) {
 
     .containerTutorial {
         height: 1350px;
+        /* Altura para telas médias */
         width: 810px;
+        /* Largura para telas médias */
     }
 
     .divTit h3 {
         font-size: 60px;
+        /* Tamanho da fonte do título para telas médias */
     }
 
     .divPar {
         padding-left: 10px;
+        /* Preenchimento à esquerda para telas médias */
         width: 380px;
+        /* Largura do parágrafo para telas médias */
     }
 
     .divPar p {
         font-size: 22px;
+        /* Tamanho da fonte do parágrafo para telas médias */
     }
 }
 
+/* Estilos responsivos para telas pequenas (até 767px) */
 @media screen and (max-width: 767px) {
 
     .containerTutorial {
         width: 410px;
+        /* Largura para telas pequenas */
     }
 
     .divTit h3 {
         font-size: 30px;
+        /* Tamanho da fonte do título para telas pequenas */
     }
 
     .divPar {
         padding-left: 10px;
+        /* Preenchimento à esquerda para telas pequenas */
         width: 380px;
+        /* Largura do parágrafo para telas pequenas */
     }
 }

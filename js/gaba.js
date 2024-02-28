@@ -1,3 +1,6 @@
+/* O presente arquivo contem o conteúdo de todas as questões agrupada em um container de arrays */
+/* Objeto declarado como export visto que o mesmo será utilizado externamente */
+/* tags relativament auto-descritivas */
 export const gaba = [
     {
         id: '01', //numero da questão

@@ -1,156 +1,273 @@
+/* Define estilos para a barra de progresso dentro da classe 'content' */
 .content div .bar.progress {
+    /* Altura da barra de progresso */
     height: 50px;
+    /* Largura da barra de progresso */
     width: 450px;
+    /* Cor de fundo da barra de progresso */
     background: #efefef;
+    /* Borda arredondada da barra de progresso */
     border-radius: 5px;
+    /* Posição relativa para posicionar os elementos filhos */
     position: relative;
+    /* Margem à esquerda da barra de progresso */
     margin-left: 20px;
+    /* Oculta conteúdo que ultrapassa as bordas da barra de progresso */
     overflow: hidden;
+    /* Borda da barra de progresso */
     border: 2px solid black;
+    /* Espaçamento externo da barra de progresso */
     margin: 5px;
+    /* Adiciona uma transição suave para a propriedade de largura */
     transition: width 1s ease;
-    /* Add a transition for the width property */
 }
 
+/* Define estilos para a parte preenchida da barra de progresso dentro da classe 'content' */
 .content div .bar.progress .progress {
+    /* Altura da parte preenchida da barra de progresso (inicialmente 0) */
     height: 100%;
+    /* Largura inicial da parte preenchida da barra de progresso */
     width: 0;
-    /* Set the initial width to 0 */
+    /* Borda arredondada da parte preenchida da barra de progresso */
     border-radius: 5px;
+    /* Gradiente linear para a cor da parte preenchida */
     background: linear-gradient(to right, var(--clr1), var(--clr2));
 }
 
+/* Define estilos para o título h1 dentro da barra de progresso */
 .content div .bar.progress h1 {
+    /* Posição do título à esquerda */
     position: left;
+    /* Distância à direita do título */
     right: 10px;
+    /* Cor do título */
     color: var(--clr1);
+    /* Família da fonte do título */
     font-family: 'Noto Sans', 'sans-serif';
+    /* Peso da fonte do título */
     font-weight: 500;
+    /* Tamanho da fonte do título */
     font-size: 35px;
 }
 
+/* Define estilos para o título h2 dentro da barra de progresso */
 .content div .bar.progress h2 {
+    /* Posição absoluta para posicionar o título */
     position: absolute;
+    /* Distância à esquerda do título */
     left: 30px;
+    /* Cor do título */
     color: #fff;
+    /* Peso da fonte do título */
     font-weight: 600;
+    /* Tamanho da fonte do título */
     font-size: 25px;
 }
 
+/* Define estilos globais de reset para margens, preenchimentos e caixa-modelo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* h3 {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-} */
-
+/* Define estilos para a classe 'container' */
 .container {
-    /* min-height: 100vh; */
+    /* Cor de fundo do contêiner */
     background: #0000004b;
+    /* Configuração de exibição como flexível */
     display: flex;
+    /* Alinhamento central na direção principal (horizontal) */
     justify-content: center;
+    /* Alinhamento central na direção transversal (vertical) */
     align-items: center;
 }
 
+/* Define estilos para a classe 'resultado' dentro da classe 'content' */
 .content div .resultado {
+    /* Tamanho da fonte do resultado */
     font-size: 30px;
+    /* Alinhamento do texto relativo */
     text-align: relative;
+    /* Distância à esquerda do resultado */
     left: 20px;
 }
 
+/* Define estilos para a classe 'content' */
 .content {
+    /* Distância do topo */
     top: 150px;
+    /* Posição relativa para posicionar elementos filhos */
     position: relative;
+    /* Altura da classe 'content' */
     height: 540px;
+    /* Largura da classe 'content' */
     width: 600px;
-
 }
 
+/* Define estilos para o título h2 dentro da classe 'content' */
 .content h2 {
+    /* Cor do título h2 */
     color: white;
 }
 
+/* Define estilos para o título h3 dentro da classe 'content' */
 .content h3 {
+    /* Configuração de exibição como flexível */
     display: flex;
+    /* Distribuição uniforme do espaço entre os elementos filhos */
     justify-content: space-between;
+    /* Alinhamento central na direção transversal (vertical) */
     align-items: center;
+    /* Cor do título h3 */
     color: white;
 }
 
+/* Define estilos específicos para o último elemento h3 dentro da classe 'content' */
 .content h3:last-child {
+    /* Margem à esquerda do último título h3 */
     margin-left: 60px;
-    /* Adjust the value to control the spacing between the h3 elements */
 }
 
+/* Define estilos para a div dentro da classe 'content' */
 .content div {
+    /* Configuração de exibição como flexível */
     display: flex;
+    /* Alinhamento central na direção transversal (vertical) */
     align-items: center;
+    /* Margem inferior da div */
     margin-bottom: 5px;
 }
 
+/* Define estilos para a div com classe 'image' dentro da classe 'content' */
 .content div .image {
+    /* Cor de fundo da div de imagem */
     background: #efefef;
+    /* Altura da div de imagem */
     height: 50px;
+    /* Largura da div de imagem */
     width: 50px;
+    /* Borda arredondada da div de imagem */
     border-radius: 15%;
+    /* Configuração de exibição como flexível */
     display: flex;
+    /* Alinhamento central na direção principal (horizontal) */
     justify-content: center;
+    /* Alinhamento central na direção transversal (vertical) */
     align-items: center;
+    /* Sombra da div de imagem */
     box-shadow: 5px 2px 5px #999;
 }
 
+/* Define estilos para a imagem dentro da div com classe 'image' dentro da classe 'content' */
 .content div .image img {
+    /* Altura da imagem */
     height: 60px;
+    /* Adiciona uma transição de escala à imagem */
     transition: transform 0.5s;
 }
 
+/* Define estilos para a imagem dentro da div com classe 'image' ao passar o mouse sobre ela */
 .content div .image img:hover {
+    /* Aumenta a escala da imagem em 5% ao passar o mouse sobre ela */
     transform: scale(1.05);
 }
 
-.content div .bar {
-    height: 50px;
-    width: 450px;
-    background: #efefef;
-    border-radius: 5px;
-    position: relative;
-    margin-left: 20px;
-    overflow: hidden;
-    box-shadow: 2px 5px 10px #999;
-    border: 2px solid black;
-    margin: 5px;
-    /* Spacing */
-    box-shadow: 0 0 10px black;
-    /* Outer border with small spacing */
+/* Define estilos para a div com classe 'bar' */
 
+
+/* Define estilos para a barra dentro da div com classe 'bar' dentro da classe 'content' */
+.content div .bar {
+    /* Altura da barra */
+    height: 50px;
+    /* Largura da barra */
+    width: 450px;
+    /* Cor de fundo da barra */
+    background: #efefef;
+    /* Borda arredondada da barra */
+    border-radius: 5px;
+    /* Posição relativa para posicionar elementos filhos */
+    position: relative;
+    /* Margem à esquerda da barra */
+    margin-left: 20px;
+    /* Oculta conteúdo que ultrapassa as bordas da barra */
+    overflow: hidden;
+    /* Sombra da barra */
+    box-shadow: 2px 5px 10px #999;
+    /* Borda da barra */
+    border: 2px solid black;
+    /* Espaçamento externo da barra */
+    margin: 5px;
+    /* Espaçamento */
+    /* Borda externa com pequeno espaçamento */
+    box-shadow: 0 0 10px black;
 }
 
-
+/* Define estilos para a parte preenchida da barra de progresso dentro da classe 'content' */
 .content div .progress {
+    /* Altura da parte preenchida da barra de progresso */
     height: 80px;
+    /* Borda arredondada da parte preenchida da barra de progresso */
     border-radius: 20px;
+    /* Gradiente linear para a cor da parte preenchida */
     background: linear-gradient(to right, var(--clr1), var(--clr2));
 }
 
+/* Define estilos para o título h1 dentro da barra de progresso */
 .content div .bar h1 {
+    /* Posição do título à esquerda */
     position: left;
+    /* Distância à direita do título */
     right: 10px;
+    /* Cor do título */
     color: var(--clr1);
+    /* Família da fonte do título */
     font-family: 'Noto Sans', 'sans-serif';
+    /* Peso da fonte do título */
     font-weight: 500;
+    /* Tamanho da fonte do título */
     font-size: 35px;
 }
 
+/* Define estilos para o título h2 dentro da barra de progresso */
 .content div .bar h2 {
+    /* Posição absoluta para posicionar o título */
     position: absolute;
+    /* Distância à esquerda do título */
     left: 30px;
+    /* Cor do título */
     color: #fff;
+    /* Sombra do texto */
     text-shadow: 2px 2px white;
+    /* Peso da fonte do título */
     font-weight: 600;
+    /* Tamanho da fonte do título */
     font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    .content div .bar {
+        /* Altura da barra */
+        height: 50px;
+        /* Largura da barra */
+        width: 250px;
+    }
+
+    .content div {
+        width: 400px;
+
+    }
+    /* Largura do container em resolução abaixo de 767 */
+    .container div {
+        width: 400px;
+    }
+
+    .content div .bar h2 {
+        font-size: 15px;
+    }
+
+    .content div h2.resultado {
+        font-size: 20px;
+    }
+
 }

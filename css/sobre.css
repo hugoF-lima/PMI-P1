@@ -1,104 +1,167 @@
+/* Estilos para o contêiner com a classe 'containerSobre' */
 .containerSobre {
     height: 750px;
+    /* Altura do contêiner */
     width: 1200px;
+    /* Largura do contêiner */
     margin: 0 auto;
+    /* Margem à esquerda e à direita automáticas para centralizar */
     margin-bottom: 100px;
+    /* Margem inferior de 100px */
     padding: 20px;
+    /* Preenchimento interno de 20px */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Cor de fundo com opacidade */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra */
     border-radius: 20px;
+    /* Borda arredondada com raio de 20px */
     text-align: center;
+    /* Alinhamento do texto no centro */
     color: white;
+    /* Cor do texto */
 }
 
+/* Estilos para a div com a classe 'divSobTit' */
 .divSobTit {
     text-align: center;
+    /* Alinhamento do texto no centro */
     display: flex;
+    /* Exibição flexível */
     flex-direction: column;
+    /* Coluna de layout flexível */
     align-items: center;
+    /* Alinhamento dos itens no centro horizontalmente */
     justify-content: center;
+    /* Centralização do conteúdo verticalmente */
 }
 
+/* Estilos para o título h3 dentro do contêiner */
 .containerSobre h3 {
     text-align: center;
+    /* Alinhamento do texto no centro */
     color: var(--btn-bg-color);
+    /* Cor do texto */
     font-size: 80px;
+    /* Tamanho da fonte de 80px */
     text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
+    /* Sombra do texto */
 }
 
+/* Estilos para o parágrafo com a classe 'direitos' dentro do contêiner */
 .direitos {
     font-size: 23px;
+    /* Tamanho da fonte de 23px */
     margin-bottom: 20px;
-
+    /* Margem inferior de 20px */
 }
 
+/* Estilos para a imagem dentro do contêiner */
 .containerSobre img {
+    /* Margem à esquerda de 2.5em */
     margin-left: 2.5em;
+    /* Exibição em bloco */
     display: block;
+    /* Margem à esquerda e à direita automáticas para centralizar */
     margin: 0 auto;
 }
 
+/* Estilos para a div com a classe 'divBtnSob' */
 .divBtnSob {
+    /* Exibição flexível */
     display: flex;
+    /* Coluna de layout flexível */
     flex-direction: column;
+    /* Alinhamento dos itens no centro horizontalmente */
     align-items: center;
+    /* Alinhamento do texto no centro */
     text-align: center;
+    /* Margem à esquerda e à direita automáticas para centralizar */
     margin: 0 auto;
+    /* Margem superior de 100px */
     margin-top: 100px;
 }
 
+/* Estilos para o botão com a classe 'btnSob' dentro da div */
 .btnSob {
+    /* Altura do botão */
     height: 80px;
+    /* Largura do botão */
     width: 300px;
+    /* Margem superior de 20px */
     margin-top: 20px;
+    /* Cor de fundo do botão */
     background-color: var(--btn-bg-color);
+    /* Borda arredondada com raio de 0.85em */
     border-radius: 0.85em;
+    /* Estilo de borda nenhum */
     border-style: none;
+    /* Preenchimento interno de 0.5em acima e abaixo, 0px à esquerda e à direita */
     padding: 0.5em 0px;
+    /* Transição de transformação com duração de 0.3s */
     transition: transform 0.3s;
 }
 
+/* Estilos para o link dentro do botão */
 .btnSob a {
+    /* Tamanho da fonte de 20px */
     font-size: 20px;
+    /* Fonte em negrito */
     font-weight: bold;
+    /* Preenchimento interno de 1em */
     padding: 1em;
+    /* Remoção da decoração do link */
     text-decoration: none;
+    /* Cor do texto do link */
     color: whitesmoke;
 }
 
-button:hover {
+/* Estilos para o hover do botão */
+.btnSob:hover {
+    /* Aumento de escala ao passar o mouse */
     transform: scale(1.1);
 }
 
+/* Estilos para as configurações de layout em diferentes tamanhos de tela */
 @media screen and (min-width: 767px) and (max-width: 1200px) {
     .containerSobre {
+        /* Altura do contêiner ajustada para telas médias */
         height: 800px;
+        /* Largura do contêiner ajustada para telas médias */
         width: 700px;
     }
 
     .containerSobre h3 {
+        /* Tamanho da fonte ajustado para telas médias */
         font-size: 60px;
     }
 
     .containerSobre p {
+        /* Tamanho da fonte ajustado para telas médias */
         font-size: 22px;
+        /* Margem inferior ajustada para telas médias */
         margin-bottom: 20px;
     }
-
 }
 
+/* Estilos para configurações de layout em telas pequenas (max-width: 767px) */
 @media screen and (max-width: 767px) {
     .containerSobre {
+        /* Altura do contêiner ajustada para telas pequenas */
         height: 950px;
+        /* Largura do contêiner ajustada para telas pequenas */
         width: 400px;
     }
 
     .containerSobre h3 {
+        /* Tamanho da fonte ajustado para telas pequenas */
         font-size: 60px;
     }
 
     .containerSobre p {
+        /* Tamanho da fonte ajustado para telas pequenas */
         font-size: 16px;
+        /* Margem inferior ajustada para telas pequenas */
         margin-bottom: 20px;
     }
 }

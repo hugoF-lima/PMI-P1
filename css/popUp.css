@@ -1,115 +1,244 @@
+/* Define estilos para o contêiner do popup com o id 'showPopUp' */
 #showPopUp {
+  /* Posição fixa em relação à janela de visualização */
   position: fixed;
+  /* Largura total */
   width: 100%;
+  /* Altura total */
   height: 100%;
+  /* Alinhado no topo da janela de visualização */
   top: 0;
+  /* Z-index para controle de sobreposição */
   z-index: 1;
 }
 
+/* Define estilos para o fundo do popup com o id 'bgPop' */
 #bgPop {
+  /* Cor de fundo preta */
   background-color: black;
+  /* Opacidade de 60% */
   opacity: 0.6;
+  /* Posição absoluta em relação ao bloco pai mais próximo */
   position: absolute;
+  /* Largura total */
   width: 100%;
+  /* Altura total */
   height: 100%;
+  /* Alinhado no topo */
   top: 0;
+  /* Z-index para controle de sobreposição */
   z-index: 1;
 }
 
-/* Os três a seguir vinculados por id, se referem ao "ver mais" das estatisticas */
+/* Estilos para o elemento com id 'desconsid', utilizado para o link "ver mais" nas estatísticas */
 #desconsid {
+  /* Cor do texto em vermelho */
   color: red;
 }
 
 #desconsid p {
+  /* Tamanho da fonte */
   font-size: 14px;
+  /* Centraliza o texto */
   position: center;
+  /* Cor do texto em vermelho */
   color: red;
 }
 
 #desconsid p:hover {
+  /* Tamanho da fonte ao passar o mouse sobre o link */
   font-size: 14px;
+  /* Cor do texto em branco ao passar o mouse sobre o link */
   color: white;
-  position: center;
+  /* Altera o cursor para indicar que o elemento é clicável */
   cursor: pointer;
 }
 
-
+/* Define estilos para o popup com o id 'popUp' */
 #popUp {
+  /* Posição relativa em relação ao bloco pai */
   position: relative;
+  /* Margem superior e inferior de 5%, margem à direita e à esquerda de 30% */
   margin: 5% 30%;
+  /* Largura mínima do popup */
   min-width: 500px;
+  /* Altura mínima do popup */
   min-height: 250px;
-  background-color: white;
+  /* Cor de fundo branca */
+  background-color: var(--quest-bg-color);
+  /* Borda preta de 1 pixel */
   border: 1px solid black;
+  /* Borda arredondada com raio de 8 pixels */
   border-radius: 8px;
-  z-index: 2; 
+  /* Z-index para controle de sobreposição acima do fundo */
+  z-index: 2;
+  color: var(--text-color);
 }
 
+#fechar {
+  color: white;
+
+}
+
+/* Define estilos para o título dentro do popup com a classe 'popUp__title' */
 .popUp__title {
+  /* Centraliza o texto */
   text-align: center;
+  /* Preenchimento de 16 pixels acima e abaixo do título */
   padding: 16px 0;
+  /* Borda inferior sólida de 1 pixel */
   border-bottom: 1px solid black;
 }
 
+/* Define estilos para o contêiner dentro do popup com a classe 'popUp__container' */
 .popUp__container {
+  /* Preenchimento interno de 16 pixels acima e abaixo, 8 pixels à esquerda e à direita */
   padding: 16px 8px;
 }
 
+
+/* Define estilos para o título da opção dentro do popup com a classe 'popUp__opcao__titulo' */
 .popUp__opcao__titulo {
+  /* Borda arredondada no início do bloco de título da opção */
   border-start-start-radius: 8px;
+  /* Borda arredondada no final do bloco de título da opção */
   border-start-end-radius: 8px;
+  /* Centraliza o texto */
   text-align: center;
+  /* Fonte em negrito */
   font-weight: bold;
+  /* Preenchimento inferior de 8 pixels */
   padding-bottom: 8px;
 }
 
+/* Define estilos para o texto da opção dentro do popup com a classe 'popUp__opcao__texto' */
 .popUp__opcao__texto {
-  padding: 16px 12px;
+  /* Preenchimento interno de 16 pixels acima e abaixo, 11 pixels à esquerda e 8 à direita */
+  padding: 11px 8px;
+  /* Justifica o texto */
   text-align: justify;
 }
 
+/* Define estilos para o identificador do texto da opção dentro do popup com a classe 'popUp__opcao__texto__id' */
 .popUp__opcao__texto__id {
+  /* Fonte em negrito */
   font-weight: bold;
 }
 
+/* Define estilos para o título do popup com a classe 'popUpTitle' */
 .popUpTitle {
+  /* Cor do texto em preto */
   color: black;
 }
 
+/* Define estilos para os títulos h2 dentro do contêiner com a classe 'popUpContents' */
 .popUpContents h2 {
-  color: black;
+  /* Cor do texto em preto */
+  color: var(--text-color);
+  font-size: 15px;
 }
 
+.popUpContents h3, p{
+  font-size:15px;
+}
+
+/* Define estilos para a classe 'acertou', utilizada para destacar opções corretas */
 .acertou {
+  /* Borda arredondada no início do bloco de opção correta */
   border-start-start-radius: 8px;
+  /* Borda arredondada no final do bloco de opção correta */
   border-start-end-radius: 8px;
+  /* Cor de fundo verde-amarelada */
   background-color: greenyellow;
 }
 
+/* Define estilos para a classe 'errou', utilizada para destacar opções incorretas */
 .errou {
+  /* Borda arredondada no início do bloco de opção incorreta */
   border-start-start-radius: 8px;
+  /* Borda arredondada no final do bloco de opção incorreta */
   border-start-end-radius: 8px;
+  /* Cor de fundo vermelha */
   background-color: red;
 }
 
+/* Define estilos para a classe 'hidden', utilizada para esconder elementos */
 .hidden {
+  /* Não exibe o elemento */
   display: none;
 }
 
+/* Define estilos para a classe 'show', utilizada para exibir elementos */
 .show {
+  /* Exibe o elemento como bloco */
   display: block;
 }
 
+/* Define estilos para o contêiner flexível com a classe 'popUpContainer' */
 .popUpContainer {
+  /* Exibição flexível */
   display: flex;
+  /* Direção da flexbox como coluna */
   flex-direction: column;
-
+  color: var(--text-color);
 }
 
+/* Define estilos para o botão de fechar popup com a classe 'fecharPopUp' */
 .fecharPopUp {
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 5px;
+  position: absolute;
+  background-color: black;
+  border: none;
+  width: 25px;
+  height: 35px;
+  border-radius: 50%;
+
+  /* Ajustando para que o 'X' permaneça dentro do circulo*/
+  padding: 5px;
+  /* Adjust this value as needed */
+  margin: 0;
+  /* Ensure no margin is applied */
+}
+
+/* Define estilos para telas com largura máxima de 767px */
+@media screen and (max-width: 767px) {
+  #popUp {
+    /* Posição relativa em relação ao bloco pai */
+    position: relative;
+    /* Margem superior e inferior de 5%, margem à direita e à esquerda de 30% */
+    margin: 5% 30%;
+    /* Largura mínima do popup */
+    min-width: 150px;
+    /* Altura mínima do popup */
+    min-height: 50px;
+    /* Borda preta de 1 pixel */
+    border: 1px solid black;
+    /* Borda arredondada com raio de 8 pixels */
+    border-radius: 8px;
+    /* Z-index para controle de sobreposição acima do fundo */
+    z-index: 2;
+  }
+
+  h2,
+  h3,
+  h4,
+  p {
+    font-size: 15x;
+  }
+
+  p a {
+    font-size: 5px;
+  }
+
+  .popUpContainer {
+    max-height: 150px;
+  }
+
+  .popUpTitle {
+    /* Cor do texto em preto */
+    max-width: 250px;
+  }
 }

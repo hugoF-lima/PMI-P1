@@ -1,203 +1,360 @@
+/* Define estilos para o contêiner de conteúdo */
 .content_container {
+    /* Cor de fundo do contêiner com opacidade */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Altura automática */
     height: auto;
+    /* Largura fixa do contêiner */
     width: 1200px;
+    /* Centraliza o contêiner horizontalmente */
     margin: 0 auto;
+    /* Margem inferior do contêiner */
     margin-bottom: 100px;
+    /* Margem superior do contêiner */
     margin-top: 50px;
+    /* Adiciona sombra ao contêiner */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /* Borda arredondada do contêiner */
     border-radius: 20px;
+    /* Preenchimento interno do contêiner */
     padding: 20px;
 }
 
+/* Define estilos para a primeira coluna dentro do contêiner */
 .collum1 {
+    /* Largura da coluna */
     width: 600px;
+    /* Define o modelo de layout como flexível */
     display: flex;
+    /* Define a direção dos itens para coluna */
     flex-direction: column;
+    /* Centraliza os itens ao longo do eixo secundário (vertical) */
     align-items: center;
+    /* Alinha o texto ao centro */
     text-align: center;
+    /* Centraliza a coluna horizontalmente */
     margin: 0 auto;
 }
 
+/* Define estilos para os títulos dentro da primeira coluna */
 .collum1 h3 {
+    /* Cor do título */
     color: var(--btn-bg-color);
+    /* Tamanho da fonte do título */
     font-size: 100px;
+    /* Alinha o texto ao centro */
     text-align: center;
+    /* Adiciona sombra ao texto do título */
     text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
+    /* Largura máxima do título */
     max-width: 800px;
 }
 
+/* Define estilos para a linha horizontal separadora */
 hr {
+    /* Borda arredondada da linha */
     border-radius: 5px;
+    /* Estilo da borda (nenhum) */
     border-style: none;
+    /* Altura da linha */
     height: 5px;
+    /* Largura da linha */
     width: 550px;
+    /* Cor de fundo da linha */
     background: var(--btn-bg-color);
+    /* Centraliza a linha horizontalmente */
     margin: 0 auto;
+    /* Margem inferior da linha */
     margin-bottom: 10px;
 }
 
+/* Define estilos para os parágrafos dentro da primeira coluna */
 .collum1 p {
+    /* Cor do texto do parágrafo */
     color: var(--btn-bg-color);
+    /* Alinha o texto ao centro */
     text-align: center;
+    /* Adiciona sombra ao texto do parágrafo */
     text-shadow: 0 0 10px var(--text-shadow-param), 0 0 20px var(--text-shadow-param), 0 0 30px var(--text-shadow-param), 0 0 40px var(--text-shadow-param), 0 0 50px var(--text-shadow-param);
+    /* Tamanho da fonte do parágrafo */
     font-size: 25px;
+    /* Peso da fonte do parágrafo */
     font-weight: bold;
 }
 
+/* Define estilos para os botões dentro da primeira coluna */
 .collum1 button {
+    /* Margem superior do botão */
     margin-top: 20px;
 }
 
 .collum1 button {
+    /* Altura do botão */
     height: 80px;
+    /* Largura do botão */
     width: 300px;
+    /* Cor de fundo do botão */
     background-color: var(--btn-color);
+    /* Borda arredondada do botão */
     border-radius: .85em;
+    /* Estilo da borda (nenhum) */
     border-style: none;
+    /* Preenchimento interno do botão */
     padding: .5em 0px;
+    /* Adiciona transição de escala ao botão */
     transition: transform 0.3s;
 }
 
-.collum1 button:hover {
+/* Define estilos para o efeito de escala ao passar o mouse sobre o botão */
+/* Era pra ele não dar hover, porem não funciona... */
+.collum1 button:hover:not([data-disabled="true"]) {
     transform: scale(1.1);
 }
 
+
+/* Define estilos para os links dentro dos botões na primeira coluna */
 .collum1 button a {
+    /* Tamanho da fonte do link dentro do botão */
     font-size: 20px;
+    /* Peso da fonte do link dentro do botão */
     font-weight: bold;
+    /* Preenchimento interno do link dentro do botão */
     padding: 1em;
+    /* Remove a decoração de texto do link dentro do botão */
     text-decoration: none;
+    /* Cor do texto do link dentro do botão */
     color: var(--text-color-btn);
-    /* A linha a seguir causa probleminhas visuais de responsividade */
+    /* Adiciona uma borda sólida com a cor especificada ao redor do link dentro do botão */
     border: 5px solid var(--btn-border);
+    /* verificar o problema de responsividade dessa linha */
 }
 
+/* Define estilos para a div1 com id 'div1' */
 #div1 {
+    /* Margem superior da div1 */
     margin-top: 10px;
 }
 
+/* Define estilos para a div2 com id 'div2' */
 #div2 {
+    /* Margem superior da div2 */
     margin-top: 150px;
 }
 
+/* Repetição de estilos para botões com configurações diferentes */
 .collum1 button {
+    /* Altura do botão */
     height: 80px;
+    /* Largura do botão */
     width: 300px;
+    /* Cor de fundo do botão */
     background-color: var(--btn-color);
+    /* Borda arredondada do botão */
     border-radius: .85em;
+    /* Estilo da borda (nenhum) */
     border-style: none;
+    /* Preenchimento interno do botão */
     padding: .5em 0px;
+    /* Adiciona transição de escala ao botão */
     transition: transform 0.3s;
+    /* Margem superior do botão */
     margin-top: 20px;
 }
 
+/* Repetição de estilos para o efeito de escala ao passar o mouse sobre o botão */
 .collum1 button:hover {
+    /* Aumenta a escala do botão em 10% ao passar o mouse sobre ele */
     transform: scale(1.1);
 }
 
+/* Define estilos para links dentro dos botões na primeira coluna */
 .collum1 button a {
+    /* Tamanho da fonte do link dentro do botão */
     font-size: 20px;
+    /* Peso da fonte do link dentro do botão */
     font-weight: bold;
+    /* Preenchimento interno do link dentro do botão */
     padding: 1em;
+    /* Remove a decoração de texto do link dentro do botão */
     text-decoration: none;
-    color: whitesmoke;
+    /* Cor do texto do link dentro do botão */
+    color: var(--text-color-btn);
+    /* Adiciona uma borda sólida com a cor especificada ao redor do link dentro do botão */
+    border: 5px solid var(--btn-border);
+    /* A linha a seguir causa probleminhas visuais de responsividade */
 }
 
-@media screen and (min-width: 767px) and (max-width: 1200px) {
+/* Define estilos para a div1 com id 'div1' */
+#div1 {
+    /* Margem superior da div1 */
+    margin-top: 10px;
+}
 
+/* Define estilos para a div2 com id 'div2' */
+#div2 {
+    /* Margem superior da div2 */
+    margin-top: 150px;
+}
+
+/* Repetição de estilos para botões com configurações diferentes */
+.collum1 button {
+    /* Altura do botão */
+    height: 80px;
+    /* Largura do botão */
+    width: 300px;
+    /* Cor de fundo do botão */
+    background-color: var(--btn-color);
+    /* Borda arredondada do botão */
+    border-radius: .85em;
+    /* Estilo da borda (nenhum) */
+    border-style: none;
+    /* Preenchimento interno do botão */
+    padding: .5em 0px;
+    /* Adiciona transição de escala ao botão */
+    transition: transform 0.3s;
+    /* Margem superior do botão */
+    margin-top: 20px;
+}
+
+/* Repetição de estilos para o efeito de escala ao passar o mouse sobre o botão */
+.collum1 button:hover {
+    /* Aumenta a escala do botão em 10% ao passar o mouse sobre ele */
+    transform: scale(1.1);
+}
+
+/* Define estilos para telas com largura mínima de 767px e largura máxima de 1200px */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
     .content_container {
+        /* Redefine a largura do contêiner para telas de tamanho médio */
         width: 650px;
     }
 
     #div1 {
+        /* Ajusta a margem superior da div1 para telas de tamanho médio */
         margin-top: 10px;
     }
 
     .collum1 {
+        /* Redefine a largura da coluna para telas de tamanho médio */
         width: 550px;
     }
 
     .collum1 h3 {
+        /* Redefine o tamanho da fonte do título para telas de tamanho médio */
         font-size: 60px;
     }
 
     hr {
+        /* Borda arredondada da linha horizontal */
         border-radius: 5px;
+        /* Altura da linha horizontal */
         height: 5px;
+        /* Largura da linha horizontal */
         width: 100px;
+        /* Margem inferior da linha horizontal */
         margin-bottom: 10px;
     }
 
     .collum1 p {
+        /* Redefine o tamanho da fonte do parágrafo para telas de tamanho médio */
         font-size: 22px;
     }
 
     .collum1 button {
+        /* Altura do botão */
         height: 80px;
+        /* Largura do botão */
         width: 200px;
+        /* Borda arredondada do botão */
         border-radius: .85em;
+        /* Preenchimento interno do botão */
         padding: .5em 0px;
+        /* Adiciona transição de escala ao botão */
         transition: transform 0.3s;
+        /* Margem superior do botão */
         margin-top: 20px;
     }
 
     .collum1 button a {
-        font-size: 20px;
+        /* Tamanho da fonte do link dentro do botão */
+        font-size: 15px;
+        /* Peso da fonte do link dentro do botão */
         font-weight: bold;
+        /* Preenchimento interno do link dentro do botão */
         padding: 1em;
     }
 
     #div2 {
+        /* Ajusta a margem superior da div2 para telas de tamanho médio */
         margin-top: 80px;
     }
-
 }
 
+
+/* Define estilos para telas com largura máxima de 767px */
 @media screen and (max-width: 767px) {
     .content_container {
+        /* Redefine a largura do contêiner para telas pequenas */
         width: 400px;
     }
 
     #div1 {
+        /* Ajusta a margem superior da div1 para telas pequenas */
         margin-top: 10px;
     }
 
     .collum1 {
+        /* Redefine a largura da coluna para telas pequenas */
         width: 350px;
     }
 
     .collum1 h3 {
+        /* Redefine o tamanho da fonte do título para telas pequenas */
         font-size: 50px;
     }
 
     hr {
+        /* Borda arredondada da linha horizontal */
         border-radius: 5px;
+        /* Altura da linha horizontal */
         height: 5px;
+        /* Largura da linha horizontal */
         width: 100px;
+        /* Margem inferior da linha horizontal */
         margin-bottom: 10px;
     }
 
     .collum1 p {
+        /* Redefine o tamanho da fonte do parágrafo para telas pequenas */
         font-size: 20px;
     }
 
     .collum1 button {
+        /* Altura do botão */
         height: 80px;
+        /* Largura do botão */
         width: 200px;
+        /* Borda arredondada do botão */
         border-radius: .85em;
+        /* Estilo da borda (nenhum) */
         border-style: none;
+        /* Preenchimento interno do botão */
         padding: .5em 0px;
+        /* Adiciona transição de escala ao botão */
         transition: transform 0.3s;
+        /* Margem superior do botão */
         margin-top: 20px;
     }
 
     .collum1 button a {
-        font-size: 20px;
+        /* Tamanho da fonte do link dentro do botão */
+        font-size: 15px;
+        /* Preenchimento interno do link dentro do botão */
         padding: 1em;
     }
 
     #div2 {
+        /* Ajusta a margem superior da div2 para telas pequenas */
         margin-top: 80px;
     }
 }

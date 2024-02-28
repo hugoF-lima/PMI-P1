@@ -1,19 +1,33 @@
+/* Define estilos para a barra de navegação com a classe 'navBar' */
 .navBar {
+  /* Configuração de exibição como flexível */
   display: flex;
+  /* Direção do eixo principal da flexbox (horizontal) */
   flex-direction: row;
+  /* Alinhamento dos itens no início do eixo principal */
   justify-content: flex-start;
+  /* Remove marcadores de lista padrão */
   list-style: none;
+  /* Espaçamento entre os itens da barra de navegação */
   gap: .5rem;
+  /* Adiciona uma barra de rolagem horizontal caso haja overflow */
   overflow-x: scroll;
+  /* Margem superior e inferior da barra de navegação */
   margin: 2rem 0;
+  /* Cor do texto da barra de navegação */
   color: var(--ul-color);
 }
 
+/* Define estilos para os itens de lista da barra de navegação com a classe 'navBar li' */
 .navBar li {
+  /* Altera o cursor para indicar que os itens são clicáveis */
   cursor: pointer;
 }
 
+/* Define estilos para os itens de lista da barra de navegação ao passar o mouse sobre eles */
 .navBar li:hover {
+  /* Adiciona uma transição suave a todas as propriedades com duração de 0.3 segundos e aceleração suave */
   transition: all .3s ease-in;
+  /* Altera a cor do texto ao passar o mouse sobre os itens da barra de navegação */
   color: var(--ul-highlight);
 }

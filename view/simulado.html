@@ -2,10 +2,17 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configurações iniciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
     <title>Simulado</title>
+
+    <!-- Inclusão do ícone da página -->
     <div id="favicon"></div>
+
+    <!-- Inclusão de scripts -->
     <script type="module" src="../js/img.js"></script>
     <link rel="stylesheet" href="../css/app.css">
     <script type="module" src="../js/nav.js"></script>
@@ -14,25 +21,33 @@
 </head>
 
 <body>
+    <!-- Elemento utilizado para ancorar o menu de navegação superior -->
     <span id="topNav"></span>
 
+    <!-- Link para o site do ENADE -->
     <a href="https://enade.inep.gov.br/enade/#!/index" target="_blank" class="enadeQuest"><img src="../img/logo_png.svg"
             alt="Logo enade"></a>
 
+    <!-- Barra lateral do cronômetro -->
     <aside class="timer-container">
         <img src="../img/cronometro.png" alt="Cron">
         <p class="text-timer" id="timer-input"></p>
     </aside>
 
+    <!-- Contêiner principal para a troca de conteúdo -->
     <main id="change"></main>
 
-    <!-- Seleção PopUp -->
+    <!-- PopUp de seleção -->
     <div id="showPopUp" class="hidden">
+        <!-- Fundo escuro para destacar o PopUp -->
         <div id="bgPop"></div>
+        <!-- PopUp para exibir informações ou opções -->
         <div id="popUp"></div>
+        <!-- Contêiner para estatísticas do PopUp -->
         <!-- <div id="popUp-stats"></div> -->
     </div>
 
+    <!-- Elemento utilizado para ancorar o menu de navegação inferior -->
     <span id="botomNav"></span>
 </body>
 
