@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "view", // Assuming 'view' is the directory containing your index.html file
+      "use": "@vercel/static"
+    }
+  ]
+}
