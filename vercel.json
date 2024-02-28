@@ -1,8 +1,9 @@
 {
-  "builds": [
+  "routes": [
+    { "handle": "filesystem" },
     {
-      "src": "view", // Assuming 'view' is the directory containing your index.html file
-      "use": "@vercel/static"
+      "src": "/(.*)",
+      "dest": "/view/index.html"
     }
   ]
 }
